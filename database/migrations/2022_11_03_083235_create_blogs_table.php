@@ -19,6 +19,11 @@ class CreateBlogsTable extends Migration
             $table->string('slug')->unique();
             $table->longText('description');
             $table->string('filename');
+            $table->string('mtitle');
+            $table->longText('mdescription');
+            $table->string('mkeywords');
+            $table->integer('position');
+            $table->string('status');
             $table->timestamps();
         });
     }

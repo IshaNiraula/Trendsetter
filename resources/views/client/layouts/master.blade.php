@@ -126,6 +126,43 @@
             },
         });
 
+    
+        var partnerSwiper = new Swiper(".partner-mySwiper", {
+            slidesPerView: 5,
+            spaceBetween: 2,
+            freeMode: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                // when window width is >= 480px
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                // when window width is >= 640px
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                }
+            },
+        });
+
         var eventSwiper = new Swiper(".event-mySwiper", {
             slidesPerView: 3,
             spaceBetween: 10,

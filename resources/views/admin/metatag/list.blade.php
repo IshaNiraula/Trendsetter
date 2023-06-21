@@ -25,8 +25,9 @@
                                     <tr>
                                         <th>ID</th>'
                                         <th>Page</th>
-                                        <th>title</th>
-                                        <th>image</th <th>action</th>
+                                        <th>Title</th>
+                                        <th>Image</th>
+                                        <th>action</th>
                                     </tr>
                                 </thead>
                                 @foreach ($metatags as $metatag)

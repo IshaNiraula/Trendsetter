@@ -42,6 +42,7 @@
                                 @enderror
                             </span>
                         </div>
+                  
                         <div class="form-group">
                             <label for="exampleInputFile">File input</label>
                             <div class="input-group">
@@ -49,6 +50,52 @@
                                     <input name="image" type="file" />
                                 </div>
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mtitle">Meta-Title</label>
+                            <input type="text" class="form-control" id="mtitle" placeholder="Enter mtitle"
+                                name="mtitle" value="{{ old('mtitle') }}">
+                            <span class="text-danger">
+                                @error('title')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mdescription">Meta-Description</label>
+                            <textarea class="form-control" id="mdescription" placeholder="Enter the Description" name="mdescription"></textarea>
+                            <span class="text-danger">
+                                @error('mdescription')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mkeywords">Meta-Keywords</label>
+                            <textarea class="form-control" id="mkeywords" placeholder="enter the keywords" name="mkeywords"></textarea>
+                            <span class="text-danger">
+                                @error('mkeywords')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <input type="number" class="form-control" id="position" placeholder="Enter position"
+                                name="position" value="{{ old('position') }}">
+                            <span class="text-danger">
+                                @error('position')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Status</label>
+                            <select name="status" id="status">
+                                <option value="">choose status</option>
+                                <option value="published">Published</option>
+                                <option value="draft">draft</option>
+                            </select>
                         </div>
                     </div>
                     <!-- /.card-body -->

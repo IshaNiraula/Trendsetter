@@ -27,15 +27,12 @@
                     <div class="card-body">
                         <div class="form-group">
                             <select name="page" id="" class="form-control">
-                                <option value="">select page</option>
-                                <option value="home_page" {{$metaData->page == 'home_page' && 'checked'}}>Home page</option>
-                                <option value="about_page" {{$metaData->page == 'about_page' && 'checked'}}>About page</option>
-                                <option value="carrier_page"  {{$metaData->page == 'carrier_page' && 'checked'}}>Carrier page</option>
-                                <option value="contact_page"  {{$metaData->page == 'contact_page' && 'checked'}}>Contact page</option>
-                                <option value="blog_page"  {{$metaData->page == 'blog_page' && 'checked'}}>Blog page</option>
-                                <option value="service_page"  {{$metaData->page == 'service_page' && 'checked'}}>Service page</option>
-                                <option value="gallery_page"  {{$metaData->page == 'gallery_page' && 'checked'}}>Gallery page</option>
-                                <option value="length_converter_page">length converter page</option>
+                                <option value="">Select Page</option>
+                                <option value="homePage" {{$metaData->page == 'homePage' && 'checked'}}>Home page</option>
+                                <option value="aboutPage" {{$metaData->page == 'aboutPage' && 'checked'}}>About page</option>
+                                <option value="contactPage"  {{$metaData->page == 'contactPage' && 'checked'}}>Contact page</option>
+                                <option value="blogPage"  {{$metaData->page == 'blogPage' && 'checked'}}>Blog page</option>
+                                <option value="servicePage"  {{$metaData->page == 'servicePage' && 'checked'}}>Service page</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -60,11 +57,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="tags">keywords</label>
-                            <input type="text" class="form-control" id="tags" placeholder="Enter keywords"
-                                name="tags" value="{{ $metaData->tags }}">
+                            <label for="metatags">Keywords</label>
+                            <input type="text" class="form-control" id="metatags" placeholder="Enter keywords"
+                                name="metatags" value="{{ $metaData->metatags }}">
                             <span class="text-danger">
-                                @error('tags')
+                                @error('metatags')
                                     {{ $message }}
                                 @enderror
                             </span>

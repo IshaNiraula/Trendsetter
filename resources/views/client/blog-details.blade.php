@@ -1,73 +1,81 @@
 @extends('client.layouts.master')
 @section('content')
-    <div class="breadcrumb-area">
-        <div class="breadcrumb-top default-overlay bg-img breadcrumb-overly-3 pt-100 pb-95"
-            style="background-image:url({{ asset('assets/img/bg/breadcrumb-bg-5.jpg') }});">
-            <div class="container">
-                <h2>Blog Details</h2>
-                <p>{{ $blog->title }}</p>
-            </div>
-        </div>
-        <div class="breadcrumb-bottom">
-            <div class="container">
-                <ul>
-                    <li><a href="{{route('home')}}">Home</a> <span><i class="fa fa-angle-double-right"></i>Blog Details</span></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="event-area pt-130 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 col-lg-8">
-                    <div class="blog-details-wrap mr-40">
-                        <div class="blog-details-top">
-                            <img src="{{ asset(env('APP_URL') . 'uploads/blog/' . $blog->filename) }}"
-                                alt="{{ $blog->title }}">
-                            <div class="blog-details-content-wrap">
-                                <div class="b-details-meta-wrap">
-                                    <div class="b-details-meta">
-                                        <ul>
-                                            <li><i class="fa fa-calendar-o"></i>{{ $blog->created_at->toDateString() }}</li>
-                                            <li><i class="fa fa-user"></i> Admin</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <h3>{{ $blog->title }}</h3>
-                                <div>
-                                    {!! $blog->description !!}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4">
-                    <div class="sidebar-style">
-                        <div class="sidebar-recent-post mb-35">
-                            <div class="sidebar-title mb-40">
-                                <h4>Recent Post</h4>
-                            </div>
-                            <div class="recent-post-wrap">
-                                @if (isset($blogs))
-                                    @foreach ($blogs as $blog)
-                                        <div class="single-recent-post">
-                                            <div class="recent-post-img">
-                                                <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"><img
-                                                        src="{{ asset(env('APP_URL') . 'uploads/blog/' . $blog->filename) }}"
-                                                        alt="{{ $blog->title }}"></a>
-                                            </div>
-                                            <div class="recent-post-content">
-                                                <h5><a href="#">{{ $blog->title }}</a></h5>
-                                                <p><span>{{ $blog->created_at->toDateString() }}</span></p>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                @endif
-                            </div>
-                        </div>
-                    </div>
+<div class="page-header black-overlay">
+    <div class="container breadcrumb-section">
+        <div class="row pad-s15">
+            <div class="col-md-12">
+                <h2>Blog detail</h2>
+                <div class="clear"></div>
+                <div class="breadcrumb-box">
+                    <h4 style="color: #dadfe4">{{ $blog->title }}</h4>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i></a>
+                        </li>
+
+                    </ul>
+
                 </div>
             </div>
         </div>
     </div>
+</div>
+<section class="page_single blogs_main blogs_details padTB100">
+    <div class="container">
+        <div class="row">
+            <!--//==Blog Detail Section Start==//-->			
+            <div class="col-md-12 col-sm-12  col-xs-12">
+                <div class="row marB20">
+                    <div class="col-md-12">
+                        <!--//==Thumbnail==//-->
+                        <figure class="dark-theme-1">
+                            <img src="{{ env('APP_URL') . 'uploads/blog/' . $blog->filename }}" alt="Blog Thumbnail">
+                        </figure>
+                        <!--//==Blog Content Start==//-->
+                        <div class="block-caption padT20">
+                            <div class="meta-block">
+                                <ul class="inline inline-1">
+                                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>  {{ $blog->created_at->toFormattedDateString() }}</a></li>
+                                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> admin</a></li>
+                                </ul>
+                            </div>
+                            <h4>{{ $blog->title }}</h4>
+                            
+                            <p> {!! $blog->description !!} </p>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <!--//==Blog Detail Section End==//-->
+            <div class="related-course pt-70">
+                <div class="related-title mb-45 mrg-bottom-small">
+                    <h3>Related Blogs</h3>
+                </div>
+                <div class="related-slider-active">
+                    @if (isset($blogs))
+                        @foreach ($blogs as $blog)
+                            <div class="single-course">
+                                <div class="course-img">
+                                    <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"><img
+                                            class="animated"
+                                            src="{{ env('APP_URL') . 'uploads/blog/' . $blog->filename }}"
+                                            alt=""></a>
+                                </div>
+                                <div class="course-content">
+                                    <h4><a
+                                            href="{{ route('blog.show', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a>
+                                    </h4>
+                                    <p> {!! Str::words($blog->description, 10, ' ...') !!}</p>
+                                </div>
+
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//==Blog Detail Page End==//-->		
 @endsection

@@ -20,6 +20,7 @@ use App\Models\MetaTags;
 use App\Models\Partner;
 use App\Models\Event;
 use App\Models\Visa;
+use App\Models\Counter;
 
 class PageController extends Controller
 {
@@ -35,8 +36,9 @@ class PageController extends Controller
         $partners = Partner::all();
         $events = Event::all();
         $teams = Team::all();
+        $counters = Counter::all();
         $metatag = MetaTags::where('page','home_page')->get()->first();
-        return view('client.index')->with(['sliders'=> $sliders,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'projects'=>$projects,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams]);
+        return view('client.index')->with(['sliders'=> $sliders,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'projects'=>$projects,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
     }
 
     public function loginPage () {

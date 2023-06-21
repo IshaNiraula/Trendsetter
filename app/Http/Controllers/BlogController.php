@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Models\MetaTags;
 use File;
 use Illuminate\Support\Str;
 
@@ -52,6 +53,11 @@ class BlogController extends Controller
             $blog->title = $request->title;
             $blog->slug = $slug;
             $blog->description = $request->description;
+            $blog->position = $request->position;
+            $blog->mtitle = $request->mtitle;
+            $blog->mdescription = $request->mdescription;
+            $blog->mkeywords = $request->mkeywords;
+            $blog->status = $request->status;
             $blog->filename = $name;
             $save_blog = $blog->save();
             if($save_blog){
@@ -72,9 +78,10 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-       $blogs = Blog::orderBy('updated_at','desc')->get();
+        $metatag = MetaTags::where('page','blogPage')->get()->first();
+       $blogs = Blog::orderBy('created_at','desc')->take(6)->get();
        $blog = Blog::where('slug', $slug)->first();
-       return view('client.blog-details')->with(['blogs' => $blogs, 'blog' => $blog]);
+       return view('client.blog-details')->with(['blogs' => $blogs, 'blog' => $blog, 'metatag' => $metatag]);
     }
 
     /**
@@ -111,6 +118,11 @@ class BlogController extends Controller
             $blog->title = $request->title;
             $blog->slug = $slug;
             $blog->description = $request->description;
+            $blog->mtitle = $request->mtitle;
+            $blog->mdescription = $request->mdescription;
+            $blog->mkeywords = $request->mkeywords;
+            $blog->position = $request->position;
+            $blog->status = $request->status;
             $blog->filename = $name;
             $save_blog = $blog->save();
             if($save_blog){
@@ -124,6 +136,11 @@ class BlogController extends Controller
             $blog->title = $request->title;
             $blog->slug = $slug;
             $blog->description = $request->description;
+            $blog->mtitle = $request->mtitle;
+            $blog->mdescription = $request->mdescription;
+            $blog->mkeywords = $request->mkeywords;
+            $blog->position = $request->position;
+            $blog->status = $request->status;
             $blog->filename = $filename;
             $save_blog = $blog->save();
             if($save_blog){

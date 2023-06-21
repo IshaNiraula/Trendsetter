@@ -1,123 +1,110 @@
 @extends('client.layouts.master')
 @section('content')
-    <div class="breadcrumb-area">
-        <div class="breadcrumb-top default-overlay bg-img breadcrumb-overly-5 pt-100 pb-95"
-            style="background-image:url(assets/img/bg/breadcrumb-bg-6.jpg);">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>Would you like to ask a question or speak to one of our expert consultants about your Australian study
-                    dream?</p>
-
-            </div>
-        </div>
-        <div class="breadcrumb-bottom">
-            <div class="container">
-                <ul>
-                    <li><a href="{{route('home')}}">Home</a> <span><i class="fa fa-angle-double-right"></i>Contact Us</span></li>
-                </ul>
+<div class="page-header black-overlay">
+    <div class="container breadcrumb-section">
+        <div class="row pad-s15">
+            <div class="col-md-12">
+                <h2>Contact</h2>
+                <div class="clear"></div>
+                <div class="breadcrumb-box">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{{route('home')}}"><i class="fa fa-home" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-
-
-    <div class="contact-us-area pt-5 pb-5">
-        <div class="container">
-            <center>
-                <p>The experts in our Sydney, Kathmandu and Birtamod offices are more than happy to discuss your educational
-                    dreams with you. If you have a question or would like to have a discussion, please feel free to make
-                    contact via the following details</p>
-            </center>
-            <div class="row my-4">
-                <div class="col-lg-4">
-                    <div class="shadow p-3 rounded mb-3">
-                        <h3 class="">Australia Office
-                        </h3>
-                        <p><i class="fa fa-location-arrow mx-2 text-danger bg-white p-2 rounded"></i>Suite 28, level 4 301
-                            Castlereagh Street, Sydney NSW 2000</p>
-                        <p class=""><i class="fas fa-phone mx-2 text-danger bg-white p-2 rounded"></i>
-                            0281238313
-                            | 04 32260192</p>
-                        <p class=""><i class="fas fa-envelope mx-2 text-danger bg-white p-2 rounded"></i>
-                            jay@bjeducation.com.au</p>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="shadow p-3 rounded mb-3">
-                        <h3 class="">Kathmandu Office</h3>
-                        <p><i class="fa fa-location-arrow mx-2 text-danger bg-white p-2 rounded"></i>Putlisadak (4th
-                            Buliding North of Sharemarket Complex) , 4th Floor, Kathmandu</p>
-                        <p class=""><i class="fas fa-phone mx-2 text-danger bg-white p-2 rounded"></i>9851064265
-                            | 977-1-42458899</p>
-                        <p class=""><i
-                                class="fas fa-envelope mx-2 text-danger bg-white p-2 rounded"></i>basu@bjeducation.com.au
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="shadow p-3 rounded mb-3">
-                        <h3 class="">Birtamod Office</h3>
-                        <p><i class="fa fa-location-arrow mx-2 text-danger bg-white p-2 rounded"></i>Shanischare Road
-                            Chamlagain Complex, 1st Floor</p>
-                        <p class=""><i class="fas fa-phone mx-2 text-danger bg-white p-2 rounded"></i>9842629472
-                            | 023-542953</p>
-                        <p class=""><i
-                                class="fas fa-envelope mx-2 text-danger bg-white p-2 rounded"></i>raj@bjeducation.com.au
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="register-area bg-img pt-130 pb-130 contact-sec">
-            <div class="container">
-                <div class="section-title-2 mb-75 white-text">
-                    <h2>Contact <span>Now</span></h2>
-                </div>
-                <div class="register-wrap">
-                    <div class="row">
-                        <div class="col-lg-10 col-md-8">
-                            <div class="register-form">
-                                <form method="POST" action="{{route('contact.store')}}">
-                                    @csrf
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="contact-form-style mb-20">
-                                                <input name="firstName" placeholder="First Name" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="contact-form-style mb-20">
-                                                <input name="lastName" placeholder="Last Name" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="contact-form-style mb-20">
-                                                <input name="phone" placeholder="Phone" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="contact-form-style mb-20">
-                                                <input name="email" placeholder="Email" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="contact-form-style">
-                                                <textarea name="message" placeholder="Message"></textarea>
-                                                <button class="submit default-btn" type="submit">SUBMIT NOW</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+</div>
+<section class="contact text-center ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--//==Section Heading Start==//-->
+                        <div class="centered-title">
+                            <h2>Contact Info <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
+                            <div class="clear"></div>
                         </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!--//==Section Heading End==//-->
+                <div class="row">
+                    <h1 class="section-header">Contact</h1>
+  
+                    <div class="contact-wrapper">
+                    
+                    <!-- Left contact page --> 
+                      
+                      <form id="contact-form" class="form-horizontal" role="form">
+                         
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                          </div>
+                        </div>
+                  
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                          </div>
+                        </div>
+                  
+                        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                        
+                        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                          <div class="alt-send-button">
+                            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                          </div>
+                        
+                        </button>
+                        
+                      </form>
+                      
+                    <!-- Left contact page --> 
+                      
+                        <div class="direct-contact-container">
+                  
+                          <ul class="contact-list">
+                            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+                            
+                            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+                            
+                            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+                            
+                          </ul>
+                  
+                          <hr>
+                          <ul class="social-media-list">
+                            <li><a href="#" target="_blank" class="contact-icon">
+                              <i class="fa fa-github" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" class="contact-icon">
+                              <i class="fa fa-codepen" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" class="contact-icon">
+                              <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" class="contact-icon">
+                              <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>       
+                          </ul>
+                          <hr>
+                  
+                          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+                  
+                        </div>
+                      
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-    </div>
+</section>
     <!-- Contact Section Start -->
     <div class="py-4">
         <iframe
@@ -126,3 +113,14 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 @endsection
+@push('scripts')
+<script>
+    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+
+</script>
+@endpush

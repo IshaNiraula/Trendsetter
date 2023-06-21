@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMetaTagsTable extends Migration
+class CreateCountersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateMetaTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('meta_tags', function (Blueprint $table) {
+        Schema::create('counters', function (Blueprint $table) {
             $table->id();
+            $table->integer('number');
             $table->string('title');
-            $table->longText('description');
-            $table->string('keywords');
-            $table->string('image');
-            $table->string('page');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateMetaTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('meta_tags');
+        Schema::dropIfExists('counters');
     }
 }

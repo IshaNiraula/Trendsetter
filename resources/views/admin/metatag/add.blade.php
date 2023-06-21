@@ -1,6 +1,4 @@
 @extends('admin.layouts.master')
-
-
 @section('content')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -27,14 +25,11 @@
                             <label for="title">Select Page</label>
                             <select name="page" id="" class="form-control">
                                 <option value="">Select Page</option>
-                                <option value="home_page">Home page</option>
-                                <option value="about_page">About page</option>
-                                <option value="carrier_page">Carrier page</option>
-                                <option value="contact_page">Contact page</option>
-                                <option value="blog_page">Blog page</option>
-                                <option value="service_page">Service page</option>
-                                <option value="gallery_page">Gallery page</option>
-                                <option value="length_converter_page">length converter page</option>
+                                <option value="homePage">Home page</option>
+                                <option value="aboutPage">About page</option>
+                                <option value="contactPage">Contact page</option>
+                                <option value="blogPage">Blog page</option>
+                                <option value="servicePage">Service page</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -57,10 +52,10 @@
                             </span>
                         </div>
                         <div class="form-group">
-                            <label for="title">keywords</label>
-                            <textarea class="form-control" id="tags" placeholder="enter the keywords" name="tags"></textarea>
+                            <label for="keywords">Keywords</label>
+                            <textarea class="form-control" id="keywords" placeholder="enter the keywords" name="keywords"></textarea>
                             <span class="text-danger">
-                                @error('tags')
+                                @error('keywords')
                                     {{ $message }}
                                 @enderror
                             </span>

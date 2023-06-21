@@ -52,7 +52,7 @@ class MetaTagsController extends Controller
             $metaData->title = $request->title;
             $metaData->description = $request->description;
             $metaData->image = $name;
-            $metaData->tags = $request->tags;
+            $metaData->keywords = $request->keywords;
             $metaData->page = $request->page;
             $save_metaData = $metaData->save();
             if($save_metaData){
@@ -109,7 +109,7 @@ class MetaTagsController extends Controller
             $metatag->title = $request->title;
             $metatag->description = $request->description;
             $metatag->image = $name;
-            $metatag->tags = $request->tags;
+            $metatag->keywords = $request->keywords;
             $metatag->page = $request->page;
             $save_metatag = $metatag->save();
             if($save_metatag){
@@ -123,7 +123,7 @@ class MetaTagsController extends Controller
             $metatag->title = $request->title;
             $metatag->description = $request->description;
             $metatag->image = $filename;
-            $metatag->tags = $request->tags;
+            $metatag->keywords = $request->keywords;
             $metatag->page = $request->page;
             $save_metatag = $metatag->save();
             if($save_metatag){

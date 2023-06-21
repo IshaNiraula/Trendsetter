@@ -14,7 +14,7 @@
                                 <span class="icon-bar"></span> 
                                 <span class="icon-bar"></span></button> 
                                 <!-- Logo -->
-                                <a class="navbar-brand" href="index.html">
+                                <a class="navbar-brand" href="{{route('home')}}">
                                 <img class="site_logo" alt="Logo"  src="{{asset('assets/img/logo.jpeg')}}" />
                                 </a>
                             </div>
@@ -22,27 +22,27 @@
                             <div class="navbar-collapse collapse">
                                 <!-- nav -->
                                 <ul class="nav navbar-nav">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="{{route('home')}}">Home</a></li>
                                     <li>
                                         <a href="#">About Us</a>
                                         
                                     </li>
                                     <li>
-                                        <a href="#">Services</a>
+                                        <a href="{{route('service')}}">Services</a>
                                         
                                     </li>
                                     <li>
                                         <a href="#">Projects</a>
                                     </li>
                                     <li>
-                                        <a href="#">blog</a> 
+                                        <a href="{{route('blog')}}">blog</a> 
                                     </li>
                                     <li >
                                         <a href="#">Gallery</a>
                                        
                                     </li>
                                     <li>
-                                        <a href="#">Contact</a>
+                                        <a href="{{route('contact')}}">Contact</a>
                                     </li>
                                 </ul>
                             </div>

@@ -24,6 +24,7 @@ use App\Http\Controllers\MetaTagsController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\VisaController;
+use App\Http\Controllers\CounterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -172,6 +173,14 @@ Route::middleware('isLoggedIn')->name('admin.')->group(function () {
     Route::get('/admin/team/edit/{id}', [TeamController::class, 'edit'])->name('team.edit');
     Route::post('/admin/team/update/{id}', [TeamController::class, 'update'])->name('team.update');
     Route::post('/admin/team/delete/{id}', [TeamController::class, 'destroy'])->name('team.delete');
+
+     //counter
+     Route::get('/admin/counter/list', [CounterController::class, 'index'])->name('counter.list');
+     Route::get('/admin/counter/add', [CounterController::class, 'create'])->name('counter.add');
+     Route::post('/admin/counter/add', [CounterController::class, 'store'])->name('counter.store');
+     Route::get('/admin/counter/edit/{id}', [CounterController::class, 'edit'])->name('counter.edit');
+     Route::post('/admin/counter/update/{id}', [CounterController::class, 'update'])->name('counter.update');
+     Route::post('/admin/counter/delete/{id}', [CounterController::class, 'destroy'])->name('counter.delete');
 
     //career form lists
     Route::get('/admin/career/form/list', [CarrierFormController::class, 'index'])->name('carrier.form.list');
