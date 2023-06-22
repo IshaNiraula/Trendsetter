@@ -593,58 +593,7 @@
         </div>
     </div>
     <!--//=============Projects area End============//-->
-    <!--//=============Product area Start============//-->
-    <div class="wa-product-main home-product grey-bg padTB100">
-        <div class="container">
-            <div class="row">
-                <!--//==Section Heading Start==//-->
-                <div class="col-md-12">
-                    <div class="centered-title">
-                        <h2>Our Products<span class="heading-shapes"><i></i><i></i><i></i></span></h2>
-                        <div class="clear"></div>
-
-                    </div>
-                </div>
-                <!--//==Section Heading End==//-->
-            </div>
-            <div class="row">
-                <div id="shop-carousel" class="carousel-style-1 owl-carousel owl-theme">
-                    <!--//==product Item==//-->
-                    <div class="col-xs-12">
-                        <div class="wa-product">
-                            <div class="wa-product-thumbnail wa-item">
-                                <img src="assets/img/product/img1.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <ul class="wa-product-icon">
-                                            <li><a href="assets/img/product/img1.jpg" class="fancybox"
-                                                    data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                        aria-hidden="true"></i></a></li>
-                                            <li><a href="product-detail-sidebar.html"><i class="fa fa-link"
-                                                        aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wa-product-caption">
-                                <h2>
-                                    <a href="product-detail-sidebar.html">product title here</a>
-                                </h2>
-                                <div class="clear"></div>
-                                <h5>product Category</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--//=============Product area End============//-->
+   
     <!--//=======Our Testimonials Start=======//-->
     <section class="testimonial text-center dark-section padTB100">
         <!--//======= Section Background parallax =======//-->
