@@ -1,31 +1,7 @@
 @extends('client.layouts.master')
-{{-- @push('metaTag')
-    <!-- Primary Meta Tags -->
-    <title>Best Interior Design Company</title>
-    <meta name="title" content="">
-    <meta name="description" content="{{ $metatag->description }}">
-    <meta name="keywords" content="{{ $metatag->keywords }}">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://metatags.io/">
-    <meta property="og:title" content="Meta Tags — Preview, Edit and Generate">
-    <meta property="og:description"
-        content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
-    <meta property="og:image"
-        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://metatags.io/">
-    <meta property="twitter:title" content="Meta Tags — Preview, Edit and Generate">
-    <meta property="twitter:description"
-        content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
-    <meta property="twitter:image"
-        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
-@endpush --}}
 @section('content')
-    <!--//=======Main slider Start=======//-->
+   
     <div class="wa_main_bn_wrap swiper">
         <div id="main-slider" class="owl-carousel owl-theme slider-active swiper-wrapper ">
             @if (isset($sliders))
@@ -54,22 +30,19 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
-    <!--//=======Main slider End=======//-->
-
-    <!--//=======About section Start=======//-->
+    
     <section class="about-section padTB100">
         <div class="container">
             <div class="row">
-                <!--//==Section Heading Start==//-->
+            
                 <div class="centered-title">
                     <div class="col-md-12">
                         <h2>Who We are <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
                         <div class="clear"></div>
-                        <em>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo <br>inventore veritatis et
-                            quasi architecto beatae</em>
+
                     </div>
                 </div>
-                <!--//==Section Heading End==//-->
+    
                 <div class="content-container">
                     <!--about Box-->
                     <div class="about-box">
@@ -77,36 +50,31 @@
                         <div class="about-content">
                             <div class="about">
                                 <div class="clearfix">
-                                    <!--Image Column-->
-                                    <div class="column image-column col-md-6 col-sm-12 col-xs-12">
-                                        <div class="inner">
-                                            <figure><img src="assets/img/all/weare.jpg" alt=""></figure>
-                                        </div>
-                                    </div>
-                                    <!--Content Column-->
-                                    <div class="column content-column col-md-6 col-sm-12 col-xs-12">
-                                        <div class="inner">
-                                            <p>
-                                                It has survived not only five centuries, but also the leap into ele ctronic
-                                                typesetting, remaining essentially un changed The industry's standard dummy
-                                                text ever since doloremque. quis nostrud exercitation oris nisi ut aliquip
-                                                ex ea commodo consequat. Duis aute irure dolo.
-                                            </p>
-                                            <p>
-                                                Fusce fermentum eros at mi varius sagittis. In vel nisi nec mauris blandit
-                                                elementum. Donec in tincidunt est, eget ullamcorper libero. Nulla lacinia
-                                                libero in est vulputate ullamcorper. incididunt ut labore et lorna aliqua.
-                                                Ut enim ad minim veniam, quis nostrud exercitation oris nisi ut aliquip ex
-                                                ea
-                                            </p>
-                                            <p>
-                                                velit turpis, euismod quis sollicitudin nec, ullamcorper porttitor nunc.
-                                                Nullam quis urna ac diam commodo commodo.
-                                            </p>
-                                            <div class="clear"></div>
-                                            <a href="#" class="theme-button marT10">Read more</a>
-                                        </div>
-                                    </div>
+                                    @foreach ($abouts as $about)
+                                        @if (isset($about))
+                                            <!--Image Column-->
+                                            <div class="column image-column col-md-6 col-sm-12 col-xs-12">
+                                                <div class="inner">
+                                                    <figure> <img
+                                                            src="{{ env('APP_URL') . 'uploads/about/' . $about->filename }}"
+                                                            alt="{{ $about->title }}" /></figure>
+                                                </div>
+                                            </div>
+                                            <!--Content Column-->
+                                            <div class="column content-column col-md-6 col-sm-12 col-xs-12">
+                                                <div class="inner">
+                                                    <span>About The Company</span>
+                                                    <h2>{{ $about->title }}</h2>
+                                                    <p>
+                                                        {!! $about->description !!}
+                                                    </p>
+
+                                                    <div class="clear"></div>
+                                                    <a href="{{ route('about') }}" class="theme-button marT10">Read more</a>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
                                     <div class="clear"></div>
                                 </div>
                             </div>
@@ -131,8 +99,7 @@
                     <p class="card-body">Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden
                         herbs.</p>
                 </div>
-                <a href=""
-                    class="theme-button marT10">Read more</a>
+                <a href="" class="theme-button marT10">Read more</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -144,10 +111,9 @@
                     <h2 class="card-title">Du bœuf Burger</h2>
                     <p class="card-body">A beef burger with wholewheat patty, juicy lettuce and a side of gluten free fries
                     </p>
-                    <a href=""
-                    class="theme-button marT10">Read more</a>
+                    <a href="" class="theme-button marT10">Read more</a>
                 </div>
-                
+
             </div>
             <div class="card">
                 <div class="card-image">
@@ -160,8 +126,7 @@
                     <p class="card-body">The traditional French soup made with onions and beef with a dollop of garlic and
                         saffaron mayonise.</p>
                 </div>
-                <div class="card-price"><a href=""
-                    class="theme-button marT10">Read more</a></div>
+                <div class="card-price"><a href="" class="theme-button marT10">Read more</a></div>
             </div>
 
         </div>
@@ -238,11 +203,13 @@
                                                         <div class="clear"></div>
                                                         <div class="wa-team-caption">
                                                             <ul class="wa-team-icon">
-                                                                <li><a href="{{ $team->facebook_link }}" title="facebook">
+                                                                <li><a href="{{ $team->facebook_link }}"
+                                                                        title="facebook">
                                                                         <i class="fab fa-facebook"></i></a></li>
 
-                                                                <li><a href="{{ $team->twitter_link }}" title="twiiter"><i
-                                                                            class="fab fa-twitter"></i></a></li>
+                                                                <li><a href="{{ $team->twitter_link }}"
+                                                                        title="twiiter"><i class="fab fa-twitter"></i></a>
+                                                                </li>
                                                                 <li><a href="{{ $team->linkedin_link }}"
                                                                         title="linkedin"><i
                                                                             class="fab fa-linkedin"></i></a></li>
@@ -272,7 +239,7 @@
     <!--//=======Our Team End=======//-->
     <!--//=========Fun Facts Start=========//-->
     <section class="fun-facts padTB100">
-        <div class="special-style-full special-area-widthfull special-style-dark">
+        <div class="special-style-full special-style-full-1 special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style facts-bg"></div>
         </div>
         <div id="fun-factor" class="fun-fact-section dark-theme-fun-fact">
@@ -281,27 +248,23 @@
                 <h1 class="marB50">&amp; Hire Us Now</h1>
                 <div class="row text-center fact-counter pad-s15">
                     <!--//==Facts Counter Item==//-->
+                    <div class="row">
                     @if (isset($counters))
                         @foreach ($counters as $counter)
-                            <div class="col-xs-12 col-sm-3 col-md-3 marB-s30">
-                                <!-- Icon -->
-                                <span class="top-box icon-box"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                                <div class="single-counter-card count-number padTB40">
-                                    <h1>
-                                        <span class="odometer" data-count="{{ $counter->number }}">0</span>
-                                        <span class="target">+</span>
-                                    </h1>
+                                <div class="col-md-3 col-sm-6 coun">
+                                    <div class="counter">
+                                        <span class="counter-value">{{$counter->number}}</span>
+                                        <h3>{{$counter->title}}</h3>
+                                    </div>
                                 </div>
-                                <!-- Title -->
-                                <h2 class="facts-text">{{ $counter->title }}</h2>
+                                @endforeach
+                                @endif
                             </div>
-                        @endforeach
-                    @endif
                 </div>
             </div>
         </div>
     </section>
-    <!--//=========Fun Facts End=========//-->
+   
     <!--//=============Projects area Start============//-->
     <div class="wa-project-main padTB100">
         <div class="container">
@@ -593,9 +556,9 @@
         </div>
     </div>
     <!--//=============Projects area End============//-->
-   
+
     <!--//=======Our Testimonials Start=======//-->
-    <section class="testimonial text-center dark-section padTB100">
+    <section class="testimonial text-center dark-section padT90">
         <!--//======= Section Background parallax =======//-->
         <div class="special-style-full special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style testimonial-bg"></div>
@@ -638,7 +601,7 @@
     </section>
     <!--//=======Our Testimonials End=======//-->
     <!--//=========Blogs area Start=========//-->
-    <section class="blogs_main padTB100">
+    <section class="blogs_main padB100">
         <div class="container">
             <div class="row">
                 <!--//==Section Heading Start==//-->
@@ -738,3 +701,26 @@
     </section>
     <!--//=========Partners area End=========//-->
 @endsection
+
+@push('scripts')
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+  
+ 
+$(document).ready(function(){
+    $('.counter-value').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 3500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});
+    </script>
+@endpush
+
+

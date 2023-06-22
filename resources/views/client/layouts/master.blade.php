@@ -23,7 +23,7 @@
   
     <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/color.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Modernizer JS -->
     <script src="{{ asset('assets/js/vendor/modernizr-3.11.7.min.js') }}"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -200,6 +200,7 @@
         });
     </script>
   @stack('scripts')
+
 </body>
 
 </html>

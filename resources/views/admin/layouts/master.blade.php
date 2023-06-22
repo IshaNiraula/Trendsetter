@@ -194,20 +194,20 @@
 
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
+                            
                                 <li class="nav-item">
-                                    <a href="{{ route('admin.blog.list') }}" class="nav-link">
+                                    <a href="{{ route('admin.about.list') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>View About us</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('admin.blog.add') }}" class="nav-link">
+                                    <a href="{{ route('admin.about.add') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Add About us</p>
                                     </a>
                                 </li>
-                            </ul>
+                            
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">

@@ -3066,7 +3066,7 @@ ul.breadcrumb i {
     width: 100%;
 }
 .special-style-full {
-    height: 900px;
+    height: 800px;
     overflow: hidden;
     padding: 0;
     position: absolute;
@@ -3075,6 +3075,9 @@ ul.breadcrumb i {
     z-index: 0;
     top: 0;
     left: 0;
+}
+.special-style-full-1{
+    height: 600px;
 }
 .special-style-full:before {
     content: "";
@@ -3413,11 +3416,7 @@ span.countdown-text {
     color: #fff;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.74);
 }
-.carousel,
-.item,
-.active {
-    height: 100%;
-}
+
 .fill {
     width: 100%;
     height: 100%;
@@ -4460,32 +4459,41 @@ ul.inline-1{
 .contact-header {
   color: white;
   position: absolute;
-  top: 120px;
-  left: -40px;
+  top: 10%;
+  left: 0;
 }
 
 .contact-header h1 {
-  font-size: 1.5rem;
+  font-size: 20px;
+  color: #444444;
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 15%;
 }
  
 .contact-info{
     position: relative;
     top: 50%;
     left: 15%;
-    gap: 1rem;
-    display: flex;
+   margin-top: 20px;
 }
 
 .social-bar {
-  position: absolute;
-  bottom: 20px;
-  left: 75px;
-  z-index: 1;
-  width: 100px;
+    position: absolute;
+    bottom: 8%;
+    left: 100px;
+    z-index: 1;
+    width: 100%;
+}
+.social-bar ul li:hover {
+    font-size: 3.4rem;
 }
 
 .social-bar ul {
   list-style-type: none;
+  display: flex;
+    gap: 25px;
 }
 
 .social-bar ul li {
@@ -4496,7 +4504,7 @@ ul.inline-1{
   line-height: 25px;
   text-align: center;
   margin-right: -4px;
-  font-size: 1.2rem;
+  font-size: 3rem;
 }
 
 .header {
@@ -4520,15 +4528,19 @@ ul.inline-1{
     text-align: center;
     padding: 10px 15px;
     color: #444;
-    border: 1px solid black;
    
 }
 
 .address h3,
 .email h3,
 .phone h3 {
-    font-size: 14px;
-  font-weight: 300;
+    font-size: 16px;
+  font-weight: 400;
+}
+.address h3 a,
+.email h3 a,
+.phone h3 a{
+   color: #444;
 }
 
 .address i,
@@ -4562,7 +4574,7 @@ form input {
   line-height: 40px;
   outline: 0;
   border-bottom: 1px solid rgba(68, 68, 68, .3);
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: rgba(68, 68, 68, .8);
 }
 
@@ -4570,7 +4582,7 @@ form textarea {
   border-bottom: 1px solid rgba(68, 68, 68, .3);
   resize: none;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: Lato, sans-serif;
   color: rgba(68, 68, 68, .8);
 }
@@ -4589,6 +4601,9 @@ form button {
   font-size: 1.1rem;
   font-weight: 300;
   outline: none;
+}
+form button:hover {
+    background-color: #097deb;
 }
 
 .contact-form {
@@ -4609,16 +4624,17 @@ body {
   width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 2fr;
+  grid-template-rows: 0.5fr 0.5fr 5fr;
   grid-template-areas:
     "contact-us header header header"
     "contact-us address phone email"
     "contact-us contact-form contact-form contact-form";
-  
+  margin: 50px 0;
 }
 
 .contact-us {
   grid-area: contact-us;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header {
@@ -4640,5 +4656,178 @@ body {
 .contact-form {
   grid-area: contact-form;
 }
-
+.ag-format-container {
+    width: 1142px;
+    margin: 0 auto;
+  }
   
+  .ag-courses_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  
+    padding: 50px 0;
+  }
+  .ag-courses_item {
+    width: 100%;
+    margin: 0 15px 30px;
+    overflow: hidden;
+    border-radius: 28px;
+  }
+  .ag-courses-item_link {
+    display: block;
+    padding: 60px 20px;
+    background-color: #777;
+  
+    overflow: hidden;
+  
+    position: relative;
+  }
+  .ag-courses-item_link:hover,
+  .ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: #FFF;
+  }
+  .ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+  }
+  .ag-courses-item_title {
+    min-height: 87px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-weight: bold;
+   
+    color: #FFF;
+  text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+  .ag-courses-item_title  h1{
+    font-size: 50px;
+  }
+  .ag-courses-item_date-box {
+    
+    color: #FFF;
+  text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+  .ag-courses-item_date-box h4{
+    font-size: 24px;
+  }
+  .ag-courses-item_date {
+    font-weight: bold;
+    color: #0cad75;
+  
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease
+  }
+  .ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #0cad75;
+  
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+  
+    border-radius: 50%;
+  
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  
+  @media only screen and (max-width: 979px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+    }
+    .ag-courses-item_title {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+  
+  }
+  @media only screen and (max-width: 639px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+    .ag-courses-item_title {
+      min-height: 72px;
+      line-height: 1;
+  
+      font-size: 24px;
+    }
+    .ag-courses-item_link {
+      padding: 22px 40px;
+    }
+    .ag-courses-item_date-box {
+      font-size: 16px;
+    }
+  }
+  
+  .counter{
+    color: #628900;
+    background: linear-gradient(to bottom, #628900 49%, transparent 50%);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    padding: 25px 15px 35px;
+    margin: 0 auto;
+    border: 18px solid #628900;
+    border-radius: 100% 100%;
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.3);
+}
+.counter .counter-value{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    display: block;
+    margin: 0 0 45px;
+}
+.counter h3{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+.counter.red{
+    color: #e3213c;
+    background: linear-gradient(to bottom, #e3213c 49%, transparent 50%);
+    border-color: #e3213c;
+}
+.counter.orange{
+    color: #fb8603;
+    background: linear-gradient(to bottom, #fb8603 49%, transparent 50%);
+    border-color: #fb8603;
+}
+.counter.blue{
+    color: #1f8bc1;
+    background: linear-gradient(to bottom, #1f8bc1 49%, transparent 50%);
+    border-color: #1f8bc1;
+}
+@media screen and (max-width:990px) {
+    .counter{ margin-bottom: 40px; }
+}
+
+.coun{
+    display: flex;
+    flex-direction: row;
+}

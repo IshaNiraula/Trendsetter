@@ -25,6 +25,7 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\VisaController;
 use App\Http\Controllers\CounterController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -174,13 +175,13 @@ Route::middleware('isLoggedIn')->name('admin.')->group(function () {
     Route::post('/admin/team/update/{id}', [TeamController::class, 'update'])->name('team.update');
     Route::post('/admin/team/delete/{id}', [TeamController::class, 'destroy'])->name('team.delete');
 
-     //counter
-     Route::get('/admin/counter/list', [CounterController::class, 'index'])->name('counter.list');
-     Route::get('/admin/counter/add', [CounterController::class, 'create'])->name('counter.add');
-     Route::post('/admin/counter/add', [CounterController::class, 'store'])->name('counter.store');
-     Route::get('/admin/counter/edit/{id}', [CounterController::class, 'edit'])->name('counter.edit');
-     Route::post('/admin/counter/update/{id}', [CounterController::class, 'update'])->name('counter.update');
-     Route::post('/admin/counter/delete/{id}', [CounterController::class, 'destroy'])->name('counter.delete');
+    //counter
+    Route::get('/admin/counter/list', [CounterController::class, 'index'])->name('counter.list');
+    Route::get('/admin/counter/add', [CounterController::class, 'create'])->name('counter.add');
+    Route::post('/admin/counter/add', [CounterController::class, 'store'])->name('counter.store');
+    Route::get('/admin/counter/edit/{id}', [CounterController::class, 'edit'])->name('counter.edit');
+    Route::post('/admin/counter/update/{id}', [CounterController::class, 'update'])->name('counter.update');
+    Route::post('/admin/counter/delete/{id}', [CounterController::class, 'destroy'])->name('counter.delete');
 
     //career form lists
     Route::get('/admin/career/form/list', [CarrierFormController::class, 'index'])->name('carrier.form.list');
@@ -198,7 +199,16 @@ Route::middleware('isLoggedIn')->name('admin.')->group(function () {
     Route::post('/admin/metatag/update/{id}', [MetaTagsController::class, 'update'])->name('metatag.update');
     Route::post('/admin/metatag/delete/{id}', [MetaTagsController::class, 'destroy'])->name('metatag.delete');
 
-    //metatags
+    //about
+    Route::get('/admin/about/list', [AboutController::class, 'index'])->name('about.list');
+    Route::get('/admin/about/add', [AboutController::class, 'create'])->name('about.add');
+    Route::post('/admin/about/add', [AboutController::class, 'store'])->name('about.store');
+    Route::get('/admin/about/edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
+    Route::post('/admin/about/update/{id}', [AboutController::class, 'update'])->name('about.update');
+    Route::post('/admin/about/delete/{id}', [AboutController::class, 'destroy'])->name('about.delete');
+    Route::post('/upload_about_editor_image', [AboutController::class, 'aboutEditorUpload'])->name('about.editor.upload');
+
+    //partner
     Route::get('/admin/partner/list', [PartnerController::class, 'index'])->name('partner.list');
     Route::get('/admin/partner/add', [PartnerController::class, 'create'])->name('partner.add');
     Route::post('/admin/partner/add', [PartnerController::class, 'store'])->name('partner.store');

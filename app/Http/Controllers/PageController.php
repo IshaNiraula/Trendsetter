@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Slider;
 use App\Models\Gallery;
+use App\Models\About;
 use App\Models\Service;
 use App\Models\Blog;
 use App\Models\ProjectCat;
@@ -36,9 +37,10 @@ class PageController extends Controller
         $partners = Partner::all();
         $events = Event::all();
         $teams = Team::all();
+        $abouts = About::all();
         $counters = Counter::all();
         $metatag = MetaTags::where('page','home_page')->get()->first();
-        return view('client.index')->with(['sliders'=> $sliders,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'projects'=>$projects,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
+        return view('client.index')->with(['sliders'=> $sliders,'abouts'=>$abouts,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'projects'=>$projects,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
     }
 
     public function loginPage () {
@@ -115,10 +117,12 @@ class PageController extends Controller
     }
 
     public function aboutPage () {
+        $abouts = About::all();
         $teams = Team::all();
         $testimonials = Testimonial::all();
+        $partners = Partner::all();
         $metatag = MetaTags::where('page','about_page')->get()->first();
-        return view('client.about',compact('teams','metatag','testimonials'));
+        return view('client.about',compact('teams','metatag','testimonials','abouts','partners'));
     }
 
     public function contactPage() {
