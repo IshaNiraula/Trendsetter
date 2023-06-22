@@ -117,6 +117,55 @@
         </div>
     </section>
     <!--//=======About section End=======//-->
+
+    <section class="service-try">
+        <div class="container">
+            <div class="card">
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1604135307399-86c6ce0aba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80">
+                </div>
+                <div class="card-text">
+                    <p class="card-meal-type">Breakfast/Eggs</p>
+                    <h2 class="card-title">Délicieux Bénédicte</h2>
+                    <p class="card-body">Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden
+                        herbs.</p>
+                </div>
+                <a href=""
+                    class="theme-button marT10">Read more</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1551782450-17144efb9c50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1769&q=80">
+                </div>
+                <div class="card-text">
+                    <p class="card-meal-type">Lunch/Meat</p>
+                    <h2 class="card-title">Du bœuf Burger</h2>
+                    <p class="card-body">A beef burger with wholewheat patty, juicy lettuce and a side of gluten free fries
+                    </p>
+                    <a href=""
+                    class="theme-button marT10">Read more</a>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1635146037526-a75e6905ad78?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1834&q=80">
+                </div>
+                <div class="card-text">
+                    <p class="card-meal-type">Soups/Meat</p>
+                    <h2 class="card-title">Soupe à l’oignon</h2>
+                    <p class="card-body">The traditional French soup made with onions and beef with a dollop of garlic and
+                        saffaron mayonise.</p>
+                </div>
+                <div class="card-price"><a href=""
+                    class="theme-button marT10">Read more</a></div>
+            </div>
+
+        </div>
+    </section>
     <!--//=============Services Start============//-->
     <section class="services padB100 text-center">
         <div class="container">
@@ -189,14 +238,15 @@
                                                         <div class="clear"></div>
                                                         <div class="wa-team-caption">
                                                             <ul class="wa-team-icon">
-                                                                <li><a href="{{ $team->facebook_link }}" title="facebook"><i
-                                                                            class="fa-brands fa-facebook"></i></a></li>
+                                                                <li><a href="{{ $team->facebook_link }}" title="facebook">
+                                                                        <i class="fab fa-facebook"></i></a></li>
+
                                                                 <li><a href="{{ $team->twitter_link }}" title="twiiter"><i
-                                                                            class="fa-brands fa-twitter"></i></a></li>
-                                                                <li><a href="{{ $team->linkedin_link }}" title="linkedin"><i
-                                                                            class="fa-brands fa-linkedin"></i></a></li>
-                                                                <li><a href="{{ $team->insta_link }}" title="instagram"><i
-                                                                            class="fa-brands fa-instagram"></i></a></li>
+                                                                            class="fab fa-twitter"></i></a></li>
+                                                                <li><a href="{{ $team->linkedin_link }}"
+                                                                        title="linkedin"><i
+                                                                            class="fab fa-linkedin"></i></a></li>
+
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -588,7 +638,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                     <div class="clear"></div>
                 </div>
             </div>
@@ -654,34 +704,40 @@
                 <div class="col-md-12">
                     <div class="row">
                         @if (isset($blogs))
-                        @foreach ($blogs as $blog)
-                        <div class="home-blog-item">
-                            <div class="col-md-4 col-sm-6">
-                                <div class="wa-theme-design-block">
-                                    <figure class="dark-theme">
-                                        <img src="{{ asset(env('APP_URL') . 'uploads/blog/' . $blog->filename) }}" alt="{{ $blog->title }}">
-                                        <span class="hover-style"></span>
-                                    </figure>
-                                    <div class="block-caption">
-                                        <h4><a href="{{ route('blog.show', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a></h4>
-                                        <div class="meta-block">
-                                            <ul class="inline">
-                                                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>
-                                                        admin</a></li>
-                                                <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    {{ $blog->created_at->toFormattedDateString() }}</a></li>
-                                            </ul>
+                            @foreach ($blogs as $blog)
+                                <div class="home-blog-item">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="wa-theme-design-block">
+                                            <figure class="dark-theme">
+                                                <img src="{{ asset(env('APP_URL') . 'uploads/blog/' . $blog->filename) }}"
+                                                    alt="{{ $blog->title }}">
+                                                <span class="hover-style"></span>
+                                            </figure>
+                                            <div class="block-caption">
+                                                <h4><a
+                                                        href="{{ route('blog.show', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a>
+                                                </h4>
+                                                <div class="meta-block">
+                                                    <ul class="inline">
+                                                        <li><a href="#"><i class="fa fa-user"
+                                                                    aria-hidden="true"></i>
+                                                                admin</a></li>
+                                                        <li><a href="#"><i class="fa fa-calendar"
+                                                                    aria-hidden="true"></i>
+                                                                {{ $blog->created_at->toFormattedDateString() }}</a></li>
+                                                    </ul>
+                                                </div>
+                                                <p>
+                                                    {!! Str::words($blog->description, 18, ' ...') !!}
+                                                </p>
+                                                <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"
+                                                    class="theme-button ">READ MORE</a>
+                                            </div>
                                         </div>
-                                        <p>
-                                            {!! Str::words($blog->description, 18, ' ...') !!}
-                                        </p>
-                                        <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}" class="theme-button ">READ MORE</a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                       @endforeach
-                       @endif
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>
@@ -724,12 +780,12 @@
                                                 </div>
                                             </div>
                                         @endforeach
-                                        @endif
-                                    </div>
-                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     </section>
     <!--//=========Partners area End=========//-->
 @endsection

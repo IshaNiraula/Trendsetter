@@ -19,14 +19,14 @@
 </head>
 
 <body>
-    {{-- <div>
+    <div>
         <h1>Submitted details</h1>
-        <p>First Name : {{ $mailData['fname'] }}</p>
-        <p>Last Name : {{ $mailData['lname'] }}</p>
-        <p>Phone : {{ $mailData['phone'] }}</p>
+        <p>Name : {{ $mailData['name'] }}</p>
         <p>Email : {{ $mailData['email'] }}</p>
+        <p>Phone : {{ $mailData['phone'] }}</p>
+        <p>Subject : {{ $mailData['subject'] }}</p>
         <p>Message : {{ $mailData['message'] }}</p>
-    </div> --}}
+    </div>
 </body>
 
 </html>

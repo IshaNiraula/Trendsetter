@@ -35,8 +35,7 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone</th>
-                                        <th>Location</th>
-                                        <th>Area</th>
+                                        <th>Subject</th>
                                         <th>Message</th>
                                         <th>Actions</th>
                                     </tr>
@@ -45,11 +44,10 @@
                                     <tbody>
                                         <tr>
                                             <td>{{ $form->id }}</td>
-                                            <td>{{ $form->fullname }}</td>
+                                            <td>{{ $form->name }}</td>
                                             <td>{{ $form->email }}</td>
-                                            <td>{{ $form->telephone }}</td>
-                                            <td>{{ $form->location }}</td>
-                                            <td>{{ $form->area }}</td>
+                                            <td>{{ $form->phone }}</td>
+                                            <td>{{ $form->subject }}</td>
                                             <td>{{ $form->message }}</td>
                                             <td class="d_flex">
                                                 <form method="post" action="{{route('admin.contact.delete',['id'=>$form->id])}}">

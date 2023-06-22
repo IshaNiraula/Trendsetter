@@ -39,8 +39,8 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'firstName' => 'required',
-            'lastName' => 'required',
+            'name' => 'required',
+            'subject' => 'required',
             'email' => 'required|email',
             'phone'=>'required',
             'message' => 'required',
@@ -48,17 +48,18 @@ class ContactController extends Controller
         ]);
 
         $contact = new Contact();
-        $contact->firstName = $request->firstName;
-        $contact->lastName = $request->lastName;
+        $contact->name = $request->name;
+        $contact->subject = $request->subject;
         $contact->email = $request->email;
         $contact->phone = $request->phone;
         $contact->message = $request->message;
         $data_save = $contact->save();
         if($data_save){
                $mailData = [
+                'name'=> $request->name, 
                 'email' => $request->email,
-                'fullname'=> $request->firstName . " " . $request->lastName, 
                 'phone'=> $request->phone,
+                'subject'=> $request->subject,
                 'message'=> $request->message,
             ];
           Mail::to("isha.dt23@gmail.com")->send(new ContactMail($mailData));

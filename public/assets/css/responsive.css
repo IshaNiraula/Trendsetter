@@ -434,4 +434,8 @@
     .wa_main_bn_wrap .owl-theme .owl-pagination {
         bottom: 10px;
     }
+    .wa-theme-design-block {
+        width: 100%;
+       
+    }
 }
