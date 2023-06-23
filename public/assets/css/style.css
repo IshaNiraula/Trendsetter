@@ -4360,62 +4360,48 @@ ul.inline-1{
     object-fit: cover;
 }
 
-  .service-try .container{
-    width:100vw;
-    display:flex;
-    justify-content:space-around;
-    flex-wrap:wrap;
-    padding:40px 20px;
-  }
-  .service-try .card{
+  .services .card{
     display:flex;
     flex-direction:column;
     width:400px;
     margin-bottom:60px;
   }
-  .service-try .card>div{
+  .services .card>div{
     box-shadow:0 15px 20px 0 rgba(0,0,0,0.5);
   }
-  .service-try .card-image{
+  .services .card-image{
     width:400px;
     height:250px;
   }
-  .service-try .card-image>img{
+  .services .card-image>img{
     width:100%;
     height:100%;
     object-fit:cover;
     object-position:bottom;
   }
-  .service-try .card-text{
+  .services .card-text{
     margin:-30px auto;
     margin-bottom:-50px;
     height:300px;
     width:300px;
-    background-color:#1D1C20;
-    color:#fff;
+    background-color:#f8f8f8;
+    color:#000;
     padding:20px;
   }
-  .service-try .card-meal-type{
+  .services .card-meal-type{
     font-style:italic;
   }
-  .service-try .card-title{
+  .services .card-title{
     font-size:2.2rem;
     margin-bottom:20px;
     margin-top:5px;
+   
   }
-  .service-try .card-body{
+  .services .card-title a{
+    color: #000;
+  }
+  .services .card-body{
     font-size:1.25rem;
-  }
-  .service-try .card-price{
-    width:100px;
-    height:100px;
-    background-color:#970C0A;
-    color:#fff;
-    margin-left:auto;
-    font-size:2rem;
-    display:flex;
-    justify-content:center;
-    align-items:center;
   }
 
 
@@ -4433,6 +4419,9 @@ ul.inline-1{
   overflow: hidden;
 }
 
+.services .card-title a:hover{
+    color: #dca44b;
+}
 
 .contact-us:before {
   position: absolute;

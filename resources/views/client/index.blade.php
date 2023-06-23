@@ -86,93 +86,40 @@
     </section>
     <!--//=======About section End=======//-->
 
-    <section class="service-try">
-        <div class="container">
-            <div class="card">
-                <div class="card-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1604135307399-86c6ce0aba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80">
-                </div>
-                <div class="card-text">
-                    <p class="card-meal-type">Breakfast/Eggs</p>
-                    <h2 class="card-title">Délicieux Bénédicte</h2>
-                    <p class="card-body">Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden
-                        herbs.</p>
-                </div>
-                <a href="" class="theme-button marT10">Read more</a>
-            </div>
-            <div class="card">
-                <div class="card-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1551782450-17144efb9c50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1769&q=80">
-                </div>
-                <div class="card-text">
-                    <p class="card-meal-type">Lunch/Meat</p>
-                    <h2 class="card-title">Du bœuf Burger</h2>
-                    <p class="card-body">A beef burger with wholewheat patty, juicy lettuce and a side of gluten free fries
-                    </p>
-                    <a href="" class="theme-button marT10">Read more</a>
-                </div>
-
-            </div>
-            <div class="card">
-                <div class="card-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1635146037526-a75e6905ad78?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1834&q=80">
-                </div>
-                <div class="card-text">
-                    <p class="card-meal-type">Soups/Meat</p>
-                    <h2 class="card-title">Soupe à l’oignon</h2>
-                    <p class="card-body">The traditional French soup made with onions and beef with a dollop of garlic and
-                        saffaron mayonise.</p>
-                </div>
-                <div class="card-price"><a href="" class="theme-button marT10">Read more</a></div>
-            </div>
-
-        </div>
-    </section>
     <!--//=============Services Start============//-->
     <section class="services padB100 text-center">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!--//==Section Heading Start==//-->
-                            <div class="centered-title">
-                                <h2>Our Services <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
+            <!--//==Section Heading Start==//-->
+            <div class="centered-title">
+                <h2>Our Services <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+       
+        <!--//==Section Heading End==//-->
+        <div class="row">
+            <!--//==Services Item Start==//-->
+            @foreach ($services as $service)
+                <div class="card-wrapper col-lg-4 col-md-6 col-12 padB60">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h2 class="card-title"><a
+                                    href="{{ route('service.show', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
+                            </h2>
+                            <p class="card-body">{!! Str::words($service->description, 15, ' ...') !!}</p>
+                            <a href="{{ route('service.show', ['slug' => $service->slug]) }}"
+                                class="theme-button marT10">Read more</a>
                         </div>
                     </div>
-                    <div class="clear"></div>
-                    <!--//==Section Heading End==//-->
-                    <div class="row">
-                        <!--//==Services Item Start==//-->
-                        @foreach ($services as $service)
-                            <div class="col-md-3 col-sm-6">
-                                <div class="wa-box-style2 grey-bg">
-                                    <div class="img">
-                                        <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
-                                            alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h4><a href="service-detail.html">{{ $service->title }}</a></h4>
-                                        <p>{!! Str::words($service->description, 15, ' ...') !!}</p>
-                                        <a href="{{ route('service.show', ['slug' => $service->slug]) }}"
-                                            class="theme-button marT10">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                        <!--//==Services Item End==//-->
-
-                    </div>
                 </div>
-            </div>
+            @endforeach
+        </div>
         </div>
     </section>
+
     <!--//=============Services End============//-->
     <!--//=======Our Team Start=======//-->
     <div class="our-team-main padB100">
@@ -193,7 +140,7 @@
                         @if (isset($teams))
                             @foreach ($teams as $team)
                                 <div class="col-md-3 col-sm-6">
-                                    <div class="latest-team-item animate__animated animate__flipInX">
+                                    <div class="latest-team-item " data-aos="flip-left">
                                         <div class="wa-team">
                                             <div class="wa-team-thumbnail item our-team-item wa-item">
                                                 <img src="{{ env('APP_URL') . 'uploads/team/' . $team->image }}"
@@ -203,16 +150,15 @@
                                                         <div class="clear"></div>
                                                         <div class="wa-team-caption">
                                                             <ul class="wa-team-icon">
-                                                                <li><a href="{{ $team->facebook_link }}"
-                                                                        title="facebook">
+                                                                <li><a href="{{ $team->facebook_link }}" title="facebook">
                                                                         <i class="fab fa-facebook"></i></a></li>
 
-                                                                <li><a href="{{ $team->twitter_link }}"
-                                                                        title="twiiter"><i class="fab fa-twitter"></i></a>
+                                                                <li><a href="{{ $team->twitter_link }}" title="twiiter"><i
+                                                                            class="fab fa-twitter"></i></a>
                                                                 </li>
                                                                 <li><a href="{{ $team->linkedin_link }}"
-                                                                        title="linkedin"><i
-                                                                            class="fab fa-linkedin"></i></a></li>
+                                                                        title="linkedin"><i class="fab fa-linkedin"></i></a>
+                                                                </li>
 
                                                             </ul>
                                                         </div>
@@ -251,14 +197,14 @@
                     <div class="row">
                         @if (isset($counters))
                             @foreach ($counters as $counter)
-                                <div class="col-md-3 col-sm-6 coun">
-                                    <div class="counter animate__animated animate__fadeInUp"
+                                <div class="col-md-3 col-sm-6 coun" data-aos="zoom-in">
+                                    <div class="counter"
                                         style="border: 18px solid {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }};
                                             color: {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }};
                                             background: linear-gradient(to bottom, {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }} 49%, transparent 50%);">
                                         <span class="counter-value">{{ $counter->number }}</span>
                                         <h3>{{ $counter->title }}</h3>
-                                       
+
                                     </div>
                                 </div>
                             @endforeach
@@ -267,10 +213,10 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-        
+
+
+
+
     </section>
 
     <!--//=============Projects area Start============//-->

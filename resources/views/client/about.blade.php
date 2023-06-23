@@ -86,11 +86,11 @@
                 </div>
                 <!--//==Section Heading End==//-->
                 <div class="col-md-12">
-                    <div class="row">
+                    <div class="row" >
                         <!--//==Team Item==//-->
                         @if (isset($teams))
                             @foreach ($teams as $team)
-                                <div class="col-md-3 col-sm-6">
+                                <div class="col-md-3 col-sm-6" data-aos="flip-left">
                                     <div class="latest-team-item">
                                         <div class="wa-team">
                                             <div class="wa-team-thumbnail item our-team-item wa-item">
@@ -183,14 +183,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="centered-title">
-                        <h2>FREQUENTLY ASKED QUESTIONS <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
+                        <h2>FREQUENTLY ASKED QUESTIONS. <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
                         <div class="clear"></div>
 
                     </div>
                 </div>
             </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingOne">
@@ -212,9 +212,50 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Section 1
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                    aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur
+                                            erat
+                                            libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet
+                                            lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Section 1
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                    aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur
+                                            erat
+                                            libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet
+                                            lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        
+                       
                     </div>
+                   
                 </div>
             </div>
         </div>
