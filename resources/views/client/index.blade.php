@@ -1,7 +1,7 @@
 @extends('client.layouts.master')
 
 @section('content')
-   
+
     <div class="wa_main_bn_wrap swiper">
         <div id="main-slider" class="owl-carousel owl-theme slider-active swiper-wrapper ">
             @if (isset($sliders))
@@ -30,11 +30,11 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
-    
+
     <section class="about-section padTB100">
         <div class="container">
             <div class="row">
-            
+
                 <div class="centered-title">
                     <div class="col-md-12">
                         <h2>Who We are <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
@@ -42,7 +42,7 @@
 
                     </div>
                 </div>
-    
+
                 <div class="content-container">
                     <!--about Box-->
                     <div class="about-box">
@@ -193,7 +193,7 @@
                         @if (isset($teams))
                             @foreach ($teams as $team)
                                 <div class="col-md-3 col-sm-6">
-                                    <div class="latest-team-item">
+                                    <div class="latest-team-item animate__animated animate__flipInX">
                                         <div class="wa-team">
                                             <div class="wa-team-thumbnail item our-team-item wa-item">
                                                 <img src="{{ env('APP_URL') . 'uploads/team/' . $team->image }}"
@@ -249,22 +249,30 @@
                 <div class="row text-center fact-counter pad-s15">
                     <!--//==Facts Counter Item==//-->
                     <div class="row">
-                    @if (isset($counters))
-                        @foreach ($counters as $counter)
+                        @if (isset($counters))
+                            @foreach ($counters as $counter)
                                 <div class="col-md-3 col-sm-6 coun">
-                                    <div class="counter">
-                                        <span class="counter-value">{{$counter->number}}</span>
-                                        <h3>{{$counter->title}}</h3>
+                                    <div class="counter animate__animated animate__fadeInUp"
+                                        style="border: 18px solid {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }};
+                                            color: {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }};
+                                            background: linear-gradient(to bottom, {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }} 49%, transparent 50%);">
+                                        <span class="counter-value">{{ $counter->number }}</span>
+                                        <h3>{{ $counter->title }}</h3>
+                                       
                                     </div>
                                 </div>
-                                @endforeach
-                                @endif
-                            </div>
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
+        
+        
+        
+        
     </section>
-   
+
     <!--//=============Projects area Start============//-->
     <div class="wa-project-main padTB100">
         <div class="container">
@@ -705,22 +713,18 @@
 @push('scripts')
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>
-  
- 
-$(document).ready(function(){
-    $('.counter-value').each(function(){
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        },{
-            duration: 3500,
-            easing: 'swing',
-            step: function (now){
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-});
+        $(document).ready(function() {
+            $('.counter-value').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 3500,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        });
     </script>
 @endpush
-
-

@@ -183,7 +183,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="centered-title">
-                        <h2>Our Partners <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
+                        <h2>FREQUENTLY ASKED QUESTIONS <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
                         <div class="clear"></div>
 
                     </div>

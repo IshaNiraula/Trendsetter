@@ -44,7 +44,9 @@
                 <input type="text" placeholder="Phone" name="phone" required>
                 <input type="text" placeholder="Subject" name="subject" required>
                 <textarea rows="4" placeholder="Message" name="message" required></textarea>
+                <div class="buttons">
                 <button type="submit">SEND  <i class="fas fa-arrow-right"></i></button>
+            </div>
             </form>
         </div>
 

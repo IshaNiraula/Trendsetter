@@ -4579,23 +4579,24 @@ form input {
 }
 
 form textarea {
-  border-bottom: 1px solid rgba(68, 68, 68, .3);
+    border: 1px solid #eee;
   resize: none;
   outline: none;
   font-size: 1.3rem;
   font-family: Lato, sans-serif;
   color: rgba(68, 68, 68, .8);
 }
+.contact-form .buttons{
+    display: flex;
+    justify-content: end;
+}
 
 form button {
-  position: absolute;
   display: block;
   height: 40px;
   width: 250px;
-  left: 95px;
   border: 0;
   border-radius: 20px;
-  bottom: -20px;
   background: #9ED8EB;
   color: white;
   font-size: 1.1rem;
