@@ -121,8 +121,9 @@ class PageController extends Controller
         $teams = Team::all();
         $testimonials = Testimonial::all();
         $partners = Partner::all();
+        $faqs = Faq::orderBy('updated_at','desc')->get();
         $metatag = MetaTags::where('page','about_page')->get()->first();
-        return view('client.about',compact('teams','metatag','testimonials','abouts','partners'));
+        return view('client.about',compact('teams','metatag','testimonials','abouts','partners','faqs'));
     }
 
     public function contactPage() {

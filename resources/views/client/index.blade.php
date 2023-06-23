@@ -95,28 +95,29 @@
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
-       
-        <!--//==Section Heading End==//-->
-        <div class="row">
-            <!--//==Services Item Start==//-->
-            @foreach ($services as $service)
-                <div class="card-wrapper col-lg-4 col-md-6 col-12 padB60">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}" alt="">
-                        </div>
-                        <div class="card-text">
-                            <h2 class="card-title"><a
-                                    href="{{ route('service.show', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
-                            </h2>
-                            <p class="card-body">{!! Str::words($service->description, 15, ' ...') !!}</p>
-                            <a href="{{ route('service.show', ['slug' => $service->slug]) }}"
-                                class="theme-button marT10">Read more</a>
+
+            <!--//==Section Heading End==//-->
+            <div class="row gap-4">
+                <!--//==Services Item Start==//-->
+                @foreach ($services as $service)
+                    <div class="card-wrapper col-lg-4 col-md-6 col-12 padB60">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h2 class="card-title"><a
+                                        href="{{ route('service.show', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
+                                </h2>
+                                <p class="card-body">{!! Str::words($service->description, 15, ' ...') !!}</p>
+                                <a href="{{ route('service.show', ['slug' => $service->slug]) }}"
+                                    class="theme-button marT10">Read more</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+
         </div>
     </section>
 
@@ -190,8 +191,7 @@
         </div>
         <div id="fun-factor" class="fun-fact-section dark-theme-fun-fact">
             <div class="container text-center">
-                <h3 class="marB10">Check Out Our Awesome Statistics Till Now!</h3>
-                <h1 class="marB50">&amp; Hire Us Now</h1>
+                <h3 class="marB80">Check Out Our Awesome Statistics Till Now!</h3>
                 <div class="row text-center fact-counter pad-s15">
                     <!--//==Facts Counter Item==//-->
                     <div class="row">
@@ -594,7 +594,7 @@
                                                     </ul>
                                                 </div>
                                                 <p>
-                                                    {!! Str::words($blog->description, 18, ' ...') !!}
+                                                    {!! Str::words($blog->description, 15, ' ...') !!}
                                                 </p>
                                                 <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"
                                                     class="theme-button ">READ MORE</a>
@@ -654,6 +654,45 @@
         </div>
     </section>
     <!--//=========Partners area End=========//-->
+    <section class="faqs padB100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="centered-title">
+                        <h2>FREQUENTLY ASKED QUESTIONS. <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
+                        <div class="clear"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        @foreach($faqs as $faq)
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading{{$loop->iteration}}">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                        href="#collapse{{$loop->iteration}}" aria-expanded="true" aria-controls="collapse{{$loop->iteration}}">
+                                      {{$faq->question}}
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse{{$loop->iteration}}" class="panel-collapse collapse in" role="tabpanel"
+                                aria-labelledby="heading{{$loop->iteration}}">
+                                <div class="panel-body">
+                                    <p>{{$faq->answer}} </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
 @endsection
 
 @push('scripts')
@@ -673,4 +712,5 @@
             });
         });
     </script>
+   
 @endpush

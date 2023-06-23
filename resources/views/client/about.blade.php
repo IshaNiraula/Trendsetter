@@ -12,9 +12,8 @@
                     <div class="breadcrumb-box">
                         <ul class="breadcrumb">
                             <li>
-                                <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                                <a href="{{route('home')}}"><i class="fa fa-home" aria-hidden="true"></i></a>
                             </li>
-                            <li class="active">About Us</li>
                         </ul>
                     </div>
                 </div>
@@ -192,66 +191,24 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            @foreach($faqs as $faq)
                             <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
+                                <div class="panel-heading" role="tab" id="heading{{$loop->iteration}}">
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Section 1
+                                            href="#collapse{{$loop->iteration}}" aria-expanded="true" aria-controls="collapse{{$loop->iteration}}">
+                                          {{$faq->question}}
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                                    aria-labelledby="headingOne">
+                                <div id="collapse{{$loop->iteration}}" class="panel-collapse collapse in" role="tabpanel"
+                                    aria-labelledby="heading{{$loop->iteration}}">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur
-                                            erat
-                                            libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet
-                                            lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                        <p>{{$faq->answer}} </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Section 1
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                                    aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur
-                                            erat
-                                            libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet
-                                            lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Section 1
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                                    aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur
-                                            erat
-                                            libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet
-                                            lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
-                                    </div>
-                                </div>
-                            </div>
+                        @endforeach
                         </div>
                        
                     </div>
