@@ -105,7 +105,7 @@
                             <div class="card-image">
                                 <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}" alt="">
                             </div>
-                            <div class="card-text">
+                            <div class="card-text" data-aos="zoom-out-up">
                                 <h2 class="card-title"><a
                                         href="{{ route('service.show', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
                                 </h2>
@@ -219,294 +219,44 @@
 
     </section>
 
-    <!--//=============Projects area Start============//-->
-    <div class="wa-project-main padTB100">
+    <!--//=============Gallery area Start============//-->
+    <div class="rs-gallery padTB100">
         <div class="container">
             <div class="row">
                 <!--//==Section Heading Start==//-->
                 <div class="col-md-12">
                     <div class="centered-title">
-                        <h2>Our Projects<span class="heading-shapes"><i></i><i></i><i></i></span></h2>
+                        <h2>Gallery<span class="heading-shapes"><i></i><i></i><i></i></span></h2>
                         <div class="clear"></div>
 
                     </div>
                 </div>
-                <!--//==Section Heading End==//-->
-                <div class="col-md-12">
-                    <!--//==Filter Button Start==//-->
-                    <div class="controls text-center padB30">
-                        <a class="filter-1 filter-tab active" data-filter="all">All</a>
-                        <a class="filter-1 filter-tab" data-filter=".cat1">Category1</a>
-                        <a class="filter-1 filter-tab" data-filter=".cat2">Category2</a>
-                        <a class="filter-1 filter-tab" data-filter=".cat3">Category3</a>
-                        <a class="filter-1 filter-tab" data-filter=".cat4">Category4</a>
-                    </div>
-                </div>
             </div>
-            <div class="row" id="MixItUp1">
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat1 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img1.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img1.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
+            @if (count($galleries) == 0)
+                <div class="intro">
+                    <h1 class="text-danger fw-bold">there is no any gallery yet.</h1>
+                </div>
+            @elseif(count($galleries) > 0)
+                <div class="row">
+                    @foreach ($galleries as $gallerie)
+                    <div class="col-lg-4 col-md-6 padT30">
+                        <div class="gallery-item">
+                            <img style="object-fit: cover;"
+                                    src="{{ asset(env('APP_URL') . 'uploads/gallery/cover/' . $gallerie->cover_image) }}"
+                                    alt="{{ $gallerie->title }}" class=" rounded w-100" />
+                            <div class="gallery-desc">
+                                <h3><a href="#">{{ $gallerie->title }}</a></h3>
+                               
+                                <a class="image-popup" href="{{ route('gallery.show', ['slug' => $gallerie->slug]) }}"
+                                    class="btn btn-primary">View images</a>
+                             
                             </div>
                         </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
                     </div>
+                    @endforeach
                 </div>
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat4 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img2.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img2.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat2 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img3.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img3.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat3 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img4.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img4.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat2 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img5.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img5.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat1 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img6.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img6.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat3 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img7.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img7.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat4 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img8.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img8.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--//==project Item==//-->
-                <div
-                    class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 cat4 mix">
-                    <div class="wa-project">
-                        <div class="wa-project-thumbnail wa-item">
-                            <img src="assets/img/project/img9.jpg" alt="">
-                            <div class="caption">
-                                <div class="caption-text">
-                                    <ul class="wa-project-icon">
-                                        <li><a href="assets/img/project/img9.jpg" class="fancybox"
-                                                data-fancybox-group="group"><i class="fa fa-arrows-alt"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="project-detail-sidebar.html"><i class="fa fa-link"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-project-caption">
-                            <h2>
-                                <a href="project-detail-sidebar.html">Project title here</a>
-                            </h2>
-                            <div class="clear"></div>
-                            <h5>Project Category</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
+                {{-- {!! $galleries->links() !!} --}}
+            @endif
         </div>
     </div>
     <!--//=============Projects area End============//-->
@@ -571,8 +321,10 @@
                     <div class="row">
                         @if (isset($blogs))
                             @foreach ($blogs as $blog)
-                                <div class="home-blog-item">
-                                    <div class="col-md-4 col-sm-6">
+                                <div class="home-blog-item" >
+                                    <div class="col-md-4 col-sm-6" data-aos="flip-left"
+                                    data-aos-easing="ease-out-cubic"
+                                    data-aos-duration="1000">
                                         <div class="wa-theme-design-block">
                                             <figure class="dark-theme">
                                                 <img src="{{ asset(env('APP_URL') . 'uploads/blog/' . $blog->filename) }}"

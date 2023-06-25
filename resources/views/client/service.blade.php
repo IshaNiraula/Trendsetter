@@ -21,53 +21,55 @@
 <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 @endpush --}}
 @section('content')
-  
-        <div class="page-header black-overlay">
-            <div class="container breadcrumb-section">
-                <div class="row pad-s15">
-                    <div class="col-md-12">
-                        <h2>Service</h2>
-                        <div class="clear"></div>
-                        <div class="breadcrumb-box">
-                            <ul class="breadcrumb">
-                                <li>
-                                    <a href="{{route('home')}}"><i class="fa fa-home" aria-hidden="true"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+
+    <div class="page-header black-overlay">
+        <div class="container breadcrumb-section">
+            <div class="row pad-s15">
+                <div class="col-md-12">
+                    <h2>Service</h2>
+                    <div class="clear"></div>
+                    <div class="breadcrumb-box">
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <section class="page_single services_main services_details padTB100">
-            <div class="container">
-                <div class="row">
-                    <!--//==service Section Start==//-->			
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="row">
-                            @if (isset($services))
+    </div>
+    <section class="page_single services services_main services_details padTB100">
+        <div class="container">
+            <div class="row">
+                <!--//==service Section Start==//-->
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        @if (isset($services))
                             @foreach ($services as $service)
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="wa-box-style2 grey-bg">
-                                    <div class="img serviceP">
-                                        <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
-                                            alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h4><a href="service-detail.html">{{ $service->title }}</a></h4>
-                                        <p>{!! Str::words($service->description, 15, ' ...') !!}</p>
-                                        <a href="{{ route('service.show', ['slug' => $service->slug]) }}"
-                                            class="theme-button marT10">Read more</a>
+                                <div class="card-wrapper col-lg-4 col-md-6 col-12 padB60">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
+                                                alt="">
+                                        </div>
+                                        <div class="card-text" data-aos="zoom-out-up">
+                                            <h2 class="card-title"><a
+                                                    href="{{ route('service.show', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
+                                            </h2>
+                                            <p class="card-body">{!! Str::words($service->description, 15, ' ...') !!}</p>
+                                            <a href="{{ route('service.show', ['slug' => $service->slug]) }}"
+                                                class="theme-button marT10">Read more</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
-                          @endif
-                        </div>
+                            @endforeach
+                        @endif
                     </div>
-                    <!--//==Blog Section End==//-->
                 </div>
+                <!--//==Blog Section End==//-->
             </div>
-        </section>
+        </div>
+    </section>
 
 @endsection

@@ -64,7 +64,7 @@
                                                 <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> admin</a></li>
                                             </ul>
                                         </div>
-                                        <p>{!! Str::words($blog->description, 18, ' ...') !!}</p>
+                                        <p>{!! Str::words($blog->description, 15 , ' ...') !!}</p>
                                         <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}" class="theme-button marT10">Read more</a>
                                     </div>
                                 </div>

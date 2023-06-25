@@ -31,7 +31,6 @@ class PageController extends Controller
         $bannerServices = Service::orderBy('position','asc')->take(4)->get();
         $services = Service::orderBy('position','asc')->take(4)->get();
         $blogs = Blog::orderBy('updated_at','desc')->get();
-        $projects = Project::all();
         $faqs = Faq::orderBy('updated_at','desc')->get();
         $testimonials = Testimonial::all();
         $partners = Partner::all();
@@ -40,7 +39,7 @@ class PageController extends Controller
         $abouts = About::all();
         $counters = Counter::all();
         $metatag = MetaTags::where('page','home_page')->get()->first();
-        return view('client.index')->with(['sliders'=> $sliders,'abouts'=>$abouts,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'projects'=>$projects,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
+        return view('client.index')->with(['sliders'=> $sliders,'abouts'=>$abouts,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
     }
 
     public function loginPage () {
@@ -108,6 +107,7 @@ class PageController extends Controller
     public function galleryPage(){
         $metatag = MetaTags::where('page','gallery_page')->get()->first();
         $galleries = GalleryAlbum::paginate(2);
+        
         return view('client.gallery')->with(['galleries'=>$galleries,'metatag' => $metatag]);
     }
      
