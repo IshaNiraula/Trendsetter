@@ -1,81 +1,55 @@
 <footer id="main-footer" class="dark-footer footer-style1">
     <!--Upper Footer Block-->
+
     <div class="upper-footer wv_footer">
         <div class="container">
             <div class="row pad-s15">
-                <!--Widget Block-->
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
-                        <h4>About Company</h4>
-                        <p>
-                            At vero eos et accusamus et iusto lits agnissmos ducimus os quidtiis praesetium ptatum mole deeniti.
-                        </p>
-                        <p>
-                            At vero eos et accusamus et iusto lits agnissmos ducimus os quidtiis praecxAt vero eos et accusamus et mos.
-                        </p>
+                        <h4>Find Us</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa non saepe velit fuga optio
+                            doloremque, ullam deleniti.</p>
+                        <div class="info">
+                            <div class="location">
+                                <p>  <i class="fas fa-location-arrow"></i>
+                               Sallaghari, Bhaktapur</p>
+                            </div>
+                            <div class="phone">
+                                <i class="fas fa-phone-alt"></i>
+                                <p><a href="te:1234567890">1234567890</a></p>
+                            </div>
+                            <div class="email">
+                                <i class="fas fa-envelope"></i>
+                                <p><a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!--Widget Block-->
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
-                        <h4>OUR SERVICES</h4>
+                        <h4>Quick links</h4>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Sitemap</a></li>
+                            <li><a href="{{ route('about') }}"><i class="fa fa-angle-right"></i> About Us</a></li>
+                            <li><a href="{{ route('blog') }}"><i class="fa fa-angle-right"></i>Blog</a></li>
+                            <li><a href="{{ route('service') }}"><i class="fa fa-angle-right"></i>Service</a></li>
+                            <li><a href="{{ route('gallery') }}"><i class="fa fa-angle-right"></i>Gallery</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Privacy Policy</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Your Account</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Advanced Search</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+                            <li><a href="{{ route('contact') }}"><i class="fa fa-angle-right"></i> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
                 <!--Widget Block-->
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-6 col-sm-12 col-lg-6">
                     <div class="widget">
-                        <h4>External links</h4>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Sitemap</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Privacy Policy</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Your Account</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Advanced Search</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--Widget Block-->
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h4>instagram feeds</h4>
-                        <ul class="fliker-image-2">
-                            <li>
-                                <a href="#"><img src="assets/img/all/1.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/img/all/2.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/img/all/3.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/img/all/4.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/img/all/5.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/img/all/6.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/img/all/7.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/img/all/8.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/img/all/8.jpg" alt=""></a>
-                            </li>
-                        </ul>
+                        <h4>Location</h4>
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3648361466367!2d85.40703257539013!3d27.675116676201075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a90f3fe73bd%3A0x6717557a3e66a878!2sSallaghari%20Shopping%20Complex!5e0!3m2!1sen!2snp!4v1687754201730!5m2!1sen!2snp"
+                                width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,7 +72,8 @@
                         <form method="post" action="#">
                             <div class="form-group clearfix">
                                 <input type="email" name="email" value="" placeholder="Your Email Here">
-                                <button type="submit" class="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                <button type="submit" class="button"><i class="fa fa-paper-plane"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </form>
                     </div>
@@ -106,21 +81,21 @@
             </div>
         </div>
     </div>
-    <!--//======= Newsletter Area End=======//-->  	
+    <!--//======= Newsletter Area End=======//-->
     <!--Copyright Footer Block-->
     <div class="bottom-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 copy-right">
-                    <p>Copyright © 2017 All Rights Reserved by Webaashi</p>
+                    <p>Copyright © 2023 All Rights Reserved by OutofBox</p>
                 </div>
                 <div class="col-md-6 col-sm-6 text-right">
                     <!--//======= Social =======//-->
                     <ul class="social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>

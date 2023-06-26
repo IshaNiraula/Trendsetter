@@ -17,7 +17,8 @@
 
                                             <h2 class="wa-theme-color">{{ $slider->title }}</h2>
                                             <p>{{ $slider->description }}</p>
-                                            <a href="#" class="theme-button theme-Color-button">read more</a>
+                                            <a href="{{ route('about') }}" class="theme-button theme-Color-button">read
+                                                more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -239,20 +240,21 @@
             @elseif(count($galleries) > 0)
                 <div class="row">
                     @foreach ($galleries as $gallerie)
-                    <div class="col-lg-4 col-md-6 padT30">
-                        <div class="gallery-item">
-                            <img style="object-fit: cover;"
+                        <div class="col-lg-4 col-md-6 padT30">
+                            <div class="gallery-item">
+                                <img style="object-fit: cover;"
                                     src="{{ asset(env('APP_URL') . 'uploads/gallery/cover/' . $gallerie->cover_image) }}"
                                     alt="{{ $gallerie->title }}" class=" rounded w-100" />
-                            <div class="gallery-desc">
-                                <h3><a href="#">{{ $gallerie->title }}</a></h3>
-                               
-                                <a class="image-popup" href="{{ route('gallery.show', ['slug' => $gallerie->slug]) }}"
-                                    class="btn btn-primary">View images</a>
-                             
+                                <div class="gallery-desc">
+                                    <h3><a href="#">{{ $gallerie->title }}</a></h3>
+
+                                    <a class="image-popup"
+                                        href="{{ route('gallery.show', ['slug' => $gallerie->slug]) }}"
+                                        class="btn btn-primary">View images</a>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
                 {{-- {!! $galleries->links() !!} --}}
@@ -287,9 +289,9 @@
                                 @foreach ($testimonials as $testimonial)
                                     <div class="one swiper-slide">
                                         <blockquote>
-                                            <span class="leftq quotes">&ldquo;</span>
+                                            <i class="fas fa-quote-left"></i>
                                             {{ $testimonial->description }}
-                                            <span class="rightq quotes">&bdquo; </span>
+                                            <i class="fas fa-quote-right"></i>
                                         </blockquote>
                                         <div class="down-content">
                                             <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" />
@@ -321,10 +323,9 @@
                     <div class="row">
                         @if (isset($blogs))
                             @foreach ($blogs as $blog)
-                                <div class="home-blog-item" >
-                                    <div class="col-md-4 col-sm-6" data-aos="flip-left"
-                                    data-aos-easing="ease-out-cubic"
-                                    data-aos-duration="1000">
+                                <div class="home-blog-item">
+                                    <div class="col-md-4 col-sm-6" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                        data-aos-duration="1000">
                                         <div class="wa-theme-design-block">
                                             <figure class="dark-theme">
                                                 <img src="{{ asset(env('APP_URL') . 'uploads/blog/' . $blog->filename) }}"
@@ -420,29 +421,61 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        @foreach($faqs as $faq)
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading{{$loop->iteration}}">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                        href="#collapse{{$loop->iteration}}" aria-expanded="true" aria-controls="collapse{{$loop->iteration}}">
-                                      {{$faq->question}}
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse{{$loop->iteration}}" class="panel-collapse collapse in" role="tabpanel"
-                                aria-labelledby="heading{{$loop->iteration}}">
-                                <div class="panel-body">
-                                    <p>{{$faq->answer}} </p>
+                        @foreach ($faqs as $faq)
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading{{ $loop->iteration }}">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse{{ $loop->iteration }}" aria-expanded="true"
+                                            aria-controls="collapse{{ $loop->iteration }}">
+                                            {{ $faq->question }}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse{{ $loop->iteration }}" class="panel-collapse collapse in"
+                                    role="tabpanel" aria-labelledby="heading{{ $loop->iteration }}">
+                                    <div class="panel-body">
+                                        <p>{{ $faq->answer }} </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
         </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="contact image" class="w-100 h-100">
+                </div>
+                <div class="col-lg-6">
+                    <form method="POST" action="{{ route('contact.store') }}">
+                        @csrf
+                        <label for="name">Name</label>
+                        <input type="text" id="fname" name="name" placeholder="Your name..">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Your Email..">
+
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone" placeholder="Your Phone..">
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Your Subject..">
+
+                        <label for="message">Messafe</label>
+                        <textarea id="message" name="message" placeholder="Write something.." rows="4"></textarea>
+
+                        <button type="submit">SEND  <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 @endsection
@@ -464,5 +497,4 @@
             });
         });
     </script>
-   
 @endpush
