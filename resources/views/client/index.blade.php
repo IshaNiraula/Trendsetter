@@ -141,7 +141,7 @@
                         <!--//==Team Item==//-->
                         @if (isset($teams))
                             @foreach ($teams as $team)
-                                <div class="col-md-3 col-sm-6">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
                                     <div class="latest-team-item " data-aos="flip-left">
                                         <div class="wa-team">
                                             <div class="wa-team-thumbnail item our-team-item wa-item">
@@ -324,7 +324,7 @@
                         @if (isset($blogs))
                             @foreach ($blogs as $blog)
                                 <div class="home-blog-item">
-                                    <div class="col-md-4 col-sm-6" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                    <div class=" col-lg-4 col-md-6 col-sm-12" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                                         data-aos-duration="1000">
                                         <div class="wa-theme-design-block">
                                             <figure class="dark-theme">

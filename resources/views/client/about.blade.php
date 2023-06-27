@@ -133,50 +133,6 @@
     </div>
     <!--//=======Our Team Section End=======//-->
 
-    <!--//=========Partners Start=========//-->
-    <section class="wa-partners padB100">
-        <div class="container">
-            <div class="row">
-                <!--//==Section Heading Start==//-->
-                <div class="col-md-12">
-                    <div class="centered-title">
-                        <h2>Our Partners <span class="heading-shapes"><i></i><i></i><i></i></span></h2>
-                        <div class="clear"></div>
-
-                    </div>
-                </div>
-                <!--//==Section Heading End==//-->
-                <div class="row ">
-                    <div class="col-md-12">
-                        <div
-                            class="wa-partner-carousel owl-carousel-style1 text-center owl-carousel owl-theme swiper-wrapper">
-                            @if (count($partners) == 0)
-                                <div class="intro">
-                                    <h1 class="text-gray fw-bold">No partners available yet.</h1>
-                                </div>
-                            @elseif(count($partners) >= 1)
-                                <div class="swiper partner-mySwiper">
-                                    <div class="swiper-wrapper">
-                                        @foreach ($partners as $partner)
-                                            <div class="partener-item swiper-slide">
-                                                <div class="col-lg-3">
-                                                    <div class="wa-theme-design-block">
-                                                        <figure class="dark-theme">
-                                                            <img src="{{ env('APP_URL') . 'uploads/partner/' . $partner->filename }}"
-                                                                alt="Thumbnail">
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--//=========Partners End=========//-->
     <section class="faqs padB100">
         <div class="container">
             <div class="row">

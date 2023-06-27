@@ -4201,12 +4201,12 @@ header .navbar-collapse {
     color: #02303f;
 }
 .testimonial-sec h2 {
-    color: #6b198b;
+    color: #06b15f;
     margin: 15px 0 5px;
     text-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 .testimonial-sec h6 {
-    color: #dcdd2b;
+    color: #dca44b;
     font-size: 15px;
     margin: 0;
 }
@@ -4241,13 +4241,14 @@ header .navbar-collapse {
     margin: 0;
     padding: 50px;
     width: 800px;
-    background-color: #480f5e;
+    background-color: #0e683d;
     color: white;
-    font-size: 15px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 28px;
     box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: background-color 0.6s linear;
+  
 }
 
 .testimonial-sec blockquote:after {
@@ -4257,8 +4258,8 @@ header .navbar-collapse {
     position: absolute;
     top: 100%;
     border: solid transparent;
-    border-top-color: #480f5e;
-    border-left-color: #480f5e;
+    border-top-color: #0e683d;
+    border-left-color: #0e683d;
     border-width: 10px;
     left: 10%;
 }
@@ -4791,7 +4792,7 @@ body {
     font-size: 35px;
     font-weight: 600;
     display: block;
-    margin: 0 0 45px;
+    margin: 0 0 30px;
 }
 .counter h3 {
     font-size: 16px;
@@ -4956,7 +4957,7 @@ a:focus {
     height: 50px;
     border-radius: 5%;
     text-align: center;
-    background-color: #2e3192;
+    background-color: #dca44b;
     color: #ffffff;
     font-size: 16px;
     -webkit-transform: translateY(35px);
@@ -5160,7 +5161,7 @@ a:focus {
 #mySidenav {
     flex-direction: column;
     position: fixed;
-    top: 20%;
+    top: 30%;
     justify-content: end;
     width: 0;
     display: flex;
@@ -5319,6 +5320,11 @@ input[type=submit]:hover {
 #contacts img{
     height: 615px;
     width: 100%;
+    object-fit: cover;
+}
+.home iframe{
+    width: 550px;
+    height: 250px;
     object-fit: cover;
 }
 
