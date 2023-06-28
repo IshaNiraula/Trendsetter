@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family:  Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #777;
     background: #ffffff;
@@ -15,7 +15,6 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
 
 img {
     max-width: 100%;
@@ -106,7 +105,7 @@ textarea {
     margin-right: 3px;
     outline: none;
     max-width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
 }
 input[type="text"],
 input[type="email"],
@@ -263,7 +262,8 @@ blockquote:before {
     color: #fff;
     border: 0px solid;
     border-radius: 1px;
-    background-color: #2e2e2e;
+    background-color: #1e2b3a;
+    border-radius: 5px;
 }
 .theme-button:focus {
     outline: none;
@@ -4065,9 +4065,10 @@ header .navbar-collapse {
 }
 .single-course .course-content h4 a {
     color: #333;
+    font-style: 16px;
 }
 .single-course .course-content h4 a:hover {
-    color: #ed1c24;
+    color: #dca44b;
 }
 .single-course .course-content p {
     line-height: 23px;
@@ -4169,6 +4170,7 @@ header .navbar-collapse {
 .related-slider-active {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 .related-course {
@@ -4249,7 +4251,6 @@ header .navbar-collapse {
     box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: background-color 0.6s linear;
-  
 }
 
 .testimonial-sec blockquote:after {
@@ -4405,7 +4406,7 @@ ul.inline-1 {
     margin-top: 5px;
 }
 .services .card-title a {
-    color: #000;
+    color: #1e2b3a;
 }
 .services .card-body {
     font-size: 1.25rem;
@@ -4573,7 +4574,7 @@ form input {
 }
 
 form textarea {
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
     resize: none;
     outline: none;
     font-size: 1.3rem;
@@ -4583,22 +4584,6 @@ form textarea {
 .contact-form .buttons {
     display: flex;
     justify-content: end;
-}
-
-form button {
-    display: block;
-    height: 40px;
-    width: 250px;
-    border: 0;
-    border-radius: 20px;
-    background: #9ed8eb;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 300;
-    outline: none;
-}
-form button:hover {
-    background-color: #097deb;
 }
 
 .contact-form {
@@ -4619,7 +4604,7 @@ body {
     width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 5fr;
+    grid-template-rows: 0.5fr 0.5fr 4fr;
     grid-template-areas:
         "contact-us header header header"
         "contact-us address phone email"
@@ -4665,8 +4650,8 @@ body {
     align-items: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-
-    padding: 50px 0;
+    padding-top: 60px;
+    padding-bottom: 0;
 }
 .ag-courses_item {
     width: 100%;
@@ -4676,7 +4661,7 @@ body {
 }
 .ag-courses-item_link {
     display: block;
-    padding: 60px 20px;
+    padding: 45px 20px;
     background-color: #777;
 
     overflow: hidden;
@@ -4705,7 +4690,7 @@ body {
     position: relative;
 }
 .ag-courses-item_title h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 .ag-courses-item_date-box {
     color: #fff;
@@ -4714,7 +4699,7 @@ body {
     position: relative;
 }
 .ag-courses-item_date-box h4 {
-    font-size: 24px;
+    font-size: 20px;
 }
 .ag-courses-item_date {
     font-weight: bold;
@@ -4747,7 +4732,7 @@ body {
         flex-basis: calc(50% - 30px);
     }
     .ag-courses-item_title {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
@@ -5294,40 +5279,38 @@ a:focus {
     text-transform: uppercase;
 }
 
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+input[type="submit"] {
+    background-color: #04aa6d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+input[type="submit"]:hover {
+    background-color: #45a049;
 }
-#contacts img{
+#contacts img {
     height: 615px;
     width: 100%;
     object-fit: cover;
 }
-.home iframe{
+.home iframe {
     width: 550px;
     height: 250px;
     object-fit: cover;
 }
-
-
-

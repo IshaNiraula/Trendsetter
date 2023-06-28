@@ -15,7 +15,7 @@
                   </div>
           
                   <div class="ag-courses-item_date-box">
-                   <h4>Thank You for submitting form. We'll rech back to you soon. Good Day...</h4>
+                   <h4>Thank You for submitting form. We'll reach back to you soon. Good Day...</h4>
                   </div>
                 </a>
               </div>

@@ -472,7 +472,7 @@
                         <label for="message">Messafe</label>
                         <textarea id="message" name="message" placeholder="Write something.." rows="4"></textarea>
 
-                        <button type="submit">SEND  <i class="fas fa-arrow-right"></i></button>
+                        <button type="submit" class="theme-button">SEND  <i class="fas fa-arrow-right"></i></button>
                     </form>
                 </div>
             </div>

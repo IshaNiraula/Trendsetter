@@ -45,7 +45,7 @@
                 <input type="text" placeholder="Subject" name="subject" required>
                 <textarea rows="4" placeholder="Message" name="message" required></textarea>
                 <div class="buttons">
-                <button type="submit">SEND  <i class="fas fa-arrow-right"></i></button>
+                <button type="submit" class="theme-button">SEND  <i class="fas fa-arrow-right"></i></button>
             </div>
             </form>
         </div>

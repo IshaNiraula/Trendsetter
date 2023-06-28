@@ -25,7 +25,6 @@
     <div class="course-details-area pt-130">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <!--//==Thumbnail==//-->
                     <figure class="dark-theme-2">
@@ -37,37 +36,34 @@
                         <p>
                             {!! $service->description !!}
                         </p>
-
-                    </div>
-                    <div class="related-course pt-70">
-                        <div class="related-title mb-45 mrg-bottom-small">
-                            <h3>Related Servcies</h3>
-                        </div>
-                        <div class="related-slider-active">
-                            @if (isset($services))
-                                @foreach ($services as $service)
-                                    <div class="single-course">
-                                        <div class="course-img">
-                                            <a href="{{ route('service.show', ['slug' => $service->slug]) }}"><img
-                                                    class="animated"
-                                                    src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
-                                                    alt=""></a>
-                                        </div>
-                                        <div class="course-content">
-                                            <h4><a
-                                                    href="{{ route('service.show', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
-                                            </h4>
-                                            <p> {!! Str::words($service->description, 10, ' ...') !!}</p>
-                                        </div>
-
-                                    </div>
-                                @endforeach
-                            @endif
-                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="related-course pt-70">
+                <div class="related-title mb-45 mrg-bottom-small">
+                    <h3>Related Servcies</h3>
+                </div>
+                <div class="row padT30">
+                    @if (isset($services))
+                        @foreach ($services as $service)
+                            <div class="single-course col-lg-3 col-md-4 col-sm-6">
+                                <div class="course-img">
+                                    <a href="{{ route('service.show', ['slug' => $service->slug]) }}"><img
+                                            class="animated"
+                                            src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
+                                            alt=""></a>
+                                </div>
+                                <div class="course-content">
+                                    <h4><a
+                                            href="{{ route('service.show', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
+                                    </h4>
+                                    <p> {!! Str::words($service->description, 8, ' ...') !!}</p>
+                                </div>
 
-
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
             </div>
         </div>
     </div>

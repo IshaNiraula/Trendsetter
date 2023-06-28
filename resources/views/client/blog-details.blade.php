@@ -47,15 +47,16 @@
                 </div>
               
             </div>
+        </div>
             <!--//==Blog Detail Section End==//-->
             <div class="related-course pt-70">
-                <div class="related-title mb-45 mrg-bottom-small">
+                <div class="related-title mrg-bottom-small">
                     <h3>Related Blogs</h3>
                 </div>
-                <div class="related-slider-active">
+                <div class="row padT30">
                     @if (isset($blogs))
                         @foreach ($blogs as $blog)
-                            <div class="single-course">
+                            <div class="single-course col-lg-3 col-md-4 col-sm-6">
                                 <div class="course-img">
                                     <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"><img
                                             class="animated"
@@ -66,7 +67,7 @@
                                     <h4><a
                                             href="{{ route('blog.show', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a>
                                     </h4>
-                                    <p> {!! Str::words($blog->description, 10, ' ...') !!}</p>
+                                    <p> {!! Str::words($blog->description, 8, ' ...') !!}</p>
                                 </div>
 
                             </div>
@@ -74,7 +75,7 @@
                     @endif
                 </div>
             </div>
-        </div>
+   
     </div>
 </section>
 <!--//==Blog Detail Page End==//-->		
