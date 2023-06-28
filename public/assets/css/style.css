@@ -2448,6 +2448,7 @@ ul.payment_methods.methods li label {
 }
 .blogs_main .wa-theme-design-block {
     float: left;
+    height: 460px;
     width: calc(100% - 2px);
     #border: 1px solid #ebebeb;
     -webkit-transition: all 0.25s ease-in-out;

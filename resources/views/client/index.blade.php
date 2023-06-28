@@ -324,7 +324,7 @@
                         @if (isset($blogs))
                             @foreach ($blogs as $blog)
                                 <div class="home-blog-item">
-                                    <div class=" col-lg-4 col-md-6 col-sm-12" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                    <div class=" col-lg-4 col-md-6 col-sm-12 padT40" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                                         data-aos-duration="1000">
                                         <div class="wa-theme-design-block">
                                             <figure class="dark-theme">

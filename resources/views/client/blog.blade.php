@@ -47,7 +47,7 @@
                         <div class="row">
                             @if (isset($blogs))
                             @foreach ($blogs as $blog)
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-md-4 col-sm-6 ">
                                 <div class="wa-theme-design-block blog-page">
                                     <!--//==Thumbnail==//-->
                                     <figure class="dark-theme">
