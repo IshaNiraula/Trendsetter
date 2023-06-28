@@ -22,7 +22,7 @@
     </div>
     <!--//==Page Header End==//-->
     <!--//=======About Section Start=======//-->
-    <section class="about-section padTB100">
+    <section class="about-section ">
         <div class="container">
             <div class="row">
                 <!--//==Section Heading Start==//-->

@@ -1392,6 +1392,7 @@ blockquote:before {
     position: relative;
     float: Left;
     width: 100%;
+    padding: 100px 0;
 }
 
 /*=============================
@@ -1402,6 +1403,7 @@ blockquote:before {
     position: relative;
     float: left;
     width: 100%;
+    padding: 100px 0;
 }
 .wa-box-style2 {
     padding: 50px 20px;
@@ -1457,9 +1459,10 @@ blockquote:before {
     position: relative;
     float: left;
     width: 100%;
+    padding: 60px 0;
 }
 .our-team-carousel .item {
-    #margin: 1px;
+    margin: 1px;
 }
 .our-team-carousel.item img {
     display: block;
@@ -2445,6 +2448,7 @@ ul.payment_methods.methods li label {
     position: relative;
     float: left;
     width: 100%;
+    padding: 100px 0;
 }
 .blogs_main .wa-theme-design-block {
     float: left;

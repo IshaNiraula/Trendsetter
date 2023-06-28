@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <section class="page_single services services_main services_details padTB100">
+    <section class="page_single services services_main services_details ">
         <div class="container">
             <div class="row">
                 <!--//==service Section Start==//-->

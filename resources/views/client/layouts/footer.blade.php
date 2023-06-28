@@ -1,4 +1,4 @@
-<footer id="main-footer" class="dark-footer footer-style1 marT70">
+<footer id="main-footer" class="dark-footer footer-style1">
     <!--Upper Footer Block-->
 
     <div class="upper-footer wv_footer">

@@ -88,7 +88,7 @@
     <!--//=======About section End=======//-->
 
     <!--//=============Services Start============//-->
-    <section class="services padB100 text-center">
+    <section class="services text-center">
         <div class="container">
             <!--//==Section Heading Start==//-->
             <div class="centered-title">
@@ -307,7 +307,7 @@
     </section>
     <!--//=======Our Testimonials End=======//-->
     <!--//=========Blogs area Start=========//-->
-    <section class="blogs_main padB100">
+    <section class="blogs_main ">
         <div class="container">
             <div class="row">
                 <!--//==Section Heading Start==//-->
@@ -447,7 +447,7 @@
         </div>
         </div>
     </section>
-    <section id="contacts">
+    <section id="contacts ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">

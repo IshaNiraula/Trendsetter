@@ -288,8 +288,54 @@
         margin-bottom: 30px;
         border: 1px solid #ddd;
     }
+    .navbar-toggle {
+        margin-top: 30px;
+    }
+    .top_bar .first-half {
+        gap: 0;
+    }
+    .wa-team img {
+        height: 100%;
+    }
+    .services {
+        padding: 60px 0;
+    }
+    .services .card-text {
+        width: 390px;
+    }
+    .blogs_main {
+        padding: 60px 0;
+    }
+    .blogs_main .wa-theme-design-block {
+        height: auto;
+    }
+    .dark-theme-1 {
+        height: auto;
+    }
+    .related-course {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .single-course .course-content {
+        height: 100px;
+    }
+    .galleryModal {
+        padding-top: 50%;
+    }
+    .gallery-content {
+        width: 80%;
+    }
+    .contact-form-container{
+        display: flex;
+    }
+    .about-section {
+        padding: 60px 0;
+    }
     #top-bar .pull-right ul {
         padding: 5px 0 0;
+    }
+    .navbar-brand {
+        height: 100px;
     }
     .about-content .inner.padT100 {
         padding-top: 30px;
@@ -404,6 +450,9 @@
 @media only screen and (max-width: 479px) {
     .navbar-default .navbar-brand {
         padding: 8px;
+    }
+    .navbar-brand {
+        height: 100px;
     }
     .wa_main_bn_wrap figcaption p,
     .wa_main_bn_wrap .owl-pagination {
