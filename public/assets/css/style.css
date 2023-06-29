@@ -5308,7 +5308,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
-#contacts img {
+img.contact-image {
     height: 615px;
     width: 100%;
     object-fit: cover;
