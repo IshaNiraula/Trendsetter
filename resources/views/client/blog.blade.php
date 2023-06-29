@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <section class="page_single blogs_main blogs_details">
+        <section class="page_single blogs_main blogs_details padT100">
             <div class="container">
                 <div class="row">
                     <!--//==Blog Section Start==//-->			

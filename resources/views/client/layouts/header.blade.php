@@ -34,18 +34,19 @@
                             <div class="navbar-header">
                                 <!-- Button For Responsive toggle -->
                                 <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target=".navbar-collapse">
+                                    data-target="navbar-collapse" >
                                     <span class="sr-only">Toggle navigation</span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span></button>
+                                    <span class="icon-bar"></span>
+                                </button>
                                 <!-- Logo -->
                                 <a class="navbar-brand" href="{{ route('home') }}">
                                     <img class="site_logo" alt="Logo" src="{{ asset('assets/img/logo.jpeg') }}" />
                                 </a>
                             </div>
                             <!-- Navbar Collapse -->
-                            <div class="navbar-collapse collapse">
+                            <div class="navbar-collapse collapse" id="myNavbar">
                                 <!-- nav -->
                                 <ul class="nav navbar-nav">
                                     <li><a href="{{ route('home') }}">Home</a></li>
@@ -64,22 +65,20 @@
                                     <li>
                                         <a href="{{ route('contact') }}">Contact</a>
                                     </li>
-                                    {{-- <li>
-                                        <button class="header-btn">Get a quote</button>
-                                    </li> --}}
+
                                 </ul>
                             </div>
-                            <!-- /.navbar-collapse -->
+
                         </div>
-                        <!-- /.col-md-12 -->
+
                     </div>
-                    <!-- /.row -->
+
                 </div>
-                <!-- /.container -->
+
             </div>
         </div>
     </div>
-    <!--//==Navbar End==//-->
+
 </header>
 
 <header id="nav-header">
@@ -93,7 +92,7 @@
                             <div class="navbar-header">
                                 <!-- Button For Responsive toggle -->
                                 <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target=".navbar-collapse">
+                                    data-target="navbar-collapse" >
                                     <span class="sr-only">Toggle navigation</span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
@@ -106,7 +105,7 @@
                             <!-- Navbar Collapse -->
                             <div class="navbar-collapse collapse">
                                 <!-- nav -->
-                                <ul class="nav navbar-nav">
+                                <ul class="nav navbar-nav" id="myNavbar">
                                     <li><a href="{{ route('home') }}">Home</a></li>
                                     <li>
                                         <a href="{{ route('about') }}">About Us</a>
@@ -138,3 +137,19 @@
     <!--//==Navbar End==//-->
 </header>
 
+<script>
+ $(document).ready(function() {
+    $('.navbar-toggle').click(function() {
+      $('#myNavbar').toggleClass('in');
+    });
+
+    $('.navbar-toggle').on('click', function(e) {
+      e.stopPropagation();
+    });
+
+    $(document).click(function() {
+      $('#myNavbar').removeClass('in');
+    });
+  });
+
+</script>

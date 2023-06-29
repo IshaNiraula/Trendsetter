@@ -1,7 +1,11 @@
 @extends('client.layouts.master')
 @section('content')
-    <div class="contact-form-container">
-        <div class="contact-us">
+
+
+<section>
+    <div class="container">
+    <div class="contact-form-container ">
+        <div class="contact-us ">
             <div class="contact-header">
                 <h1>⏵⏵⏵&nbsp;&nbsp;If you have any Queries<br> CONTACT US</h1>
                 <div class="contact-info">
@@ -32,11 +36,10 @@
                 </ul>
             </div>
         </div>
-        <div class="header">
+       
+        <div class="contact-form header ">
             <h1>Let's Get Started</h1>
-        </div>
 
-        <div class="contact-form">
             <form method="POST" action="{{ route('contact.store') }}">
               @csrf
                 <input type="text" placeholder="Name" name="name" required>
@@ -51,8 +54,30 @@
         </div>
 
     </div>
+</div>
+</section>
+<section class="shadow">
+    <div class="container">
+        <div class="contact-box">
+            <h2>CONTACT INFO</h2>
+            <div class="location">
+                <i class="fas fa-location-arrow"></i>
+                <p>Sallaghari, Kathmandu</p>
+            </div>
+            <div class="phon">
+                <i class="fas fa-phone-volume"></i>
+                <p><a href="tel:123456789"> 123456789</a></p>
+            </div>
+            <div class="mail">
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:info@gmail.com">info@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+    
 
-    <section class="map" style="width:100vw;">
+    <section class="contact-map" >
      
         <div class="map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3648361466367!2d85.40703257539013!3d27.675116676201075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a90f3fe73bd%3A0x6717557a3e66a878!2sSallaghari%20Shopping%20Complex!5e0!3m2!1sen!2snp!4v1687411672822!5m2!1sen!2snp" width="100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   </div>

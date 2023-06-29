@@ -1403,7 +1403,7 @@ blockquote:before {
     position: relative;
     float: left;
     width: 100%;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 .wa-box-style2 {
     padding: 50px 20px;
@@ -2448,7 +2448,8 @@ ul.payment_methods.methods li label {
     position: relative;
     float: left;
     width: 100%;
-    padding: 100px 0;
+    padding-top: 0;
+    padding-bottom: 100px;
 }
 .blogs_main .wa-theme-design-block {
     float: left;
@@ -3089,8 +3090,9 @@ ul.breadcrumb i {
     left: 0;
 }
 .special-style-full-1 {
-    height: 600px;
+    height: 500px;
 }
+
 .special-style-full:before {
     content: "";
     position: absolute;
@@ -3259,6 +3261,7 @@ html .ui-button.ui-state-disabled:active {
     position: relative;
     float: left;
     width: 100%;
+    padding-top: 80px;
 }
 .page_single ul li a,
 .page_single ul li a:visited {
@@ -3351,10 +3354,10 @@ html .ui-button.ui-state-disabled:active {
 .social li a {
     float: left;
     border: 1px solid;
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
     padding-top: 8px;
-    font-size: 18px;
+    font-size: 14px;
     color: #fff;
     margin: 0px 5px;
     border-radius: 0px;
@@ -4199,7 +4202,6 @@ header .navbar-collapse {
     min-height: 315px;
     margin: 0 auto;
     position: relative;
-    padding-bottom: 30px;
     overflow: hidden;
 }
 .testimonial-sec h1 {
@@ -4507,14 +4509,15 @@ ul.inline-1 {
     font-size: 3rem;
 }
 
-.header {
-    text-align: center;
-    padding: 20px 0;
+/* .header {
+  
     color: #444;
-}
+} */
 
 .header h1 {
     font-weight: normal;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .header h2 {
@@ -4608,7 +4611,7 @@ body {
     width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 4fr;
+    grid-template-rows: 0.5fr 0.5fr 15fr;
     grid-template-areas:
         "contact-us header header header"
         "contact-us address phone email"
@@ -5197,7 +5200,7 @@ a:focus {
 
 .top_bar {
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: #504e4e;
     border-bottom: solid 1px rgba(0, 0, 0, 0.05);
     z-index: 2;
@@ -5212,7 +5215,7 @@ a:focus {
     gap: 10px;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top:4px;
     padding-bottom: 0;
     align-items: baseline;
 }
@@ -5224,12 +5227,12 @@ a:focus {
 .top_bar .first-half .phone i,
 .top_bar .first-half .email i {
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
 }
 .top_bar .first-half .phone a,
 .top_bar .first-half .email a {
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
 }
 .top_bar .text-right .social a {
     border: none;
@@ -5250,6 +5253,7 @@ a:focus {
     background-color: #333;
     position: fixed;
     top: -100px;
+    left: 0;
     width: 100%;
     display: block;
     transition: top 0.3s;
@@ -5319,3 +5323,33 @@ img.contact-image {
     height: 250px;
     object-fit: cover;
 }
+.contact-map{
+    width: 100vw;
+}
+.shadow{
+    display: none;
+}
+section.shadow {
+    border-radius: 30px;
+    padding: 25px 25%;
+    background: linear-gradient(90deg, rgb(244 192 102) 0%, rgba(220,164,75,1) 50%, rgb(136 106 0) 100%);
+    color: white;
+    margin-bottom: 25px;
+}
+section.shadow .phon p a, section.shadow .mail p a{
+    color: white;
+}
+section.shadow .phon, section.shadow .location, section.shadow .mail{
+    display: flex;
+    align-items: baseline;
+}
+.contact-box i{
+    font-size: 18px;
+}
+.contact-box h2{
+    margin-bottom: 10px;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+

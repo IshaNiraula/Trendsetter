@@ -266,7 +266,7 @@
     <!--//=======Our Testimonials Start=======//-->
     <section class="testimonial text-center dark-section padT90">
         <!--//======= Section Background parallax =======//-->
-        <div class="special-style-full special-area-widthfull special-style-dark">
+        <div class="special-style-full special-style-full-2 special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style testimonial-bg"></div>
         </div>
         <div class="container">
