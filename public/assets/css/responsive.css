@@ -408,9 +408,9 @@
         padding: 5px 0px;
     }
     .content-column h2 {
-        font-size: 24px;
-        line-height: 32px;
-        margin-bottom: 10px;
+        font-size: 26px;
+        line-height: 38px;
+        margin: 20px 0;
     }
     #main-footer .bottom-footer {
         text-align: center;
@@ -472,6 +472,13 @@
     .shadow {
         display: block;
     }
+    .swiper-button-next, .swiper-button-prev {
+        top: var(--swiper-navigation-top-offset,25%);
+       
+    }
+    .wa_main_bn_wrap figcaption h2 {
+        font-size: 34px;
+    }
 }
 @media only screen and (max-width: 479px) {
     .navbar-default .navbar-brand {
@@ -482,10 +489,6 @@
     }
     .navbar-brand {
         height: 100px;
-    }
-    .wa_main_bn_wrap figcaption p,
-    .wa_main_bn_wrap .owl-pagination {
-        display: none;
     }
     .wa_main_bn_wrap figcaption span {
         display: inline-block;
@@ -507,7 +510,7 @@
     .wa_main_bn_wrap figure figcaption {
         margin: 0px;
         padding: 0px 15%;
-        top: 30%;
+        top: 20%;
     }
     .wa_main_bn_wrap .owl-buttons {
         bottom: 72%;
@@ -518,6 +521,10 @@
     }
     .wa-theme-design-block {
         width: 100%;
+       
+    }
+    .swiper-button-next, .swiper-button-prev {
+        top: var(--swiper-navigation-top-offset,25%);
        
     }
 }

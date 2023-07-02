@@ -33,8 +33,7 @@
                         <div class="col-md-12">
                             <div class="navbar-header">
                                 <!-- Button For Responsive toggle -->
-                                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target="navbar-collapse" >
+                                <button onclick="openNav();" type="button" class="navbar-toggle"  >
                                     <span class="sr-only">Toggle navigation</span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
@@ -46,7 +45,7 @@
                                 </a>
                             </div>
                             <!-- Navbar Collapse -->
-                            <div class="navbar-collapse collapse" id="myNavbar">
+                            <div class="" id="myNavbar">
                                 <!-- nav -->
                                 <ul class="nav navbar-nav">
                                     <li><a href="{{ route('home') }}">Home</a></li>
@@ -91,8 +90,7 @@
                         <div class="col-md-12">
                             <div class="navbar-header">
                                 <!-- Button For Responsive toggle -->
-                                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target="navbar-collapse" >
+                                <button onclick="openNav();"  type="button" class="navbar-toggle">
                                     <span class="sr-only">Toggle navigation</span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
@@ -103,7 +101,7 @@
                                 </a>
                             </div>
                             <!-- Navbar Collapse -->
-                            <div class="navbar-collapse collapse">
+                            <div class="">
                                 <!-- nav -->
                                 <ul class="nav navbar-nav" id="myNavbar">
                                     <li><a href="{{ route('home') }}">Home</a></li>
@@ -136,8 +134,35 @@
     </div>
     <!--//==Navbar End==//-->
 </header>
-
+<div id="mySidemenu" class="sidemenu">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="d-flex flex-column g-2 list-unstyled" id="myNavbar">
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li>
+            <a href="{{ route('about') }}">About Us</a>
+        </li>
+        <li>
+            <a href="{{ route('service') }}">Services</a>
+        </li>
+        <li>
+            <a href="{{ route('blog') }}">blog</a>
+        </li>
+        <li>
+            <a href="{{ route('gallery') }}">Gallery</a>
+        </li>
+        <li>
+            <a href="{{ route('contact') }}">Contact</a>
+        </li>
+    </ul>
+  </div>
 <script>
+    function openNav() {
+  document.getElementById("mySidemenu").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidemenu").style.width = "0";
+}
  $(document).ready(function() {
     $('.navbar-toggle').click(function() {
       $('#myNavbar').toggleClass('in');

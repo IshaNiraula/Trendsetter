@@ -40,7 +40,7 @@ class PageController extends Controller
         $counters = Counter::all();
         $metatag = MetaTags::where('page','home_page')->get()->first();
         
-        return view('client.index')->with(['sliders'=> $sliders,'abouts'=>$abouts,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
+        return view('client.home')->with(['sliders'=> $sliders,'abouts'=>$abouts,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
     }
 
     public function loginPage () {
