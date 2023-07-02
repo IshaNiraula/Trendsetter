@@ -4917,6 +4917,9 @@ a:focus {
 }
 
 /* Gallery */
+.rs-gallery {
+    padding: 100px 0;
+}
 .rs-gallery .gallery-item {
     position: relative;
 }
@@ -5331,6 +5334,7 @@ img.contact-image {
 .contact-map{
     width: 100vw;
 }
+
 .shadow{
     display: none;
 }
@@ -5372,13 +5376,13 @@ section.shadow .phon, section.shadow .location, section.shadow .mail{
   }
   
   .sidemenu a {
-    padding: 8px 8px 8px 32px;
+    padding: 20px 8px 20px 45px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 26px;
+    color: #ddd;
     display: block;
     transition: 0.3s;
-  }
+}
   
   .sidemenu a:hover {
     color: #f1f1f1;

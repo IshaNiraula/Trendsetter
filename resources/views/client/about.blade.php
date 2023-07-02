@@ -72,7 +72,7 @@
     </section>
 
     <!--//=======Our Team Section Start=======//-->
-    <div class="our-team-main padTB60">
+    <div class="our-team-main ">
         <div class="container">
             <div class="row">
                 <!--//==Section Heading Start==//-->
@@ -133,7 +133,7 @@
     </div>
     <!--//=======Our Team Section End=======//-->
 
-    <section class="faqs padB100">
+    <section class="faqs">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

@@ -1,6 +1,6 @@
 @extends('client.layouts.master')
 @section('content')
-    <div class="wa_main_bn_wrap swiper container">
+    <div class="wa_main_bn_wrap swiper ">
         <div id="main-slider" class="owl-carousel owl-theme slider-active swiper-wrapper ">
             @if (isset($sliders))
                 @foreach ($sliders as $slider)
@@ -195,7 +195,7 @@
                     <div class="row">
                         @if (isset($counters))
                             @foreach ($counters as $counter)
-                                <div class="col-md-3 col-sm-6 coun" data-aos="zoom-in">
+                                <div class="col-md-3 col-sm-6 col-6 coun" data-aos="zoom-in">
                                     <div class="counter"
                                         style="border: 18px solid {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }};
                                             color: {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }};
@@ -218,7 +218,7 @@
     </section>
 
       <!--//=============Gallery area Start============//-->
-      <div class="rs-gallery padTB100">
+      <div class="rs-gallery ">
         <div class="container">
             <div class="row">
                 <!--//==Section Heading Start==//-->
@@ -407,7 +407,7 @@
                     <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
                         alt="contact image" class="contact-image">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 home">
                     <form method="POST" action="{{ route('contact.store') }}">
                         @csrf
                         <label for="name">Name</label>
