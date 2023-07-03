@@ -5,20 +5,20 @@
                 <div class="col-lg-6 first-half">
                     <div class="phone">
                         <i class="fas fa-phone"></i>
-                        <p><a href="tel:123456789"> 123456789 </a></p>
+                        <p><a href="tel:985-1324752"> 985-1324752 </a></p>
                     </div>
                     <div class="email">
                         <i class="fas fa-envelope"></i>
-                        <p><a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                        <p><a href="mailto:trendsettersdesign63@gmail.com">trendsettersdesign63@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 text-right">
                     <!--//======= Social =======//-->
                     <ul class="social">
-                        <li><a href="www.facebook.con"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>

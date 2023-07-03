@@ -35,10 +35,10 @@
 
 <body>
     <div id="mySidenav" class="sidenav">
-        <a href="#" id="about"><i class="fab fa-facebook"></i></a>
-        <a href="#" id="blog"><i class="fab fa-twitter"></i></a>
-        <a href="#" id="instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" id="contact"><i class="fas fa-phone"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="about"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="blog"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="tel:985-1324752" id="contact"><i class="fas fa-phone"></i></a>
       </div>
     @include('client.layouts.header')
     @yield('content')

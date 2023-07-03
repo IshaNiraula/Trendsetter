@@ -5188,22 +5188,22 @@ a:focus {
 
 #about {
     top: 30%;
-    background-color: #0b83ee;
+    background-color: #0b83eea1;
 }
 
 #blog {
     top: 40%;
-    background-color: #1d9bf0;
+    background-color: #1d9bf09c;
 }
 
 #instagram {
     top: 50%;
-    background-color: #ac34aa;
+    background-color: #ac34aa9e;
 }
 
 #contact {
     top: 60%;
-    background-color: #555;
+    background-color: #555555a6;
 }
 
 .top_bar {

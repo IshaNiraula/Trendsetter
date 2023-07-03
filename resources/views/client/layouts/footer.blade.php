@@ -12,15 +12,15 @@
                         <div class="info">
                             <div class="location">
                                 <p>  <i class="fas fa-location-arrow"></i>
-                               Sallaghari, Bhaktapur</p>
+                                    Kathmandu, Nepal</p>
                             </div>
                             <div class="phone">
                                 <i class="fas fa-phone-alt"></i>
-                                <p><a href="tel:1234567890">1234567890</a></p>
+                                <p><a href="tel:985-1324752">985-1324752</a></p>
                             </div>
                             <div class="email">
                                 <i class="fas fa-envelope"></i>
-                                <p><a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                                <p><a href="mailto:trendsettersdesign63@gmail.com">trendsettersdesign63@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -89,10 +89,10 @@
                 <div class="col-md-6 col-sm-6 text-right">
                     <!--//======= Social =======//-->
                     <ul class="social">
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>

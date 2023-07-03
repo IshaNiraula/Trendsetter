@@ -11,20 +11,20 @@
         top: 60px;
     }
     .project-col4 .wa-project .caption-text {
-        top: 30px
+        top: 30px;
     }
     .wa-product .caption-text {
         top: 100px;
     }
     .wa-product .caption-text {
-        top: 60px
+        top: 60px;
     }
     .wa-product-4col .wa-product .caption-text,
     .project-flullwidth .wa-project .caption-text {
-        top: 40px
+        top: 40px;
     }
     .wa-product-sidebar .wa-product .caption-text {
-        top: 40px
+        top: 40px;
     }
     .order-table {
         display: table;
@@ -91,17 +91,17 @@
         width: 100%;
     }
     .wa-product .caption-text {
-        top: 50px
+        top: 50px;
     }
     .wa-product-4col .wa-product .caption-text,
     .project-col4 .wa-project .caption-text {
-        top: 40px
+        top: 40px;
     }
     .project-flullwidth .wa-project .caption-text {
-        top: 50px
+        top: 50px;
     }
     .wa-product-sidebar .wa-product .caption-text {
-        top: 40px
+        top: 40px;
     }
     .thumbnail-row img {
         width: 100%;
@@ -223,6 +223,11 @@
         left: calc(50% - 65px);
         width: 130px;
     }
+    .wa_main_bn_wrap figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     .carousel-style-1 .owl-buttons div {
         position: relative;
     }
@@ -235,7 +240,6 @@
         position: relative;
         float: left;
         width: 100%;
-        ;
     }
     .marB-s30 {
         margin-bottom: 30px;
@@ -289,7 +293,19 @@
         border: 1px solid #ddd;
     }
     .navbar-toggle {
-        margin-top: 30px;
+        margin-top: 34px;
+    }
+    .wa_main_bn_wrap figure {
+        height: 460px;
+    }
+    .swiper {
+        width: 100%;
+        height: 400px;
+    }
+    .wa_main_bn_wrap figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .top_bar .first-half {
         gap: 0;
@@ -300,7 +316,7 @@
     .services {
         padding: 60px 0;
     }
-    .top_bar{
+    .top_bar {
         display: none;
     }
     .services .card-text {
@@ -323,17 +339,18 @@
     .centered-title {
         margin-bottom: 20px;
     }
-    .services, .rs-gallery {
+    .services,
+    .rs-gallery {
         padding: 30px 0;
     }
-    .testimonial-sec{
+    .testimonial-sec {
         margin-top: 100px;
     }
     .testimonial-sec blockquote {
         margin: auto;
         width: 700px;
     }
-    .special-style-full-2{
+    .special-style-full-2 {
         height: 700px;
     }
     .testimonial-sec .down-content {
@@ -357,7 +374,8 @@
     .special-style-full-2 {
         height: 650px;
     }
-    .testimonial, .home-product {
+    .testimonial,
+    .home-product {
         padding-bottom: 115px;
     }
     .home-blog-item {
@@ -382,7 +400,7 @@
     .gallery-content {
         width: 80%;
     }
- 
+
     .about-section {
         padding: 60px 0;
     }
@@ -501,7 +519,7 @@
         width: 100px;
         height: 100px;
     }
-    .contact-map{
+    .contact-map {
         width: 100%;
     }
     .home iframe {
@@ -529,11 +547,6 @@
     .wa_main_bn_wrap figcaption h2 {
         font-size: 30px;
     }
-    .swiper {
-        width: 100%;
-        height: 400px;
-    }
-        
     .dark-theme img {
         height: 100%;
         object-fit: contain;
@@ -541,7 +554,7 @@
     .faqs .centered-title {
         margin-bottom: 36px;
     }
-    .home form{
+    .home form {
         margin-bottom: 50px;
     }
     .gallery-item img {
@@ -569,6 +582,17 @@
         -ms-flex-preferred-size: calc(50% - 30px);
         flex-basis: 100%;
     }
+    #mySidenav a {
+        padding: 10px;
+        width: 40px;
+        font-size: 18px;
+    }
+    .site_logo {
+        padding: 15px 10px;
+    }
+    .navbar-toggle {
+        padding: 8px 8px;
+    }
 }
 @media only screen and (max-width: 479px) {
     .navbar-default .navbar-brand {
@@ -576,9 +600,9 @@
     }
     .swiper {
         width: 100%;
-        height: 380px;
+        height: 460px;
     }
-    .header h1{
+    .header h1 {
         font-size: 28px;
     }
     .navbar-brand {
@@ -609,7 +633,7 @@
     .wa_main_bn_wrap figure figcaption {
         margin: 0px;
         padding: 0px 10%;
-        top: 18%;
+        top: 10%;
     }
     .wa_main_bn_wrap .owl-buttons {
         bottom: 72%;
@@ -620,7 +644,6 @@
     }
     .wa-theme-design-block {
         width: 100%;
-       
     }
     #accordion .panel-title a {
         font-size: 16px;
@@ -630,10 +653,10 @@
         line-height: 30px;
         margin: 15px 0;
     }
-    #accordion .panel-body p{
+    #accordion .panel-body p {
         font-style: 15px;
     }
-    .about-content .inner p{
+    .about-content .inner p {
         font-size: 15px;
     }
     .our-team-main {
@@ -664,11 +687,9 @@
     }
     section.shadow {
         padding: 27px 15%;
-      
     }
     .ag-courses_box {
         padding-top: 30px;
-       
     }
     .ag-courses-item_bg {
         top: -35px;
@@ -682,5 +703,18 @@
     }
     .ag-courses-item_title {
         margin: 0 0 15px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 479px)  {
+    .swiper {
+        width: 100%;
+        height: 500px;
+    }
+    .wa_main_bn_wrap figure {
+        height: 500px;
+    }
+    .wa_main_bn_wrap figure figcaption {
+        padding: 0px 6%;
+        top: 5%;
     }
 }

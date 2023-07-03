@@ -254,13 +254,12 @@
                         </div>
                     @endforeach
                 </div>
-                {{-- {!! $galleries->links() !!} --}}
             @endif
         </div>
     </div>
 
     <!--//=======Our Testimonials Start=======//-->
-    <section class="testimonial text-center dark-section padT90">
+    {{-- <section class="testimonial text-center dark-section padT90">
         <!--//======= Section Background parallax =======//-->
         <div class="special-style-full special-style-full-2 special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style testimonial-bg"></div>
@@ -280,7 +279,7 @@
                             <h1 class="text-gray fw-bold">No testimonials available yet.</h1>
                         </div>
                     @elseif(count($testimonials) >= 1)
-                        <div class="swiper test-mySwiper py-4">
+                        <div class=" test-mySwiper py-4">
                             <div class="swiper-wrapper">
                                 @foreach ($testimonials as $testimonial)
                                     <div class="one swiper-slide">
@@ -300,7 +299,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
       <!--//=========Blogs area Start=========//-->
       <section class="blogs_main ">
