@@ -257,11 +257,11 @@
             @endif
         </div>
     </div>
-
-    <!--//=======Our Testimonials Start=======//-->
-    {{-- <section class="testimonial text-center dark-section padT90">
+    
+  
+    {{-- <section class="testimonial text-center dark-section padTB100">
         <!--//======= Section Background parallax =======//-->
-        <div class="special-style-full special-style-full-2 special-area-widthfull special-style-dark">
+        <div class="special-style-full special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style testimonial-bg"></div>
         </div>
         <div class="container">
@@ -270,32 +270,28 @@
                     <div class="centered-title">
                         <h2>Clients Testimonial<span class="heading-shapes"><i></i><i></i><i></i></span></h2>
                         <div class="clear"></div>
-
                     </div>
                 </div>
-                <div class="testimonial-sec">
-                    @if (count($testimonials) == 0)
-                        <div class="intro">
-                            <h1 class="text-gray fw-bold">No testimonials available yet.</h1>
-                        </div>
-                    @elseif(count($testimonials) >= 1)
-                        <div class=" test-mySwiper py-4">
-                            <div class="swiper-wrapper">
-                                @foreach ($testimonials as $testimonial)
-                                    <div class="one swiper-slide">
-                                        <blockquote>
-                                            <i class="fas fa-quote-left"></i>
-                                            {{ $testimonial->description }}
-                                            <i class="fas fa-quote-right"></i>
-                                        </blockquote>
-                                        <div class="down-content">
-                                            <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" />
-                                            <h2>{{ $testimonial->name }}</h2>
-                                            <h6>{{ $testimonial->profession }}</h6>
-                                        </div>
+                <div class="col-md-12">
+                    <div class="row test-mySwiper">
+                        <div id="testimonial-section2" class="owl-carousel owl-theme carousel-style-1">
+                            @foreach ($testimonials as $testimonial)
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <div class="wa-box-style2">
+                                    <div class="icon">	
+                                        <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" />
                                     </div>
-                                @endforeach
-                    @endif
+                                    <div class="text">
+                                        <h4><a href="#">{{ $testimonial->name }}</a></h4>
+                                        <p>
+                                            {{ $testimonial->description }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
