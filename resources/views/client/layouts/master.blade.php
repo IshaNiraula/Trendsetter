@@ -27,10 +27,10 @@
     <!-- Modernizer JS -->
     <script src="{{ asset('assets/js/vendor/modernizr-3.11.7.min.js') }}"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
 </head>
 
 <body>
@@ -59,6 +59,7 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="{{ asset('assets/plugins/menu/js/hover-dropdown-menu.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/plugins/menu/js/jquery.hover-dropdown-menu-addon.js') }}">

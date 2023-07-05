@@ -4,11 +4,10 @@
     <div class="upper-footer wv_footer">
         <div class="container">
             <div class="row pad-s15">
-                <div class=" col-lg-3 col-md-6 col-sm-12">
+                <div class=" col-lg-4 col-md-6 col-sm-12">
                     <div class="widget">
                         <h4>Find Us</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa non saepe velit fuga optio
-                            doloremque, ullam deleniti.</p>
+                        <p>Trendsetters is a leading design-build firm that delivers customized and visionary interior and exterior solutions, surpassing expectations and reflecting clients' aspirations.</p>
                         <div class="info">
                             <div class="location">
                                 <p>  <i class="fas fa-location-arrow"></i>
@@ -26,7 +25,7 @@
                     </div>
                 </div>
                 <!--Widget Block-->
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12">
                     <div class="widget">
                         <h4>Quick links</h4>
                         <ul>

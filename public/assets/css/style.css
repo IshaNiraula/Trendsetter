@@ -1106,7 +1106,7 @@ blockquote:before {
 .dropdown-menu > li > a:focus,
 .dropdown-menu > li > a:hover {
     background-color: #fff;
-    #color: #333;
+    color: #333;
 }
 .navbar-default .navbar-nav > li > a {
     color: #000;
@@ -1408,7 +1408,7 @@ blockquote:before {
 .wa-box-style2 {
     padding: 50px 20px;
     margin-bottom: 30px;
-    height: 510px;
+    height: auto;
 }
 .wa-box-style2 i {
     font-size: 32px;
@@ -1809,7 +1809,7 @@ span.counter {
     float: left;
     width: 100%;
     margin-bottom: 30px;
-    #padding: 10px 10px 20px;
+    padding: 10px 10px 20px;
     position: relative;
     background-color: #fff;
 }
@@ -2379,7 +2379,7 @@ span.counter {
     padding: 25px 15px;
 }
 .product-checkout .login > p:first-child {
-    #padding: 25px 15px 0;
+    padding: 25px 15px 0;
     text-align: left;
 }
 .product-checkout .button {
@@ -2455,7 +2455,7 @@ ul.payment_methods.methods li label {
     float: left;
     height: 460px;
     width: calc(100% - 2px);
-    #border: 1px solid #ebebeb;
+    border: 1px solid #ebebeb;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
@@ -3544,11 +3544,11 @@ span.countdown-text {
     color: #fff;
 }
 .carousel-style-1 .owl-buttons div.owl-prev {
-    #margin-left: 5px;
+    margin-left: 5px;
     z-index: 99;
 }
 .carousel-style-1 .owl-buttons div.owl-next {
-    #margin-right: 5px;
+    margin-right: 5px;
     z-index: 99;
 }
 .carousel-style-1 .owl-buttons:before {
@@ -4047,7 +4047,7 @@ header .navbar-collapse {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: ##ed1c24;
+    background-color: #ed1c24;
     color: #fff;
     font-size: 13px;
     display: inline-block;
@@ -4056,7 +4056,7 @@ header .navbar-collapse {
 }
 .single-course .course-img span.new-course {
     background-color: #fff;
-    color: ##ed1c24;
+    color: #ed1c24;
 }
 .single-course .course-content {
     padding: 25px 17px 20px;
@@ -4200,160 +4200,6 @@ header .navbar-collapse {
 }
 #testimonial-section2 .text p {
     padding-top: 15px;
-}
-
-.testimonial-sec {
-    width: 800px;
-    min-height: 315px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-}
-.testimonial-sec h1 {
-    text-align: center;
-    text-shadow: 0 1px white;
-    color: #02303f;
-}
-.testimonial-sec h2 {
-    color: #06b15f;
-    margin: 15px 0 5px;
-    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-}
-.testimonial-sec h6 {
-    color: #dca44b;
-    font-size: 15px;
-    margin: 0;
-}
-.testimonial-sec input[type="radio"] {
-    position: absolute;
-    width: 1px; /* Setting this to 0 make it invisible for VoiceOver */
-    height: 1px; /* Setting this to 0 make it invisible for VoiceOver */
-    padding: 0;
-    margin: -1px;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-.testimonial-sec label {
-    display: block;
-    width: 32%;
-    border: 4px solid white;
-    position: absolute;
-    bottom: 5px;
-    cursor: pointer;
-    transition: border-color 0.3s linear;
-}
-
-.testimonial-sec label.second {
-    left: 34%;
-}
-.testimonial-sec label.third {
-    left: 68%;
-}
-
-.testimonial-sec blockquote {
-    margin: 0;
-    padding: 50px;
-    width: 800px;
-    background-color: #0e683d;
-    color: white;
-    font-size: 16px;
-    line-height: 28px;
-    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: background-color 0.6s linear;
-}
-
-.testimonial-sec blockquote:after {
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 100%;
-    border: solid transparent;
-    border-top-color: #0e683d;
-    border-left-color: #0e683d;
-    border-width: 10px;
-    left: 10%;
-}
-.testimonial-sec #second:checked ~ .two blockquote {
-    background-color: purple;
-}
-.testimonial-sec .two blockquote:after {
-    border: solid transparent;
-    border-top-color: purple;
-    border-left-color: purple;
-    border-width: 10px;
-}
-.testimonial-sec #third:checked ~ .three blockquote {
-    background-color: #54885f;
-}
-.testimonial-sec .three blockquote:after {
-    border: solid transparent;
-    border-top-color: #54885f;
-    border-left-color: #54885f;
-    border-width: 10px;
-}
-.testimonial-sec .quotes {
-    position: absolute;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 5em;
-}
-.testimonial-sec .leftq {
-    top: -25px;
-    left: 5px;
-}
-.testimonial-sec.rightq {
-    bottom: -10px;
-    right: 5px;
-}
-.testimonial-sec img {
-    float: left;
-    margin-right: 20px;
-}
-.testimonial-sec .slide {
-    position: absolute;
-    left: -100%;
-    opacity: 0;
-    transition: all 0.6s ease-in;
-}
-
-.testimonial-sec #first:checked ~ label.first {
-    border-width: 6px;
-    border-color: #db532b;
-}
-.testimonial-sec #second:checked ~ label.second {
-    border-width: 6px;
-    border-color: purple;
-}
-.testimonial-sec #third:checked ~ label.third {
-    border: 6px solid #54885f;
-}
-
-.testimonial-sec #first:checked ~ div.one {
-    left: 0;
-    opacity: 1;
-}
-.testimonial-sec #second:checked ~ div.two {
-    left: 0;
-    opacity: 1;
-}
-.testimonial-sec #third:checked ~ div.three {
-    left: 0;
-    opacity: 1;
-}
-
-.testimonial-sec .down-content {
-    border: 1px solid transparent;
-    padding: 10px 10px;
-    background-color: #757979b3;
-    height: 145px;
-    width: auto;
-}
-.testimonial-sec .down-content img {
-    height: 120px;
-    width: 120px;
-    object-fit: cover;
 }
 .partner-mySwiper {
     height: 200px;
@@ -5400,3 +5246,6 @@ section.shadow .phon, section.shadow .location, section.shadow .mail{
     .sidemenu {padding-top: 15px;}
     .sidemenu a {font-size: 18px;}
   }
+
+
+  
