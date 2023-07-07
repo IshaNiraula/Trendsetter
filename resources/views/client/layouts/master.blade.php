@@ -71,7 +71,7 @@
     <script type="text/javascript" src="{{ asset('assets/plugins/counter/js/jquery.countTo.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/plugins/counter/js/jquery.appear.js') }}"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"

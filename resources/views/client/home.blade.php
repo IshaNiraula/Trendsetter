@@ -6,8 +6,8 @@
                 @foreach ($sliders as $slider)
                     <div class="item swiper-slide">
                         <figure>
-                            <img src="{{ env('APP_URL') . 'uploads/slider/' . $slider->filename }}"
-                                class="" alt="" />
+                            <img src="{{ env('APP_URL') . 'uploads/slider/' . $slider->filename }}" class=""
+                                alt="" />
                             <figcaption>
                                 <div class="container">
                                     <div class="row">
@@ -30,7 +30,7 @@
         <div class="swiper-button-next"></div>
     </div>
 
-     <!--//=======About section End=======//-->
+    <!--//=======About section End=======//-->
     <section class="about-section padTB100">
         <div class="container">
             <div class="row">
@@ -85,7 +85,7 @@
         </div>
     </section>
 
-     <!--//=============Services Start============//-->
+    <!--//=============Services Start============//-->
     <section class="services text-center">
         <div class="container">
             <!--//==Section Heading Start==//-->
@@ -182,8 +182,8 @@
         </div>
     </div>
 
-       <!--//=========Fun Facts Start=========//-->
-       <section class="fun-facts padTB100">
+    <!--//=========Fun Facts Start=========//-->
+    <section class="fun-facts padTB100">
         <div class="special-style-full special-style-full-1 special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style facts-bg"></div>
         </div>
@@ -217,8 +217,8 @@
 
     </section>
 
-      <!--//=============Gallery area Start============//-->
-      <div class="rs-gallery ">
+    <!--//=============Gallery area Start============//-->
+    <div class="rs-gallery ">
         <div class="container">
             <div class="row">
                 <!--//==Section Heading Start==//-->
@@ -257,8 +257,8 @@
             @endif
         </div>
     </div>
-    
-  
+
+
     {{-- <section class="testimonial text-center dark-section padTB100">
         <!--//======= Section Background parallax =======//-->
         <div class="special-style-full special-area-widthfull special-style-dark">
@@ -297,8 +297,8 @@
         </div>
     </section> --}}
 
-      <!--//=========Blogs area Start=========//-->
-      <section class="blogs_main ">
+    <!--//=========Blogs area Start=========//-->
+    <section class="blogs_main ">
         <div class="container">
             <div class="row">
                 <!--//==Section Heading Start==//-->
@@ -315,8 +315,8 @@
                         @if (isset($blogs))
                             @foreach ($blogs as $blog)
                                 <div class="home-blog-item">
-                                    <div class=" col-lg-4 col-md-6 col-sm-12 padT40" data-aos="flip-left" data-aos-easing="ease-out-cubic"
-                                        data-aos-duration="1000">
+                                    <div class=" col-lg-4 col-md-6 col-sm-12 padT40" data-aos="flip-left"
+                                        data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                                         <div class="wa-theme-design-block">
                                             <figure class="dark-theme">
                                                 <img src="{{ asset(env('APP_URL') . 'uploads/blog/' . $blog->filename) }}"
@@ -391,11 +391,9 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
     </section>
 
-    <section id="contacts ">
+    <section id="contacts">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -420,7 +418,7 @@
                         <label for="message">Messafe</label>
                         <textarea id="message" name="message" placeholder="Write something.." rows="4"></textarea>
 
-                        <button type="submit" class="theme-button">SEND  <i class="fas fa-arrow-right"></i></button>
+                        <button type="submit" class="theme-button">SEND <i class="fas fa-arrow-right"></i></button>
                     </form>
                 </div>
             </div>
