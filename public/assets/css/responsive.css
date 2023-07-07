@@ -593,6 +593,22 @@
     .navbar-toggle {
         padding: 8px 8px;
     }
+    .testimonial .wa-box-style2 h4 {
+        font-size: 20px;
+    }
+    .testimonial .special-style-full {
+        height: 950px;
+    }
+    .dark-section .wa-box-style2 {
+        margin-top: 65px;
+    }
+    .prev {
+        right: 90%;
+      
+    }
+    .slideshow-container {
+        margin-top: 95px;
+    }
 }
 @media only screen and (max-width: 479px)   {
     .navbar-default .navbar-brand {
@@ -703,6 +719,9 @@
     }
     .ag-courses-item_title {
         margin: 0 0 15px;
+    }
+    .testimonial .special-style-full {
+        height: 1100px;
     }
 }
 @media only screen and (min-width: 300px) and (max-width: 475px)  {

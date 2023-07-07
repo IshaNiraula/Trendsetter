@@ -259,7 +259,7 @@
     </div>
 
 
-    {{-- <section class="testimonial text-center dark-section padTB100">
+    <section class="testimonial text-center dark-section padTB100">
         <!--//======= Section Background parallax =======//-->
         <div class="special-style-full special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style testimonial-bg"></div>
@@ -273,10 +273,33 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="row test-mySwiper">
-                        <div id="testimonial-section2" class="owl-carousel owl-theme carousel-style-1">
-                            @foreach ($testimonials as $testimonial)
-                            <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="row ">
+                        <div class="slideshow-container">
+                        @foreach ($testimonials as $testimonial)
+                            <div class="mySlides ">
+                                    <div class="wa-box-style2 ">
+                                        <div class="icon">	
+                                            <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" />
+                                        </div>
+                                        <div class="text ">
+                                            <h4>{{ $testimonial->name }} | {{$testimonial->profession}}</h4>
+                                            <p>
+                                                {{ $testimonial->description }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                        </div>
+                     
+                     
+                        {{-- <div id="testimonial-section2" class="swiper-wrapper">
+                           
+                            <div class="col-md-12 col-lg-12 col-sm-12 swiper-slide">
                                 <div class="wa-box-style2">
                                     <div class="icon">	
                                         <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" />
@@ -289,13 +312,14 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
+                            @endforeach --}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
+
 
     <!--//=========Blogs area Start=========//-->
     <section class="blogs_main ">
@@ -443,4 +467,32 @@
             });
         });
     </script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
 @endpush

@@ -30,20 +30,34 @@
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   
+
 </head>
 
 <body>
+    @if (Session::has('success'))
+        <div id="message" class="alert alert-success">
+            {{ Session::get('success') }}
+          <button onclick="hideMessage();" style="margin-left: 25px">Close</button>
+        </div>
+    @endif
+    @if (Session::has('error'))
+        <div class="alert alert-danger">
+            {{ Session::get('error') }}
+        </div>
+    @endif
     <div id="mySidenav" class="sidenav">
-        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="about"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="blog"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="about"><i
+                class="fab fa-facebook"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="blog"><i
+                class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100093427325606" id="instagram"><i
+                class="fab fa-instagram"></i></a>
         <a href="tel:985-1324752" id="contact"><i class="fas fa-phone"></i></a>
-      </div>
+    </div>
     @include('client.layouts.header')
     @yield('content')
     @include('client.layouts.footer')
-  
+
     <button onclick="ScrollToTop()" id="myBtn" title="Go to top"><i class="fas fa-fighter-jet"></i></button>
     <!-- jQuery JS -->
     <script src="{{ asset('assets/js/vendor/jquery-v2.2.4.min.js') }}"></script>
@@ -73,10 +87,11 @@
 
     {{-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
     <script>
         const swiper = new Swiper('.swiper', {
@@ -243,6 +258,12 @@
                 }
             },
         });
+    </script>
+    <script>
+        function hideMessage(){
+            const message = document.getElementById('message');
+            message.style.display = "none";
+        }
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

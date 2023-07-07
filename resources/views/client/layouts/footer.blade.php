@@ -65,7 +65,8 @@
                 <div class="col-md-6 col-sm-4">
                     <!--//======= Newsletter Form=======//-->
                     <div class="news-letter-form">
-                        <form method="post" action="#">
+                        <form method="post" action="{{route('newsletter.store')}}">
+                            @csrf
                             <div class="form-group clearfix">
                                 <input type="email" name="email" value="" placeholder="Your Email Here">
                                 <button type="submit" class="button"><i class="fa fa-paper-plane"

@@ -26,6 +26,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\VisaController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,8 @@ Route::get('/gallery/{slug}', [PageController::class, 'galleryImage'])->name('ga
 Route::get('/about', [PageController::class, 'aboutPage'])->name('about');
 Route::get('/contact', [PageController::class, 'contactPage'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/newsletter', [PageController::class, 'newsletterPage'])->name('newsletter');
+Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 Route::get('/career', [PageController::class, 'carrierPage'])->name('carrier');
 Route::post('/career', [CarrierFormController::class, 'store'])->name('carrier.upload');
 Route::get('/thank-you', [PageController::class, 'thankYouPage']);
@@ -150,6 +153,12 @@ Route::middleware('isLoggedIn')->name('admin.')->group(function () {
     Route::get('/admin/faq/edit/{id}', [FAQController::class, 'edit'])->name('faq.edit');
     Route::post('/admin/faq/update/{id}', [FAQController::class, 'update'])->name('faq.update');
     Route::post('/admin/faq/delete/{id}', [FAQController::class, 'destroy'])->name('faq.delete');
+
+     //newsletter
+     Route::get('/admin/newsletter/list', [NewsletterController::class, 'index'])->name('newsletter.list');
+     Route::get('/admin/newsletter/add', [NewsletterController::class, 'create'])->name('newsletter.add');
+     Route::post('/admin/newsletter/add', [NewsletterController::class, 'store'])->name('newsletter.store');
+     Route::post('/admin/newsletter/delete/{id}', [NewsletterController::class, 'destroy'])->name('newsletter.delete');
 
     //carrier
     Route::get('/admin/career/list', [CarrierController::class, 'index'])->name('carrier.list');

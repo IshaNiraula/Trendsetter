@@ -39,7 +39,6 @@ class PageController extends Controller
         $abouts = About::all();
         $counters = Counter::all();
         $metatag = MetaTags::where('page','home_page')->get()->first();
-        
         return view('client.home')->with(['sliders'=> $sliders,'abouts'=>$abouts,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
     }
 
@@ -134,11 +133,6 @@ class PageController extends Controller
 
     public function thankYouPage() {
         return view('client.thank_you');
-    }
-
-    public function lengthConverter() {
-        $metatag = MetaTags::where('page','length_converter_page')->get()->first();
-        return view('client.length-converter');
     }
 
     public function projectPage() {
