@@ -532,11 +532,17 @@
     .contact-form.header {
         position: relative;
         top: 0;
-        right: 20%;
     }
     .contact-form-container {
         width: auto;
         margin-top: 0;
+    }
+    .contact-form-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5em;
+        padding: 0rem;
     }
     form {
         width: auto;
@@ -703,6 +709,7 @@
     }
     section.shadow {
         padding: 27px 15%;
+        margin-top: 30px;
     }
     .ag-courses_box {
         padding-top: 30px;

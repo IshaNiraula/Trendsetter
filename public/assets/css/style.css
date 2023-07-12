@@ -4617,7 +4617,13 @@ body {
 }
 /* Layout Stuff */
 .contact-form-container {
-    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+    padding: 4rem;
+    margin-bottom: 30px;
+    /* width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 15fr;
@@ -4625,7 +4631,7 @@ body {
         "contact-us header header header"
         "contact-us address phone email"
         "contact-us contact-form contact-form contact-form";
-    margin: 50px 0;
+    margin: 50px 0; */
 }
 
 .contact-us {
