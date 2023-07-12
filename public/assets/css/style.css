@@ -4193,9 +4193,10 @@ header .navbar-collapse {
     padding-top: 50px;
 }
  .icon img {
-    height: 300px;
+    height: 200px;
     width: 200px;
     object-fit: cover;
+    border-radius: 50%;
 }
  /* .text h4 {
     margin: 0;
