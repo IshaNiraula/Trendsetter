@@ -120,68 +120,6 @@
         </div>
     </section>
 
-    <!--//=======Our Team Start=======//-->
-    <div class="our-team-main padB100">
-        <div class="container">
-            <div class="row">
-                <!--//==Section Heading Start==//-->
-                <div class="col-md-12">
-                    <div class="centered-title">
-                        <h2>Our Team<span class="heading-shapes"><i></i><i></i><i></i></span></h2>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <!--//==Section Heading End==//-->
-                <div class="col-md-12">
-                    <div class="row">
-                        <!--//==Team Item==//-->
-                        @if (isset($teams))
-                            @foreach ($teams as $team)
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="latest-team-item " data-aos="flip-left">
-                                        <div class="wa-team">
-                                            <div class="wa-team-thumbnail item our-team-item wa-item">
-                                                <img src="{{ env('APP_URL') . 'uploads/team/' . $team->image }}"
-                                                    alt="">
-                                                <div class="caption">
-                                                    <div class="caption-text">
-                                                        <div class="clear"></div>
-                                                        <div class="wa-team-caption">
-                                                            <ul class="wa-team-icon">
-                                                                <li><a href="{{ $team->facebook_link }}" title="facebook">
-                                                                        <i class="fab fa-facebook"></i></a></li>
-
-                                                                <li><a href="{{ $team->twitter_link }}" title="twiiter"><i
-                                                                            class="fab fa-twitter"></i></a>
-                                                                </li>
-                                                                <li><a href="{{ $team->linkedin_link }}"
-                                                                        title="linkedin"><i class="fab fa-linkedin"></i></a>
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 mask-top-upper">
-                                                <div class="mask-top">
-                                                    <h4>{{ $team->name }}</h4>
-                                                    <span>{{ $team->designation }}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//==Team Item==//-->
-                            @endforeach
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!--//=========Fun Facts Start=========//-->
     <section class="fun-facts padTB100">
         <div class="special-style-full special-style-full-1 special-area-widthfull special-style-dark">
@@ -439,7 +377,7 @@
                         <label for="subject">Subject</label>
                         <input type="text" id="subject" name="subject" placeholder="Your Subject..">
 
-                        <label for="message">Messafe</label>
+                        <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Write something.." rows="4"></textarea>
 
                         <button type="submit" class="theme-button">SEND <i class="fas fa-arrow-right"></i></button>

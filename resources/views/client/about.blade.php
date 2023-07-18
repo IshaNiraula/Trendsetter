@@ -71,68 +71,6 @@
         </div>
     </section>
 
-    <!--//=======Our Team Section Start=======//-->
-    <div class="our-team-main ">
-        <div class="container">
-            <div class="row">
-                <!--//==Section Heading Start==//-->
-                <div class="col-md-12">
-                    <div class="centered-title">
-                        <h2>Our Team<span class="heading-shapes"><i></i><i></i><i></i></span></h2>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <!--//==Section Heading End==//-->
-                <div class="col-md-12">
-                    <div class="row" >
-                        <!--//==Team Item==//-->
-                        @if (isset($teams))
-                            @foreach ($teams as $team)
-                                <div class="col-md-3 col-sm-6" data-aos="flip-left">
-                                    <div class="latest-team-item">
-                                        <div class="wa-team">
-                                            <div class="wa-team-thumbnail item our-team-item wa-item">
-                                                <img src="{{ env('APP_URL') . 'uploads/team/' . $team->image }}"
-                                                    alt="">
-                                                <div class="caption">
-                                                    <div class="caption-text">
-                                                        <div class="clear"></div>
-                                                        <div class="wa-team-caption">
-                                                            <ul class="wa-team-icon">
-                                                                <li><a href="{{ $team->facebook_link }}" title="facebook">
-                                                                        <i class="fab fa-facebook"></i></a></li>
-
-                                                                <li><a href="{{ $team->twitter_link }}" title="twiiter"><i
-                                                                            class="fab fa-twitter"></i></a></li>
-                                                                <li><a href="{{ $team->linkedin_link }}" title="linkedin"><i
-                                                                            class="fab fa-linkedin"></i></a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 mask-top-upper">
-                                                <div class="mask-top">
-                                                    <h4>{{ $team->name }}</h4>
-                                                    <span>{{ $team->designation }}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//==Team Item==//-->
-                            @endforeach
-                        @endif
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--//=======Our Team Section End=======//-->
-
     <section class="faqs">
         <div class="container">
             <div class="row">
