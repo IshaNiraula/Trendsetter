@@ -423,7 +423,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <video width="93%" height="600" style="object-fit: cover; z-index:9999;" controls>
-                <source src="assets/img/video-1.mp4" type="video/mp4">
+                <source src="assets/img/video.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video>
         </div>
