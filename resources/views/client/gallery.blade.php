@@ -19,8 +19,25 @@
         </div>
     </div>
 
-    <section class="rs-gallery-4 rs-gallery marT50">
+    <section class="rs-gallery-4 rs-gallery ">
         <div class="container mb-3">
+            <h2>Videos</h2>
+            <div class="row">
+                <div class="col-lg-3">
+                    <video width="280" height="240" controls>
+                        <source src="assets/img/video-1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                      </video>
+                </div>
+                <div class="col-lg-3">
+                    <video width="280" height="240" controls>
+                        <source src="assets/img/video-2.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                      </video>
+                </div>
+                
+            </div>
+            <h2>Pictures</h2>
             @if (count($galleries) == 0)
                 <div class="intro">
                     <h1 class="text-danger fw-bold">there is no any gallery yet.</h1>

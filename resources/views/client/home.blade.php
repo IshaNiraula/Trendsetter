@@ -55,9 +55,14 @@
                                             <!--Image Column-->
                                             <div class="column image-column col-md-6 col-sm-12 col-xs-12">
                                                 <div class="inner">
-                                                    <figure> <img
-                                                            src="{{ env('APP_URL') . 'uploads/about/' . $about->filename }}"
-                                                            alt="{{ $about->title }}" /></figure>
+                                                    <figure>
+                                                        <img src="{{ env('APP_URL') . 'uploads/about/' . $about->filename }}"
+                                                            alt="{{ $about->title }}" />
+                                                    </figure>
+                                                    <div class="img-info">
+                                                        <h3>Swikriti Sharma</h3>
+                                                        <h4>CEO</h4>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <!--Content Column-->
@@ -183,8 +188,7 @@
                                 <div class="gallery-desc">
                                     <h3><a href="#">{{ $gallerie->title }}</a></h3>
 
-                                    <a class="image-popup"
-                                        href="{{ route('gallery.show', ['slug' => $gallerie->slug]) }}"
+                                    <a class="image-popup" href="{{ route('gallery.show', ['slug' => $gallerie->slug]) }}"
                                         class="btn btn-primary">View images</a>
 
                                 </div>
@@ -213,29 +217,29 @@
                 <div class="col-md-12">
                     <div class="row ">
                         <div class="slideshow-container">
-                        @foreach ($testimonials as $testimonial)
-                            <div class="mySlides ">
+                            @foreach ($testimonials as $testimonial)
+                                <div class="mySlides ">
                                     <div class="wa-box-style2 ">
-                                        <div class="icon">	
+                                        <div class="icon">
                                             <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" />
                                         </div>
                                         <div class="text ">
-                                            <h4>{{ $testimonial->name }} | {{$testimonial->profession}}</h4>
+                                            <h4>{{ $testimonial->name }} | {{ $testimonial->profession }}</h4>
                                             <p>
                                                 {{ $testimonial->description }}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
-                            </div>
-                            <a class="prev" onclick="plusSlides(-1)">❮</a>
-                            <a class="next" onclick="plusSlides(1)">❯</a>
-                
+                            @endforeach
                         </div>
-                     
-                     
-                        {{-- <div id="testimonial-section2" class="swiper-wrapper">
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    </div>
+
+
+                    {{-- <div id="testimonial-section2" class="swiper-wrapper">
                            
                             <div class="col-md-12 col-lg-12 col-sm-12 swiper-slide">
                                 <div class="wa-box-style2">
@@ -251,10 +255,10 @@
                                 </div>
                             </div>
                             @endforeach --}}
-                        </div>
-                    </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -316,6 +320,50 @@
         </div>
     </section>
 
+    <section class="fun-facts padTB100">
+        <div class="special-style-full special-style-full-3 special-area-widthfull special-style-dark">
+            <div class="bg-image parallax-style facts-bg"></div>
+        </div>
+        <div id="fun-factor" class="fun-fact-section dark-theme-fun-fact">
+            <div class="container text-center">
+                <h3 class="marB40">Welcome to Trendsetters <span class="heading-shapes"
+                        style="bottom: -25px"><i></i><i></i><i></i></span></h3>
+                <div class="clear"></div>
+                <h2 class="">We Care About Everything What You Want</h2>
+                <div class="row text-center video-info pad-s15">
+                    <!--//==Facts Counter Item==//-->
+                    <div class="buttons">
+                        <div class="video">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#myModal">
+                                <i class="far fa-play-circle"></i>
+                                Play Video
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <section class="faqs padB100">
         <div class="container">
             <div class="row">
@@ -408,29 +456,33 @@
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
-        
+
         function plusSlides(n) {
-          showSlides(slideIndex += n);
+            showSlides(slideIndex += n);
         }
-        
+
         function currentSlide(n) {
-          showSlides(slideIndex = n);
+            showSlides(slideIndex = n);
         }
-        
+
         function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
         }
-        </script>
+    </script>
 @endpush

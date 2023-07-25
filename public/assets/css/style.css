@@ -5480,3 +5480,44 @@ section.shadow .mail {
   @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
   }
+  .about-content .inner img{
+    height: 400px;
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+  }
+  .about-content .img-info{
+    margin-top: 20px;
+    text-align: center;
+  }
+  .video-info .buttons{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+
+  }
+  .video-info .buttons button{
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: 18px;
+  }
+  .video-info .buttons button a{
+    color: #fff;
+    display: flex;
+    column-gap: 10px;
+  }
+  .video-info .buttons button a:hover{
+    color: #dca44b;
+  }
+  .video-info .buttons button i{
+    font-size: 30px;
+  }
+  .special-style-full-3{
+    height: 400px;
+  }
+  div#fun-factor {
+    height: 100px;
+    margin-bottom: 140px;
+}
