@@ -43,7 +43,7 @@
                                     <!--Image Column-->
                                     @foreach ($abouts as $about)
                                         @if (isset($about))
-                                            <div class="column image-column col-md-6 col-sm-12 col-xs-12">
+                                            <div class="column image-column col-md-5 col-sm-12 col-xs-12">
                                                 <div class="inner">
                                                     <figure><img
                                                             src="{{ env('APP_URL') . 'uploads/about/' . $about->filename }}"
@@ -55,7 +55,7 @@
                                                 </div>
                                             </div>
                                             <!--Content Column-->
-                                            <div class="column content-column col-md-6 col-sm-12 col-xs-12">
+                                            <div class="column content-column col-md-7 col-sm-12 col-xs-12">
                                                 <div class="inner">
                                                     <span>About The Company</span>
                                                     <h2>{{ $about->title }}</h2>
@@ -75,7 +75,7 @@
         </div>
     </section>
 
-    <section class="faqs">
+    <section class="faqs marB30">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

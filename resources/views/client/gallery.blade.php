@@ -35,7 +35,12 @@
                       Your browser does not support the video tag.
                       </video>
                 </div>
-                
+                <div class="col-lg-3">
+                    <video width="280" height="240" controls>
+                        <source src="assets/img/video-3.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                      </video>
+                </div>
             </div>
             <h2>Pictures</h2>
             @if (count($galleries) == 0)
