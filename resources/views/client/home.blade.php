@@ -201,8 +201,8 @@
     </div>
 
 
-    <section class="testimonial text-center dark-section padTB100">
-        <!--//======= Section Background parallax =======//-->
+    {{-- <section class="testimonial text-center dark-section padTB100">
+
         <div class="special-style-full special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style testimonial-bg"></div>
         </div>
@@ -237,30 +237,12 @@
                         <a class="next" onclick="plusSlides(1)">❯</a>
 
                     </div>
-
-
-                    {{-- <div id="testimonial-section2" class="swiper-wrapper">
-                           
-                            <div class="col-md-12 col-lg-12 col-sm-12 swiper-slide">
-                                <div class="wa-box-style2">
-                                    <div class="icon">	
-                                        <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" />
-                                    </div>
-                                    <div class="text">
-                                        <h4><a href="#">{{ $testimonial->name }}</a></h4>
-                                        <p>
-                                            {{ $testimonial->description }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach --}}
                 </div>
             </div>
         </div>
         </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <!--//=========Blogs area Start=========//-->
@@ -424,8 +406,8 @@
             <span class="close">&times;</span>
             <video controls>
                 <source src="assets/img/video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
+                Your browser does not support the video tag.
+            </video>
         </div>
 
     </div>
