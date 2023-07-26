@@ -30,8 +30,8 @@
                         <h4>Quick links</h4>
                         <ul>
                             <li><a href="{{ route('about') }}"><i class="fa fa-angle-right"></i> About Us</a></li>
-                            <li><a href="{{ route('blog') }}"><i class="fa fa-angle-right"></i>Blog</a></li>
-                            <li><a href="{{ route('service') }}"><i class="fa fa-angle-right"></i>Service</a></li>
+                            <li><a href="{{ route('blog') }}"><i class="fa fa-angle-right"></i>Blogs</a></li>
+                            <li><a href="{{ route('service') }}"><i class="fa fa-angle-right"></i>Services</a></li>
                             <li><a href="{{ route('gallery') }}"><i class="fa fa-angle-right"></i>Gallery</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Privacy Policy</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Your Account</a></li>

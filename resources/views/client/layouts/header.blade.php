@@ -56,7 +56,7 @@
                                         <a href="{{ route('service') }}">Services</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('blog') }}">blog</a>
+                                        <a href="{{ route('blog') }}">Blogs</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('gallery') }}">Gallery</a>
@@ -112,7 +112,7 @@
                                         <a href="{{ route('service') }}">Services</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('blog') }}">blog</a>
+                                        <a href="{{ route('blog') }}">Blogs</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('gallery') }}">Gallery</a>
