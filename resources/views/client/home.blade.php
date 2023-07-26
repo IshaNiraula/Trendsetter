@@ -324,8 +324,8 @@
         <div class="special-style-full special-style-full-3 special-area-widthfull special-style-dark">
             <div class="bg-image parallax-style facts-bg"></div>
         </div>
-        <div id="fun-factor" class="fun-fact-section dark-theme-fun-fact">
-            <div class="container text-center">
+        <div id="fun-factor1" class="fun-fact-section dark-theme-fun-fact">
+            <div class="container text-center fun-video">
                 <h3 class="marB40">Welcome to Trendsetters <span class="heading-shapes"
                         style="bottom: -25px"><i></i><i></i><i></i></span></h3>
                 <div class="clear"></div>
@@ -422,7 +422,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <video width="93%" height="600" style="object-fit: cover; z-index:9999;" controls>
+            <video >
                 <source src="assets/img/video.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video>

@@ -615,6 +615,23 @@
     .slideshow-container {
         margin-top: 95px;
     }
+    .modal-content {
+        width: 100%;
+    }
+    #myModal .modal-content video {
+        width: 90%;
+        height: 300px;
+    }
+    .modal {
+        z-index: 999;
+        padding-top: 160px;
+    }
+    .about-content .img-info h4 {
+        font-size: 20px;
+    }
+    .about-content .img-info h3 {
+        font-size: 26px;
+    }
 }
 @media only screen and (max-width: 479px)   {
     .navbar-default .navbar-brand {

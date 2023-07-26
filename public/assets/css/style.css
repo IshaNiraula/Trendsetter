@@ -5487,10 +5487,23 @@ section.shadow .mail {
     margin: auto;
     display: block;
   }
+  .about-content .inner figure{
+    background: #1b2b39;
+  }
   .about-content .img-info{
     margin-top: 20px;
     text-align: center;
   }
+  .about-content .img-info h3{
+        color: #1e2b3a;
+        text-shadow: 2px 2px 4px #dca44b;
+        font-size: 30px;
+  }
+  .about-content .img-info h4{
+    color: #1e2b3a;
+    text-shadow: 2px 2px 4px #dca44b;
+    font-size: 22px;
+}
   .video-info .buttons{
     margin: 50px 0;
     display: flex;
@@ -5517,7 +5530,7 @@ section.shadow .mail {
   .special-style-full-3{
     height: 400px;
   }
-  div#fun-factor {
+  div#fun-factor1 {
     height: 100px;
     margin-bottom: 140px;
 }
@@ -5525,7 +5538,7 @@ section.shadow .mail {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 6; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -5542,7 +5555,7 @@ section.shadow .mail {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
   }
   
   /* The Close Button */
@@ -5559,3 +5572,12 @@ section.shadow .mail {
     text-decoration: none;
     cursor: pointer;
   }
+  #myModal .modal-content video{
+    width: 90%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .fun-video h2{
+    font-size: 26px;
+  }
+ 
