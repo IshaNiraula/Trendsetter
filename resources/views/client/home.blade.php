@@ -422,7 +422,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <video >
+            <video controls>
                 <source src="assets/img/video.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video>
