@@ -259,8 +259,13 @@
                 </div>
                 <!--//==Section Heading End==//-->
                 <div class="col-md-12">
+                    @if (count($blogs) == 0)
+                    <div class="intro">
+                        <h1 class="text-center">There is no any blogs uploaded yet.</h1>
+                    </div>
+                @elseif(count($blogs) > 0)
                     <div class="row">
-                        @if (isset($blogs))
+                       
                             @foreach ($blogs as $blog)
                                 <div class="home-blog-item">
                                     <div class=" col-lg-4 col-md-6 col-sm-12 padT40" data-aos="flip-left"

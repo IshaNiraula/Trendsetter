@@ -44,8 +44,13 @@
                 <div class="row">
                     <!--//==Blog Section Start==//-->			
                     <div class="col-md-12 col-sm-12 col-xs-12">
+                        @if (count($blogs) == 0)
+                        <div class="intro">
+                            <h1 class="text-center">There is no any blogs uploaded yet.</h1>
+                        </div>
+                    @elseif(count($blogs) > 0)
                         <div class="row">
-                            @if (isset($blogs))
+                          
                             @foreach ($blogs as $blog)
                             <div class="col-lg-4 col-md-6 col-sm-12 ">
                                 <div class="wa-theme-design-block blog-page">

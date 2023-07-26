@@ -5,7 +5,7 @@
         <div class="container breadcrumb-section">
             <div class="row pad-s15">
                 <div class="col-md-12">
-                    <h2>Service detail</h2>
+                    <h2>Service Detail</h2>
                     <div class="clear"></div>
                     <div class="breadcrumb-box">
                         <h4 style="color: #dadfe4">{{ $service->title }}</h4>
