@@ -49,7 +49,7 @@
                                                             src="{{ env('APP_URL') . 'uploads/about/' . $about->filename }}"
                                                             alt="{{ $about->title }}" /></figure>
                                                             <div class="img-info">
-                                                                <h3>Swikriti Sharma</h3>
+                                                                <h3>I.d Swikriti Sharma</h3>
                                                                 <h4>CEO</h4>
                                                             </div>
                                                 </div>
