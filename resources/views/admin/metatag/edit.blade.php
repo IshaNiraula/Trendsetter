@@ -1,6 +1,8 @@
 @extends('admin.layouts.master')
 
-
+@php
+    $selectedPage = $metaData->page ?? ''; // Assign the selected page to a variable
+@endphp
 @section('content')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -23,16 +25,16 @@
                 <form method="post" action="{{ route('admin.metatag.update', ['id' => $metaData->id]) }}"
                     enctype="multipart/form-data">
                     @csrf
-
+           
                     <div class="card-body">
                         <div class="form-group">
                             <select name="page" id="" class="form-control">
                                 <option value="">Select Page</option>
-                                <option value="homePage" {{$metaData->page == 'homePage' && 'checked'}}>Home page</option>
-                                <option value="aboutPage" {{$metaData->page == 'aboutPage' && 'checked'}}>About page</option>
-                                <option value="contactPage"  {{$metaData->page == 'contactPage' && 'checked'}}>Contact page</option>
-                                <option value="blogPage"  {{$metaData->page == 'blogPage' && 'checked'}}>Blog page</option>
-                                <option value="servicePage"  {{$metaData->page == 'servicePage' && 'checked'}}>Service page</option>
+                                <option value="homePage" {{ $selectedPage === 'homePage' ? 'selected' : '' }}>Home page</option>
+                                <option value="aboutPage" {{ $selectedPage === 'aboutPage' ? 'selected' : '' }}>About page</option>
+                                <option value="contactPage" {{ $selectedPage === 'contactPage' ? 'selected' : '' }}>Contact page</option>
+                                <option value="blogPage" {{ $selectedPage === 'blogPage' ? 'selected' : '' }}>Blog page</option>
+                                <option value="servicePage" {{ $selectedPage === 'servicePage' ? 'selected' : '' }}>Service page</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -59,7 +61,7 @@
                         <div class="form-group">
                             <label for="metatags">Keywords</label>
                             <input type="text" class="form-control" id="metatags" placeholder="Enter keywords"
-                                name="metatags" value="{{ $metaData->metatags }}">
+                                name="keywords" value="{{ $metaData->keywords }}">
                             <span class="text-danger">
                                 @error('metatags')
                                     {{ $message }}
@@ -75,7 +77,7 @@
                                 </div>
                             </div>
                             <img src="{{ env('APP_URL') . 'uploads/metatag/' . $metaData->image }}"
-                                alt="{{ $metaData->title }}" class="w-100 img-responsive" />
+                                alt="{{ $metaData->title }}" class="w-25 img-responsive" />
                         </div>
                   
                     </div>

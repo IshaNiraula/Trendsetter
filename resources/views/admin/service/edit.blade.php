@@ -68,6 +68,34 @@
                             </span>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="mtitle">Meta-Title</label>
+                        <input type="text" class="form-control" id="mtitle" placeholder="Enter title"
+                            name="mtitle" value="{{ $service->mtitle }}">
+                        <span class="text-danger">
+                            @error('mtitle')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mdescription">Meta-Description</label>
+                        <textarea class="form-control" rows="3" name="mdescription" placeholder="Enter description">{{ $service->mdescription }}</textarea>
+                        <span class="text-danger">
+                            @error('mdescription')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mkeywords">Meta-Keywords</label>
+                        <textarea class="form-control" rows="3" name="mkeywords" placeholder="Enter description">{{ $service->mkeywords }}</textarea>
+                        <span class="text-danger">
+                            @error('mkeywords')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>

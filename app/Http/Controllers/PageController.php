@@ -38,7 +38,7 @@ class PageController extends Controller
         $teams = Team::all();
         $abouts = About::all();
         $counters = Counter::all();
-        $metatag = MetaTags::where('page','home_page')->get()->first();
+        $metatag = MetaTags::where('page','homePage')->get()->first();
         return view('client.home')->with(['sliders'=> $sliders,'abouts'=>$abouts,'galleries' => $galleries,'services'=>$services,'blogs' => $blogs,'faqs'=>$faqs,'testimonials'=>$testimonials,'metatag'=> $metatag,'bannerServices' => $bannerServices,'partners' => $partners, 'events'=>$events, 'teams'=>$teams,'counters'=>$counters]);
     }
 
@@ -92,14 +92,14 @@ class PageController extends Controller
     }
 
     public function servicePage() {
-         $metatag = MetaTags::where('page','blog_page')->get()->first();
+         $metatag = MetaTags::where('page','servicePage')->get()->first();
          $services = Service::all();
          $visas = Visa::all();
          return view('client.service')->with(['services'=>$services,'metatag' => $metatag, 'visas'=>$visas]);
     }
 
     public function blogPage() {
-         $metatag = MetaTags::where('page','blog_page')->get()->first();
+         $metatag = MetaTags::where('page','blogPage')->get()->first();
          $blogs = Blog::orderBy('updated_at','desc')->get();
          return view('client.blog')->with(['blogs'=>$blogs, 'metatag'=> $metatag]);
     }
@@ -122,12 +122,12 @@ class PageController extends Controller
         $testimonials = Testimonial::all();
         $partners = Partner::all();
         $faqs = Faq::orderBy('updated_at','desc')->get();
-        $metatag = MetaTags::where('page','about_page')->get()->first();
+        $metatag = MetaTags::where('page','aboutPage')->get()->first();
         return view('client.about',compact('teams','metatag','testimonials','abouts','partners','faqs'));
     }
 
     public function contactPage() {
-        $metatag = MetaTags::where('page','contact_page')->get()->first();
+        $metatag = MetaTags::where('page','contactPage')->get()->first();
         return view('client.contact',compact('metatag'));
     }
 

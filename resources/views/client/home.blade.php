@@ -1,4 +1,25 @@
 @extends('client.layouts.master')
+@section('metadata')
+    @if (isset($metatag))
+        <title>{{ $metatag->title }}</title>
+        <meta name="description" content="{{ $metatag->description }}">
+        <meta name="keywords" content="{{ $metatag->keywords }}">
+        <meta name="trendsetters design studio"
+            content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
+        <meta image="{{ env('APP_URL') . '/assets/img/logo.jpeg' }}">
+        <link rel="canonical" href="{{ env('APP_URL') }}" />
+        <link rel="image_src" href="{{ env('APP_URL') . 'uploads/metatag/' . $metatag->image }}" />
+        <meta property="og:determiner" content="An" />
+        <meta property="og:site_name" content="Trendsetters Design studio" />
+        <meta property="og:type" content="Homepage" />
+        <meta property="og:url" content="{{ env('APP_URL') }}" />
+        <meta property="og:title" content="Home page" />
+        <meta property="og:image" content="{{ env('APP_URL') . 'uploads/metatag/' . $metatag->image }}" />
+        <meta property="og:image:width" content="960" />
+        <meta property="og:image:height" content="400" />
+        <meta property="og:locale" content="en_GB" />
+    @endif
+@endsection
 @section('content')
     <div class="wa_main_bn_wrap swiper ">
         <div id="main-slider" class="owl-carousel owl-theme slider-active swiper-wrapper ">
@@ -75,7 +96,8 @@
                                                     </p>
 
                                                     <div class="clear"></div>
-                                                    <a href="{{ route('about') }}" class="theme-button marT10">Read more</a>
+                                                    <a href="{{ route('about') }}" class="theme-button marT10">Read
+                                                        more</a>
                                                 </div>
                                             </div>
                                         @endif
@@ -188,7 +210,8 @@
                                 <div class="gallery-desc">
                                     <h3><a href="#">{{ $gallerie->title }}</a></h3>
 
-                                    <a class="image-popup" href="{{ route('gallery.show', ['slug' => $gallerie->slug]) }}"
+                                    <a class="image-popup"
+                                        href="{{ route('gallery.show', ['slug' => $gallerie->slug]) }}"
                                         class="btn btn-primary">View images</a>
 
                                 </div>
@@ -199,7 +222,6 @@
             @endif
         </div>
     </div>
-
 
     {{-- <section class="testimonial text-center dark-section padTB100">
 
@@ -260,12 +282,12 @@
                 <!--//==Section Heading End==//-->
                 <div class="col-md-12">
                     @if (count($blogs) == 0)
-                    <div class="intro">
-                        <h1 class="text-center">There is no any blogs uploaded yet.</h1>
-                    </div>
-                @elseif(count($blogs) > 0)
-                    <div class="row">
-                       
+                        <div class="intro">
+                            <h1 class="text-center">There is no any blogs uploaded yet.</h1>
+                        </div>
+                    @elseif(count($blogs) > 0)
+                        <div class="row">
+
                             @foreach ($blogs as $blog)
                                 <div class="home-blog-item">
                                     <div class=" col-lg-4 col-md-6 col-sm-12 padT40" data-aos="flip-left"
@@ -300,10 +322,10 @@
                                     </div>
                                 </div>
                             @endforeach
-                        @endif
-                    </div>
+                    @endif
                 </div>
             </div>
+        </div>
         </div>
     </section>
 

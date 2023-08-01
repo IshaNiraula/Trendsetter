@@ -54,6 +54,9 @@ class ServiceController extends Controller
             $service->description = $request->description;
             $service->filename = $name;
             $service->position = $request->position;
+            $service->mtitle = $request->mtitle;
+            $service->mdescription = $request->mdescription;
+            $service->mkeywords = $request->mkeywords;
             $save_service = $service->save();
             if($save_service){
                 return redirect()->route('admin.service.list')->with('success','service has been added successfully.');
@@ -100,40 +103,46 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $slug = Str::slug($request->title,'-');
-        if($request->hasfile('image')){
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+            'mtitle' => 'required|max:255',
+            'mdescription' => 'required',
+            'mkeywords' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+    
+        $service = Service::find($id);
+        if (!$service) {
+            return back()->with('error', 'Service not found');
+        }
+    
+        $slug = Str::slug($request->title, '-');
+    
+        if ($request->hasFile('image')) {
             $name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path(). '/uploads/service',$name);
-            $service = Service::find($id);
-            $filename = $service->filename;
-            if (File::exists(public_path('uploads/service/'.$filename))) {
-               File::delete(public_path('uploads/service/'.$filename));
-               }
-            $service->title = $request->title;
-            $service->slug = $slug;
-            $service->description = $request->description;
+            $request->file('image')->move(public_path() . '/uploads/service', $name);
+    
+            // Delete the previous image if it exists
+            if (File::exists(public_path('uploads/service/' . $service->filename))) {
+                File::delete(public_path('uploads/service/' . $service->filename));
+            }
             $service->filename = $name;
-            $service->position = $request->position;
-            $save_service = $service->save();
-            if($save_service){
-                return redirect()->route('admin.service.list')->with('success','service has been updated successfully.');
-            }else {
-                return back()->with('error','something went wrong');
-            }
-        }else {
-            $service = Service::find($id);
-            $filename = $service->filename;
-            $service->title = $request->title;
-            $service->slug = $slug;
-            $service->description = $request->description;
-            $service->filename = $filename;
-            $service->position = $request->position;
-            $save_service = $service->save();
-            if($save_service){
-                return redirect()->route('admin.service.list')->with('success','service has been updated successfully.');
-            }else {
-                return back()->with('error','something went wrong');
-            }
+        }
+    
+        $service->title = $request->title;
+        $service->slug = $slug;
+        $service->description = $request->description;
+        $service->position = $request->position;
+        $service->mtitle = $request->mtitle;
+        $service->mdescription = $request->mdescription;
+        $service->mkeywords = $request->mkeywords;
+    
+        $save_service = $service->save();
+        if ($save_service) {
+            return redirect()->route('admin.service.list')->with('success', 'Service has been updated successfully.');
+        } else {
+            return back()->with('error', 'Something went wrong');
         }
     }
 

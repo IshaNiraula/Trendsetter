@@ -1,4 +1,22 @@
 @extends('client.layouts.master')
+@section('metadata')
+<title>{{ $service->mtitle }}</title>
+<meta name="description" content="{{ $service->mdescription }}">
+<meta name="keywords" content="{{$service->mkeywords}}">
+<meta name="trendsetters design studio" content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
+<meta image="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}">
+<link rel="canonical" href="{{ env('APP_URL') .'uploads/service' . "/". $service->slug }}" />
+<link rel="image_src" href="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}" />
+<meta property="og:determiner" content="An" />
+<meta property="og:site_name" content="Trendsetters Design studio" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{env('APP_URL')}}" />
+<meta property="og:title" content="Home page" />
+<meta property="og:image" content="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}" />
+<meta property="og:image:width" content="960" />
+<meta property="og:image:height" content="400" />
+<meta property="og:locale" content="en_GB" />
+@endsection
 @section('content')
     <!--//==Page Header Start==//-->
     <div class="page-header black-overlay">

@@ -1,4 +1,14 @@
 @extends('client.layouts.master')
+@section('metadata')
+    @if (isset($metatag))
+        <title>{{ $metatag->title }}</title>
+        <meta name="description" content="{{ $metatag->description }}">
+        <meta name="keywords" content="{{ $metatag->keywords }}">
+        <meta name="trendsetters design studio" content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
+        <link rel="image_src" href="{{ env('APP_URL') . 'uploads/metatag/' . $metatag->image }}" />
+        <meta property="og:image" content="{{ env('APP_URL') . 'uploads/metatag/' . $metatag->image }}" />
+    @endif
+@endsection
 @section('content')
     <section>
         <div class="container">

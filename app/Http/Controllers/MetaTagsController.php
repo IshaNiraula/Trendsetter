@@ -43,8 +43,6 @@ class MetaTagsController extends Controller
             'description'=> 'required'
         ]);
 
-        $slug = Str::slug($request->title,'-');
-
         if($request->hasfile('image')){
             $name = $request->file('image')->getClientOriginalName();
             $request->file('image')->move(public_path(). '/uploads/metatag',$name);
