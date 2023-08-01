@@ -14,9 +14,9 @@ class AddMetatagsToServicesTable extends Migration
     public function up()
     {
         Schema::table('services', function (Blueprint $table) {
-            $table->string('mtitle');
+            $table->longText('mtitle');
             $table->longText('mdescription');
-            $table->string('mkeywords');
+            $table->longText('mkeywords');
         });
     }
 

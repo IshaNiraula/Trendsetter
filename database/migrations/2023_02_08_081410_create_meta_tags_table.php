@@ -15,9 +15,9 @@ class CreateMetaTagsTable extends Migration
     {
         Schema::create('meta_tags', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->longText('title');
             $table->longText('description');
-            $table->string('keywords');
+            $table->longText('keywords');
             $table->string('image');
             $table->string('page');
             $table->timestamps();
