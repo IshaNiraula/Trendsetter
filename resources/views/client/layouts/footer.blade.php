@@ -84,7 +84,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 copy-right">
-                    <p>Copyright © 2023 All Rights Reserved by OutofBox</p>
+                    <p>Copyright © 2023 All Rights Reserved by TrendsettersDesignStudio</p>
                 </div>
                 <div class="col-md-6 col-sm-6 text-right">
                     <!--//======= Social =======//-->
