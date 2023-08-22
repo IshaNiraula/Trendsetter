@@ -167,7 +167,6 @@
                                             background: linear-gradient(to bottom, {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }} 49%, transparent 50%);">
                                         <span class="counter-value">{{ $counter->number }}</span>
                                         <h3>{{ $counter->title }}</h3>
-
                                     </div>
                                 </div>
                             @endforeach
