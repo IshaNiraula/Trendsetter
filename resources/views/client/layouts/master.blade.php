@@ -38,7 +38,7 @@
     @if (Session::has('success'))
         <div id="message" class="alert alert-success">
             {{ Session::get('success') }}
-          <button onclick="hideMessage();" style="margin-left: 25px">Close</button>
+            <button onclick="hideMessage();" style="margin-left: 25px">Close</button>
         </div>
     @endif
     @if (Session::has('error'))
@@ -93,6 +93,19 @@
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB05N829C4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZB05N829C4');
+    </script>
 
     <script>
         const swiper = new Swiper('.swiper', {
@@ -261,7 +274,7 @@
         });
     </script>
     <script>
-        function hideMessage(){
+        function hideMessage() {
             const message = document.getElementById('message');
             message.style.display = "none";
         }
