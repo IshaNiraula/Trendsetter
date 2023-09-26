@@ -31,6 +31,55 @@
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "GeneralContractor",
+          "name": "Trendsettersdesignstudio",
+          "image": "https://trendsettersdesignstudio.com/assets/img/logo.jpeg",
+          "@id": "",
+          "url": "https://trendsettersdesignstudio.com/",
+          "telephone": "985-1324752",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "सर्वेश्वर सडक",
+            "addressLocality": "Kathmandu, Nepal",
+            "postalCode": "44600",
+            "addressCountry": "NP"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 27.693526,
+            "longitude": 85.2906239
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "06:00"
+          },
+          "sameAs": [
+            "https://www.facebook.com/people/Trendsetters-design-studio/100093427325606/",
+            "",
+            "https://www.tiktok.com/@trendsettersdesign"
+          ] 
+        }
+        </script>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T9V2RJJTZC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T9V2RJJTZC');
+</script>
 
 </head>
 
