@@ -31,7 +31,7 @@ class PageController extends Controller
         $galleries = GalleryAlbum::take(6)->get();
         $bannerServices = Service::orderBy('position', 'asc')->take(8)->get();
         $services = Service::orderBy('position', 'asc')->take(8)->get();
-        $blogs = Blog::orderBy('position', 'ascs')->get();
+        $blogs = Blog::orderBy('position', 'asc')->get();
         $faqs = Faq::orderBy('updated_at', 'desc')->get();
         $testimonials = Testimonial::all();
         $partners = Partner::all();
