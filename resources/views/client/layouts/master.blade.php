@@ -143,19 +143,6 @@
     </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB05N829C4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-ZB05N829C4');
-    </script>
-
     <script>
         const swiper = new Swiper('.swiper', {
             // Optional parameters
