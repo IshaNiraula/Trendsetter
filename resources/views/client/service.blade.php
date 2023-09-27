@@ -51,7 +51,7 @@
                                     <div class="card">
                                         <div class="card-image">
                                             <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
-                                                alt="">
+                                                alt=""> 
                                         </div>
                                         <div class="card-text" data-aos="zoom-out-up">
                                             <h2 class="card-title"><a
@@ -67,6 +67,7 @@
                         @endif
                     </div>
                 </div>
+             
                 <!--//==Blog Section End==//-->
             </div>
         </div>
