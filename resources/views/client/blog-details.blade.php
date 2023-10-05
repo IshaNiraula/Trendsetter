@@ -5,7 +5,7 @@
 <meta name="keywords" content="{{$blog->mkeywords}}">
 <meta name="trendsetters design studio" content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
 <meta image="{{ env('APP_URL') . 'uploads/blog/' . $blog->filename }}">
-<link rel="canonical" href="{{ env('APP_URL') .'uploads/blog' . "/". $blog->slug }}" />
+<link rel="canonical" href="{{ env('APP_URL') .'blog' . "/". $blog->slug }}" />
 <link rel="image_src" href="{{ env('APP_URL') . 'uploads/blog/' . $blog->filename }}" />
 <meta property="og:determiner" content="An" />
 <meta property="og:site_name" content="Trendsetters Design studio" />

@@ -5,7 +5,7 @@
 <meta name="keywords" content="{{$service->mkeywords}}">
 <meta name="trendsetters design studio" content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
 <meta image="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}">
-<link rel="canonical" href="{{ env('APP_URL') .'uploads/service' . "/". $service->slug }}" />
+<link rel="canonical" href="{{ env('APP_URL') .'service' . "/". $service->slug }}" />
 <link rel="image_src" href="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}" />
 <meta property="og:determiner" content="An" />
 <meta property="og:site_name" content="Trendsetters Design studio" />
