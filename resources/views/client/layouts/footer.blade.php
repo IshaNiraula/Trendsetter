@@ -33,8 +33,6 @@
                             <li><a href="{{ route('blog') }}"><i class="fa fa-angle-right"></i>Blogs</a></li>
                             <li><a href="{{ route('service') }}"><i class="fa fa-angle-right"></i>Services</a></li>
                             <li><a href="{{ route('gallery') }}"><i class="fa fa-angle-right"></i>Gallery</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Privacy Policy</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Your Account</a></li>
                             <li><a href="{{ route('contact') }}"><i class="fa fa-angle-right"></i> Contact Us</a></li>
                         </ul>
                     </div>
@@ -44,7 +42,7 @@
                     <div class="widget">
                         <h4>Location</h4>
                         <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3532.97192842128!2d85.35627931506164!3d27.687262482800325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDQxJzE0LjIiTiA4NcKwMjEnMzAuNSJF!5e0!3m2!1sen!2snp!4v1689224295474!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d220.81057279229927!2d85.3587431!3d27.6873479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf42d8084a086fe9%3A0x8741dcaae7113173!2sTrendsetters%20Design%20Studio!5e0!3m2!1sen!2snp!4v1697192474297!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>

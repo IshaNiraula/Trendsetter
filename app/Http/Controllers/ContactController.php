@@ -62,7 +62,7 @@ class ContactController extends Controller
                 'subject'=> $request->subject,
                 'message'=> $request->message,
             ];
-          Mail::to("isha.dt23@gmail.com")->send(new ContactMail($mailData));
+          Mail::to("trendsettersdesign63@gmail.com")->send(new ContactMail($mailData));
           return redirect('/thank-you')->with('success','Form has been submmited successfully');
         }else {
             return back()->with('error','something went wrong');
