@@ -71,15 +71,105 @@
           ] 
         }
         </script>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T9V2RJJTZC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/", 
+          "@type": "BreadcrumbList", 
+          "itemListElement": [{
+            "@type": "ListItem", 
+            "position": 1, 
+            "name": "Home",
+            "item": "https://trendsettersdesignstudio.com/"  
+          },{
+            "@type": "ListItem", 
+            "position": 2, 
+            "name": "About",
+            "item": "https://trendsettersdesignstudio.com/about"  
+          },{
+            "@type": "ListItem", 
+            "position": 3, 
+            "name": "Service",
+            "item": "https://trendsettersdesignstudio.com/service"  
+          },{
+            "@type": "ListItem", 
+            "position": 4, 
+            "name": "Interior Designer",
+            "item": "https://trendsettersdesignstudio.com/service/interior-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 5, 
+            "name": "Commercial design",
+            "item": "https://trendsettersdesignstudio.com/service/commercial-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 6, 
+            "name": "Residential design",
+            "item": "https://trendsettersdesignstudio.com/service/residential-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 7, 
+            "name": "Architectural design",
+            "item": "https://trendsettersdesignstudio.com/service/architectural-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 8, 
+            "name": "Customized Interior Design",
+            "item": "https://trendsettersdesignstudio.com/service/tailor-made-service"  
+          },{
+            "@type": "ListItem", 
+            "position": 9, 
+            "name": "Space Planning Services",
+            "item": "https://trendsettersdesignstudio.com/service/space-planning"  
+          },{
+            "@type": "ListItem", 
+            "position": 10, 
+            "name": "Furniture Design",
+            "item": "https://trendsettersdesignstudio.com/service/furniture-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 11, 
+            "name": "Mechanical and Electrical Services",
+            "item": "https://trendsettersdesignstudio.com/service/mechanical-electrical-and-plumbing-mep"  
+          },{
+            "@type": "ListItem", 
+            "position": 12, 
+            "name": "Gallary",
+            "item": "https://trendsettersdesignstudio.com/gallery"  
+          },{
+            "@type": "ListItem", 
+            "position": 13, 
+            "name": "Blog",
+            "item": "https://trendsettersdesignstudio.com/blog"  
+          },{
+            "@type": "ListItem", 
+            "position": 14, 
+            "name": "contact",
+            "item": "https://trendsettersdesignstudio.com/contact"  
+          }]
+        }
+        </script>
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Corporation",
+              "name": "Trendsetters Design studio",
+              "url": "https://trendsettersdesignstudio.com/",
+              "logo": "https://trendsettersdesignstudio.com/assets/img/logo.jpeg",
+              "sameAs": "https://www.facebook.com/people/Trendsetters-design-studio/100093427325606/"
+            }
+            </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9V2RJJTZC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-T9V2RJJTZC');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T9V2RJJTZC');
+    </script>
 
 </head>
 
