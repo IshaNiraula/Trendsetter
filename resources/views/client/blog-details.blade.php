@@ -57,7 +57,7 @@
                                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> admin</a></li>
                                 </ul>
                             </div>
-                            <h3>{{ $blog->title }}</h3>
+                            <h1>{{ $blog->title }}</h1>
                             <p> {!! $blog->description !!} </p>
                         </div>
                     </div>

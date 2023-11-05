@@ -51,7 +51,7 @@
                     </figure>
                     <!--//==Service Content==//-->
                     <div class="block-caption padT20 padB30">
-                        <h3 class="marB10">{{ $service->title }}</h3>
+                        <h1 class="marB10">{{ $service->title }}</h1>
                         <p>
                             {!! $service->description !!}
                         </p>
