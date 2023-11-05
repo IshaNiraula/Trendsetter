@@ -148,8 +148,8 @@
             "item": "https://trendsettersdesignstudio.com/contact"  
           }]
         }
-        </script>
-        <script type="application/ld+json">
+    </script>
+    <script type="application/ld+json">
             {
               "@context": "https://schema.org",
               "@type": "Corporation",
@@ -158,7 +158,71 @@
               "logo": "https://trendsettersdesignstudio.com/assets/img/logo.jpeg",
               "sameAs": "https://www.facebook.com/people/Trendsetters-design-studio/100093427325606/"
             }
-            </script>
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Which is the best interior designer in Nepal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Trendsetters Design studio is one of the best Interior Designer in Nepal."
+            }
+          },{
+            "@type": "Question",
+            "name": "How do you determine the Budget for interior Design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At trendsetters Design studio, we assess various factors such as project scope, client preferences, and desired quality to determine an appropriate budget. We also consider any specific materials, furnishings, or customizations requested by the client. Our goal is to provide a comprehensive estimate that aligns with the client's vision and financial resources."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is the cost of house design in Nepal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost of designing a house in Nepal can differ based on several factors such as the size of the house, intricacy of the design, materials used, and the architect or design firm selected. To get an accurate cost estimate that meets your requirements, it's best to consult with local architects or design professionals in Nepal."
+            }
+          },{
+            "@type": "Question",
+            "name": "How to design a room living room?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Designing a living room involves several key steps that can help you create a functional and aesthetically pleasing space. First, consider the purpose of the room and how you plan to use it. This will help you determine the furniture and accessories needed. Next, choose a color scheme that complements your style and the overall aesthetic of your home. Select furniture that is comfortable, functional, and fits the size and layout of your living room. Incorporate different types of lighting to create a warm and inviting atmosphere, and accessorize with decorative elements such as artwork, throw pillows, and rugs. Finally, consider the flow of the living room and arrange furniture in a way that encourages conversation and interaction. By following these steps, you can design a living room that meets your needs and reflects your style."
+            }
+          },{
+            "@type": "Question",
+            "name": "Why choose interior design in Nepal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior design offers several advantages, including enhancing aesthetics, optimizing functionality, utilizing space effectively, creating a cohesive style, saving time and effort, and providing access to expertise and resources. By choosing interior design, you can transform your space into a visually appealing and functional environment that reflects your personal style, while benefiting from professional guidance and efficient execution."
+            }
+          },{
+            "@type": "Question",
+            "name": "",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": ""
+            }
+          }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Corporation",
+          "name": "Trendsetters  Design studio",
+          "url": "https://trendsettersdesignstudio.com/",
+          "logo": "https://trendsettersdesignstudio.com/assets/img/logo.jpeg",
+          "sameAs": [
+            "https://www.facebook.com/people/Trendsetters-design-studio/100093427325606/",
+            "https://twitter.com/TrendsettersDes",
+            "https://www.pinterest.com/trendsettersdesignstudio172/",
+            "https://trendsettersdesignstudio.com/"
+          ]
+        }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9V2RJJTZC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
