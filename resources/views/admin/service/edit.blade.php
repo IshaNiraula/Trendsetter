@@ -108,7 +108,7 @@
 @push('scripts')
     <script>
         CKEDITOR.replace('description', {
-            filebrowserUploadUrl: "{{ 'https://trendsettersdesignstudio.com/upload_service_editor_image', ['_token' => csrf_token()] }}",
+            filebrowserUploadUrl: "{{ 'https://trendsettersdesignstudio.com/upload_service_editor_image' }}",
             filebrowserUploadMethod: 'form'
         })
     </script>
