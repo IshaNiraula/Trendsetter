@@ -66,7 +66,7 @@
             </div>
         
             <!--//==Blog Detail Section End==//-->
-            <div class="related-course pt-70 col-lg-4">
+            <div class="related-course pt-50 col-lg-4">
                 <div class="related-title mrg-bottom-small">
                     <h3>Related Blogs</h3>
                 </div>
