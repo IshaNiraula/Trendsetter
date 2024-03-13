@@ -44,7 +44,7 @@ Route::get('/login', [PageController::class, 'loginPage'])->middleware('alreadyL
 Route::get('/register', [PageController::class, 'registerPage']);
 Route::post('/register', [AuthController::class, 'registerAdmin'])->name('register.admin');
 Route::post('/login', [AuthController::class, 'loginAdmin'])->name('login.admin');
-Route::get('/logout', [AuthController::class, 'logoutAdmin']);
+Route::post('/logout', [AuthController::class, 'logoutAdmin'])->name('logout');
 Route::get('service', [PageController::class, 'servicePage'])->name('service');
 Route::get('/service/{slug}', [ServiceController::class, 'show'])->name('service.show');
 Route::get('/visa/{slug}', [VisaController::class, 'show'])->name('visa.show');

@@ -4,9 +4,20 @@
         <title>{{ $metatag->title }}</title>
         <meta name="description" content="{{ $metatag->description }}">
         <meta name="keywords" content="{{ $metatag->keywords }}">
-        <meta name="trendsetters design studio" content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
+        <meta name="trendsetters design studio"
+            content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
+        <meta image="{{ env('APP_URL') . '/assets/img/logo.jpeg' }}">
+        <link rel="canonical" href="{{ env('APP_URL') . 'service' }}" />
         <link rel="image_src" href="{{ env('APP_URL') . 'uploads/metatag/' . $metatag->image }}" />
+        <meta property="og:determiner" content="An" />
+        <meta property="og:site_name" content="Trendsetters Design studio" />
+        <meta property="og:type" content="Homepage" />
+        <meta property="og:url" content="{{ env('APP_URL') . 'service' }}" />
+        <meta property="og:title" content="Home page" />
         <meta property="og:image" content="{{ env('APP_URL') . 'uploads/metatag/' . $metatag->image }}" />
+        <meta property="og:image:width" content="960" />
+        <meta property="og:image:height" content="400" />
+        <meta property="og:locale" content="en_GB" />
     @endif
 @endsection
 @section('content')
@@ -32,7 +43,7 @@
         <div class="container">
             <div class="row">
                 <!--//==service Section Start==//-->
-                <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-lg-12">
                     <div class="row">
                         @if (isset($services))
                             @foreach ($services as $service)
@@ -40,7 +51,7 @@
                                     <div class="card">
                                         <div class="card-image">
                                             <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
-                                                alt="">
+                                                alt=""> 
                                         </div>
                                         <div class="card-text" data-aos="zoom-out-up">
                                             <h2 class="card-title"><a
@@ -56,6 +67,7 @@
                         @endif
                     </div>
                 </div>
+             
                 <!--//==Blog Section End==//-->
             </div>
         </div>

@@ -114,10 +114,10 @@
     </div>
 @endsection
 @push('scripts')
-    <script>
-        CKEDITOR.replace('description', {
-            filebrowserUploadUrl: "{{ route('admin.blog.editor.upload', ['_token' => csrf_token()]) }}",
-            filebrowserUploadMethod: 'form'
-        })
-    </script>
+<script>
+    CKEDITOR.replace('description', {
+        filebrowserUploadUrl: "{{ 'https://trendsettersdesignstudio.com/upload_blog_editor_image?_token=' . csrf_token() }}",
+        filebrowserUploadMethod: 'form',
+    })
+</script>
 @endpush

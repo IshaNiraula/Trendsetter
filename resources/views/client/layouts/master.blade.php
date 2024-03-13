@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logo/logo.jpg') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="HbwF0Pi52FtB7KNMJx6qv9FTH8xRyGWLbgfNh_01lCo" />
     @yield('metadata')
     <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 
@@ -30,6 +31,209 @@
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "GeneralContractor",
+          "name": "Trendsettersdesignstudio",
+          "image": "https://trendsettersdesignstudio.com/assets/img/logo.jpeg",
+          "@id": "",
+          "url": "https://trendsettersdesignstudio.com/",
+          "telephone": "985-1324752",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "सर्वेश्वर सडक",
+            "addressLocality": "Kathmandu, Nepal",
+            "postalCode": "44600",
+            "addressCountry": "NP"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 27.693526,
+            "longitude": 85.2906239
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "06:00"
+          },
+          "sameAs": [
+            "https://www.facebook.com/people/Trendsetters-design-studio/100093427325606/",
+            "",
+            "https://www.tiktok.com/@trendsettersdesign"
+          ] 
+        }
+        </script>
+    <!-- Google tag (gtag.js) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/", 
+          "@type": "BreadcrumbList", 
+          "itemListElement": [{
+            "@type": "ListItem", 
+            "position": 1, 
+            "name": "Home",
+            "item": "https://trendsettersdesignstudio.com/"  
+          },{
+            "@type": "ListItem", 
+            "position": 2, 
+            "name": "About",
+            "item": "https://trendsettersdesignstudio.com/about"  
+          },{
+            "@type": "ListItem", 
+            "position": 3, 
+            "name": "Service",
+            "item": "https://trendsettersdesignstudio.com/service"  
+          },{
+            "@type": "ListItem", 
+            "position": 4, 
+            "name": "Interior Designer",
+            "item": "https://trendsettersdesignstudio.com/service/interior-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 5, 
+            "name": "Commercial design",
+            "item": "https://trendsettersdesignstudio.com/service/commercial-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 6, 
+            "name": "Residential design",
+            "item": "https://trendsettersdesignstudio.com/service/residential-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 7, 
+            "name": "Architectural design",
+            "item": "https://trendsettersdesignstudio.com/service/architectural-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 8, 
+            "name": "Customized Interior Design",
+            "item": "https://trendsettersdesignstudio.com/service/tailor-made-service"  
+          },{
+            "@type": "ListItem", 
+            "position": 9, 
+            "name": "Space Planning Services",
+            "item": "https://trendsettersdesignstudio.com/service/space-planning"  
+          },{
+            "@type": "ListItem", 
+            "position": 10, 
+            "name": "Furniture Design",
+            "item": "https://trendsettersdesignstudio.com/service/furniture-design"  
+          },{
+            "@type": "ListItem", 
+            "position": 11, 
+            "name": "Mechanical and Electrical Services",
+            "item": "https://trendsettersdesignstudio.com/service/mechanical-electrical-and-plumbing-mep"  
+          },{
+            "@type": "ListItem", 
+            "position": 12, 
+            "name": "Gallary",
+            "item": "https://trendsettersdesignstudio.com/gallery"  
+          },{
+            "@type": "ListItem", 
+            "position": 13, 
+            "name": "Blog",
+            "item": "https://trendsettersdesignstudio.com/blog"  
+          },{
+            "@type": "ListItem", 
+            "position": 14, 
+            "name": "contact",
+            "item": "https://trendsettersdesignstudio.com/contact"  
+          }]
+        }
+    </script>
+    <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Corporation",
+              "name": "Trendsetters Design studio",
+              "url": "https://trendsettersdesignstudio.com/",
+              "logo": "https://trendsettersdesignstudio.com/assets/img/logo.jpeg",
+              "sameAs": "https://www.facebook.com/people/Trendsetters-design-studio/100093427325606/"
+            }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Which is the best interior designer in Nepal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Trendsetters Design studio is one of the best Interior Designer in Nepal."
+            }
+          },{
+            "@type": "Question",
+            "name": "How do you determine the Budget for interior Design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At trendsetters Design studio, we assess various factors such as project scope, client preferences, and desired quality to determine an appropriate budget. We also consider any specific materials, furnishings, or customizations requested by the client. Our goal is to provide a comprehensive estimate that aligns with the client's vision and financial resources."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is the cost of house design in Nepal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost of designing a house in Nepal can differ based on several factors such as the size of the house, intricacy of the design, materials used, and the architect or design firm selected. To get an accurate cost estimate that meets your requirements, it's best to consult with local architects or design professionals in Nepal."
+            }
+          },{
+            "@type": "Question",
+            "name": "How to design a room living room?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Designing a living room involves several key steps that can help you create a functional and aesthetically pleasing space. First, consider the purpose of the room and how you plan to use it. This will help you determine the furniture and accessories needed. Next, choose a color scheme that complements your style and the overall aesthetic of your home. Select furniture that is comfortable, functional, and fits the size and layout of your living room. Incorporate different types of lighting to create a warm and inviting atmosphere, and accessorize with decorative elements such as artwork, throw pillows, and rugs. Finally, consider the flow of the living room and arrange furniture in a way that encourages conversation and interaction. By following these steps, you can design a living room that meets your needs and reflects your style."
+            }
+          },{
+            "@type": "Question",
+            "name": "Why choose interior design in Nepal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior design offers several advantages, including enhancing aesthetics, optimizing functionality, utilizing space effectively, creating a cohesive style, saving time and effort, and providing access to expertise and resources. By choosing interior design, you can transform your space into a visually appealing and functional environment that reflects your personal style, while benefiting from professional guidance and efficient execution."
+            }
+          },{
+            "@type": "Question",
+            "name": "",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": ""
+            }
+          }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Corporation",
+          "name": "Trendsetters  Design studio",
+          "url": "https://trendsettersdesignstudio.com/",
+          "logo": "https://trendsettersdesignstudio.com/assets/img/logo.jpeg",
+          "sameAs": [
+            "https://www.facebook.com/people/Trendsetters-design-studio/100093427325606/",
+            "https://twitter.com/TrendsettersDes",
+            "https://www.pinterest.com/trendsettersdesignstudio172/",
+            "https://trendsettersdesignstudio.com/"
+          ]
+        }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9V2RJJTZC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T9V2RJJTZC');
+    </script>
 
 </head>
 
@@ -37,7 +241,7 @@
     @if (Session::has('success'))
         <div id="message" class="alert alert-success">
             {{ Session::get('success') }}
-          <button onclick="hideMessage();" style="margin-left: 25px">Close</button>
+            <button onclick="hideMessage();" style="margin-left: 25px">Close</button>
         </div>
     @endif
     @if (Session::has('error'))
@@ -260,7 +464,7 @@
         });
     </script>
     <script>
-        function hideMessage(){
+        function hideMessage() {
             const message = document.getElementById('message');
             message.style.display = "none";
         }

@@ -65,7 +65,7 @@ class CounterController extends Controller
      */
     public function show($id)
     {
-        //
+      
     }
 
     /**

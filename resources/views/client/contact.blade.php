@@ -4,9 +4,20 @@
         <title>{{ $metatag->title }}</title>
         <meta name="description" content="{{ $metatag->description }}">
         <meta name="keywords" content="{{ $metatag->keywords }}">
-        <meta name="trendsetters design studio" content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
+        <meta name="trendsetters design studio"
+            content="A renowned interior design company, we are passionate about transforming spaces into captivating realms that reflect your unique style and vision.">
+        <meta image="{{ env('APP_URL') . '/assets/img/logo.jpeg' }}">
+        <link rel="canonical" href="{{ env('APP_URL') . 'contact' }}" />
         <link rel="image_src" href="{{ env('APP_URL') . 'uploads/metatag/' . $metatag->image }}" />
+        <meta property="og:determiner" content="An" />
+        <meta property="og:site_name" content="Trendsetters Design studio" />
+        <meta property="og:type" content="Homepage" />
+        <meta property="og:url" content="{{ env('APP_URL') . 'contact' }}" />
+        <meta property="og:title" content="Home page" />
         <meta property="og:image" content="{{ env('APP_URL') . 'uploads/metatag/' . $metatag->image }}" />
+        <meta property="og:image:width" content="960" />
+        <meta property="og:image:height" content="400" />
+        <meta property="og:locale" content="en_GB" />
     @endif
 @endsection
 @section('content')
@@ -39,11 +50,11 @@
                     <div class="social-bar">
                         <ul>
                             <li>
-                                <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100093427325606"> <i class="fab fa-facebook-f"></i></a>
                             </li>
-                            <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkdin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100093427325606"><i class="fab fa-linkedin-in"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -94,7 +105,7 @@
     <section class="contact-map">
 
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3532.97192842128!2d85.35627931506164!3d27.687262482800325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDQxJzE0LjIiTiA4NcKwMjEnMzAuNSJF!5e0!3m2!1sen!2snp!4v1689224295474!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d220.81057279229927!2d85.3587431!3d27.6873479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf42d8084a086fe9%3A0x8741dcaae7113173!2sTrendsetters%20Design%20Studio!5e0!3m2!1sen!2snp!4v1697192474297!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 @endsection
 
